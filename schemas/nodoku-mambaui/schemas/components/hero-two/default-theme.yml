@@ -1,0 +1,30 @@
+bgImageStyle:
+    base: -z-20 bg-cover bg-no-repeat bg-center
+    decoration: blur-sm
+bgColorStyle:
+    base: -z-10
+    decoration: opacity-90 bg-violet-400 dark:bg-violet-600
+containerStyle:
+    base: -z-30
+    decoration: ''
+innerContainerStyle:
+    base: container flex flex-col items-center px-4 py-16 pb-24 mx-auto text-center lg:pb-56 md:py-32 md:px-10 lg:px-32
+    decoration: ''
+titleStyle:
+    base: text-5xl md:text-7xl lg:text-9xl  font-bold leading-none sm:text-6xl xl:max-w-3xl
+    decoration: ''
+subTitleStyle:
+    base: mt-5 mb-6 text-3xl lg:text-6xl font-bold leading-none sm:text-4xl xl:max-w-2xl
+    decoration: ''
+paragraphStyle:
+    base: mt-3 text-lg lg:text-2xl xl:max-w-3xl
+    decoration: ''
+footerContainerStyle:
+    base: mt-5 flex flex-wrap justify-center
+    decoration: ''
+footerStyle:
+    base: px-8 py-3 m-2 text-lg font-semibold rounded dark:bg-gray-800 bg-gray-100
+    decoration: ''
+codeHighlightTheme:
+    hljsLightTheme: a11y-light
+    hljsDarkTheme: a11y-dark

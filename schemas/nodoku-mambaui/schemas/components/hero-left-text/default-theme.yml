@@ -1,0 +1,39 @@
+bgImageStyle:
+    base: -z-20 bg-cover bg-no-repeat bg-center
+    decoration: blur-sm
+bgColorStyle:
+    base: -z-10
+    decoration: opacity-90 dark:bg-gray-800 bg-gray-100
+containerStyle:
+    base: dark:text-gray-100 text-gray-800
+    decoration: ''
+innerContainerStyle:
+    base: container flex flex-col justify-center p-6 mx-auto sm:py-12 lg:py-24 lg:flex-row lg:justify-center
+    decoration: ''
+imageContainerStyle:
+    base: flex items-center justify-center p-6 mt-8 lg:mt-0 h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128
+    decoration: ''
+contentContainerStyle:
+    base: flex flex-col justify-center p-6 pt-0 text-center rounded-sm lg:max-w-md xl:max-w-lg lg:text-right
+    decoration: ''
+imageStyle:
+    base: object-contain h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128
+    decoration: ''
+titleStyle:
+    base: text-5xl font-bold leading-none sm:text-6xl
+    decoration: ''
+subTitleStyle:
+    base: mt-3 text-3xl font-bold leading-none sm:text-4xl
+    decoration: ''
+paragraphStyle:
+    base: mt-4 mb-2 text-lg
+    decoration: ''
+footerContainerStyle:
+    base: mt-5 flex flex-col space-y-4 sm:items-center sm:justify-center sm:flex-row sm:space-y-0 sm:space-x-4 lg:justify-start
+    decoration: ''
+footerStyle:
+    base: px-8 py-3 text-lg font-semibold rounded bg-violet-400 dark:bg-violet-600 text-gray-900 dark:text-gray-50
+    decoration: ''
+codeHighlightTheme:
+    hljsLightTheme: a11y-light
+    hljsDarkTheme: a11y-dark

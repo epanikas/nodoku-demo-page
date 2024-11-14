@@ -1,0 +1,33 @@
+bgImageStyle:
+    base: ''
+    decoration: ''
+bgColorStyle:
+    base: ''
+    decoration: ''
+containerStyle:
+    base: container mx-auto dark:bg-gray-800 bg-gray-100 px-5
+    decoration: ''
+imageStyle:
+    base: ''
+    decoration: ''
+innerContainerStyle:
+    base: flex flex-col divide-y sm:px-8 lg:px-12 xl:px-32 divide-gray-700 dark:divide-gray-300 divide-gray-700 dark:divide-gray-300 mb-10
+    decoration: ''
+titleStyle:
+    base: py-2 text-2xl outline-none cursor-pointer focus:underline
+    decoration: ''
+subTitleStyle:
+    base: ''
+    decoration: ''
+paragraphStyle:
+    base: px-4 pb-4 text-lg
+    decoration: ''
+footerContainerStyle:
+    base: ''
+    decoration: ''
+footerStyle:
+    base: ''
+    decoration: ''
+codeHighlightTheme:
+    hljsLightTheme: a11y-light
+    hljsDarkTheme: a11y-dark

@@ -1,0 +1,9 @@
+containerStyle:
+  base: container mx-auto max-w-5xl px-4
+  decoration: ''
+contentContainerStyle:
+  base: prose prose-amber prose-lg dark:prose-invert
+  decoration: ''
+codeHighlightTheme:
+  hljsLightTheme: a11y-light
+  hljsDarkTheme: a11y-dark

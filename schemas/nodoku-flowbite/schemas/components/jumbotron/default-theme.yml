@@ -1,0 +1,27 @@
+containerStyle:
+    base: py-8 px-4 text-center lg:py-16
+    decoration: ''
+bgImageStyle:
+    base: -z-20 bg-cover bg-no-repeat bg-center
+    decoration: blur-sm
+bgColorStyle:
+    base: -z-10
+    decoration: opacity-50 bg-gray-100 dark:bg-gray-700
+titleStyle:
+    base: mb-4 lg:text-6xl font-extrabold tracking-tight leading-none md:text-5xl lg:text-6xl
+    decoration: ''
+subTitleStyle:
+    base: mb-8 lg:text-4xl font-normal md:text-2xl sm:px-16 lg:px-48
+    decoration: ''
+paragraphStyle:
+    base: mb-4 lg:text-2xl font-normal md:text-xl sm:px-16 lg:px-48
+    decoration: ''
+footerStyle:
+    base: flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0
+    decoration: ''
+footerButtonStyle:
+    base: inline-flex justify-center items-center py-3 px-5 sm:ms-4 text-base text-center focus:ring-4 focus:ring-gray-400
+    decoration: border-black dark:border-white font-medium text-black dark:text-white rounded-lg border hover:text-gray-900 hover:bg-gray-100
+codeHighlightTheme:
+    light: a11y-light
+    dark: a11y-dark

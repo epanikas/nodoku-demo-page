@@ -1,0 +1,12 @@
+# yaml-language-server: $schema=../../../../schemas/visual-schema.json
+
+rows:
+  - row:
+      components:
+        - flowbite/jumbotron:
+            theme:
+              bgColorStyle:
+                decoration: opacity-75 bg-white dark:bg-gray-700
+            selector:
+              attributes:
+                id: hero

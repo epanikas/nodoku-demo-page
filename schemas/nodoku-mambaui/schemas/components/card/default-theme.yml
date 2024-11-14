@@ -1,0 +1,33 @@
+bgImageStyle:
+    base: -z-20 bg-cover bg-no-repeat bg-center
+    decoration: blur-sm
+bgColorStyle:
+    base: -z-10
+    decoration: opacity-50 bg-white dark:bg-gray-700
+containerStyle:
+    base: 'rounded-md shadow-md dark:bg-gray-900 bg-gray-50 '
+    decoration: 'dark:text-gray-100 text-gray-800'
+imageStyle:
+    base: 'object-cover object-center w-full rounded-t-md h-72 bg-gray-500 dark:bg-gray-500'
+    decoration: ''
+innerContainerStyle:
+    base: 'flex flex-col justify-between p-6 space-y-8 pb-24'
+    decoration: ''
+titleStyle:
+    base: 'text-3xl font-semibold tracking-wide'
+    decoration: ''
+subTitleStyle:
+    base: 'text-xl font-semibold tracking-wide'
+    decoration: ''
+paragraphStyle:
+    base: ''
+    decoration: ''
+footerContainerStyle:
+    base: 'absolute inset-x-0 bottom-0 mx-5 my-5'
+    decoration: ''
+footerButtonStyle:
+    base: 'flex items-center justify-center w-full p-3 font-semibold tracking-wide rounded-md bg-violet-400 dark:bg-violet-600 text-gray-900 dark:text-gray-50 mb-5'
+    decoration: ''
+codeHighlightTheme:
+    light: a11y-light
+    dark: a11y-dark

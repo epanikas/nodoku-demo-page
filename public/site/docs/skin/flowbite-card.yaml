@@ -1,0 +1,9 @@
+# yaml-language-server: $schema=../../../../schemas/visual-schema.json
+
+rows:
+  - row:
+      components:
+        - flowbite/card:
+            selector:
+              attributes:
+                sectionName: nodoku-way

@@ -1,0 +1,132 @@
+# yaml-language-server: $schema=../../../schemas/visual-schema.json
+
+global:
+  defaultTheme: light
+  renderingPage:
+    base: dark:text-gray-200 text-gray-700
+
+
+rows:
+  - row:
+      theme:
+        decoration: mb-10
+      components:
+        - mambaui/hero-one:
+            selector:
+              attributes:
+                id: hero
+
+  - row:
+      theme:
+        decoration: mb-10
+      components:
+        - mambaui/hero-two:
+            selector:
+              attributes:
+                id: hero
+
+  - row:
+      components:
+        - mambaui/faq-header:
+            selector:
+              attributes:
+                sectionName: faq-header
+
+  - row:
+      maxCols: 1
+      theme:
+        decoration: mb-10 gap-0
+      components:
+        - mambaui/faq-one-question:
+            selector:
+              attributes:
+                sectionName: faq
+
+  - row:
+      theme:
+        decoration: mb-10
+      components:
+        - mambaui/hero-left-text:
+            selector:
+              attributes:
+                id: hero
+
+  - row:
+      theme:
+        decoration: mb-10
+      components:
+        - mambaui/hero-right-text:
+            selector:
+              attributes:
+                id: hero
+
+  - row:
+      maxCols: 6
+      theme:
+        decoration: mb-10 mx-5 gap-4
+      components:
+        - mambaui/card:
+            selector:
+              attributes:
+                sectionName: nodoku-way
+
+  - row:
+      theme:
+        decoration: mb-10
+      components:
+        - flowbite/carousel:
+            selector:
+              attributes:
+                sectionName: nodoku-way
+
+  - row:
+      theme:
+        decoration: mb-10 mx-5 gap-4
+      components:
+        - flowbite/card:
+            selector:
+              attributes:
+                sectionName: nodoku-way
+
+  - row:
+      theme:
+        decoration: mb-10 mx-5 gap-4
+      components:
+        - flowbite/horizontal-card:
+            selector:
+              attributes:
+                sectionName: nodoku-way
+
+  - row:
+      components:
+        - flowbite/jumbotron:
+            theme:
+              containerStyle:
+                decoration: mb-12
+            selector:
+              attributes:
+                id: hero
+
+  - row:
+      maxCols: 1
+      components:
+        - core/typography:
+            theme:
+              contentContainerStyle:
+                decoration: prose-xl p-10 bg-green-100
+            selector:
+              attributes:
+                sectionName: typography2
+
+  - row:
+      maxCols: 1
+      components:
+        - core/typography:
+            theme:
+              contentContainerStyle:
+                decoration: prose-xl
+            selector:
+              attributes:
+                sectionName: typography
+
+

@@ -1,0 +1,16 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "containerStyle": {
+      "$ref": "../../../../../node_modules/nodoku-core/schemas/skin-common-schema.json#/definitions/ThemeStyle"
+    },
+    "contentContainerStyle": {
+      "$ref": "../../../../../node_modules/nodoku-core/schemas/skin-common-schema.json#/definitions/ThemeStyle"
+    },
+    "codeHighlightTheme": {
+      "$ref": "../../../../../node_modules/nodoku-components/schemas/components/highlighted-code/visual-schema.json"
+    },
+    "additionalProperties": false
+  }
+}
