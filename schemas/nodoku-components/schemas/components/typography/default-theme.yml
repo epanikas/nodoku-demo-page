@@ -1,9 +1,17 @@
 containerStyle:
-  base: container mx-auto max-w-5xl px-4
+#  don't use mx-auto here, as it will break the grid column width layout (should also use min-width: 0)
+#  ref: https://stackoverflow.com/questions/36247140/why-dont-flex-items-shrink-past-content-size
+  base: container max-w-5xl px-4
   decoration: ''
+
 contentContainerStyle:
   base: prose prose-amber prose-lg dark:prose-invert
   decoration: ''
+
+preContainer:
+  base: ''
+  decoration: ''
+
 codeHighlightTheme:
   hljsLightTheme: a11y-light
   hljsDarkTheme: a11y-dark

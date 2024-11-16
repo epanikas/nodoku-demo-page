@@ -1,5 +1,5 @@
 bgImageStyle:
-    base: -z-20 bg-cover bg-no-repeat bg-center
+    base: -z-20 bg-cover bg-no-repeat bg-center h-full
     decoration: blur-sm
 bgColorStyle:
     base: -z-10

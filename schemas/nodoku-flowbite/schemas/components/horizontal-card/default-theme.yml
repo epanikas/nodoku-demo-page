@@ -1,6 +1,6 @@
 containerStyle:
 #    base: flex flex-col items-center md:flex-row md:max-w-xl
-    base: flex flex-col items-center md:flex-row
+    base: flex flex-col items-center md:flex-row h-full
     decoration: border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:border-gray-700 dark:hover:bg-gray-700
 bgImageStyle:
     base: -z-20 bg-cover bg-no-repeat

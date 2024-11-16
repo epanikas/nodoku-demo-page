@@ -1,5 +1,5 @@
 containerStyle:
-    base: w-full pb-10
+    base: w-full pb-10 h-full
     decoration: border rounded-lg shadow border-gray-200 dark:border-gray-700
 bgImageStyle:
     base: -z-20 bg-cover bg-no-repeat

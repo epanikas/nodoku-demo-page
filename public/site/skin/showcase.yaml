@@ -4,6 +4,12 @@ global:
   defaultTheme: light
   renderingPage:
     base: dark:text-gray-200 text-gray-700
+  components:
+    core/typography:
+      theme:
+        containerStyle:
+          decoration: mx-auto
+
 
 
 rows:
