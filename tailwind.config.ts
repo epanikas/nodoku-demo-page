@@ -44,6 +44,7 @@ const config: Config = {
             aspectRatio: {
                 '4/2': '4 / 2',
                 'carousel': '4 / 1.61',
+                'narrow': '6 / 2'
                 // 'carousel': '4 / 2.5',
             },
             typography: {

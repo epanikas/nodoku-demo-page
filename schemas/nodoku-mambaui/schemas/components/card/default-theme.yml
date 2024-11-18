@@ -1,11 +1,11 @@
 bgImageStyle:
-    base: -z-20 bg-cover bg-no-repeat bg-center h-full
+    base: -z-20 bg-cover bg-no-repeat bg-center
     decoration: blur-sm
 bgColorStyle:
     base: -z-10
     decoration: opacity-50 bg-white dark:bg-gray-700
 containerStyle:
-    base: 'rounded-md shadow-md dark:bg-gray-900 bg-gray-50 '
+    base: 'rounded-md shadow-md dark:bg-gray-900 bg-gray-50  h-full'
     decoration: 'dark:text-gray-100 text-gray-800'
 imageStyle:
     base: 'object-cover object-center w-full rounded-t-md h-72 bg-gray-500 dark:bg-gray-500'
