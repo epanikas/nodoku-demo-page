@@ -1,6 +1,6 @@
 containerStyle:
 #    base: flex flex-col items-center md:flex-row md:max-w-xl
-    base: flex flex-col items-center md:flex-row h-full
+    base: flex flex-col items-center md:flex-row h-full overflow-hidden
     decoration: border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:border-gray-700 dark:hover:bg-gray-700
 bgImageStyle:
     base: -z-20 bg-cover bg-no-repeat
@@ -8,11 +8,14 @@ bgImageStyle:
 bgColorStyle:
     base: -z-10
     decoration: opacity-90 bg-gray-300 dark:bg-gray-700
-imageStyle:
-    base: object-cover w-full h-full md:w-48 md:rounded-none md:rounded-s-lg
+imageContainerStyle:
+    base: h-full md:w-48 md:rounded-none md:rounded-s-lg
     decoration: rounded-t-lg
+imageStyle:
+    base: object-cover w-full h-full
+    decoration: ''
 innerContainerStyle:
-    base: flex flex-col h-full items-start justify-start pb-12 leading-loose
+    base: flex flex-1 flex-col h-full items-start justify-start pb-12 leading-loose
     decoration: p-4
 titleStyle:
     base: mb-2 text-2xl font-bold tracking-tight

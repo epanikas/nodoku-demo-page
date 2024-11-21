@@ -184,6 +184,75 @@ And another line of description.
 
 
 
+```yaml
+nd-block:
+  attributes:
+    sectionName: generated-with-nodoku
+```
+
+# And Yes!<br>This very page was generated with Nodoku!
+
+Check out the source code of this page at <br>[https://github.com/epanikas/nodoku-demo-page/blob/main/public/site/nodoku-landing.md](https://github.com/epanikas/nodoku-demo-page/blob/main/public/site/nodoku-landing.md)
+
+
+```yaml
+nd-block:
+  attributes:
+    sectionName: advantages-header
+```
+
+# Why you would like to give Nodoku a try
+
+```yaml
+nd-block:
+  attributes:
+    sectionName: advantages
+```
+
+# Distraction-free content-first approach
+
+![step-1](icon:react-icons/hi:HiMap "step 1")
+
+this is icon <HiOutlineMap size={40} />
+
+# Strict separation between content and presentation
+
+![step-1](icon:react-icons/hi:HiOutlineAdjustments "step 1")
+
+
+# Localizable out of the box
+
+![step-1](icon:react-icons/hi:HiOutlineAnnotation "step 1")
+
+
+# Distraction-free content-first approach
+
+![step-1](icon:react-icons/hi:HiOutlineArchive "step 1")
+
+
+# Strict separation between content and presentation
+
+![step-1](icon:react-icons/hi:HiArrowCircleDown "step 1")
+
+
+# Strict separation between content and presentation
+
+![step-1](icon:react-icons/hi:HiArrowCircleDown "step 1")
+
+
+# Strict separation between content and presentation
+
+![step-1](icon:react-icons/hi:HiArrowCircleDown "step 1")
+
+
+# Strict separation between content and presentation
+
+![step-1](icon:react-icons/hi:HiArrowCircleDown "step 1")
+
+
+# Strict separation between content and presentation
+
+![step-1](icon:react-icons/hi:HiArrowCircleDown "step 1")
 
 
 

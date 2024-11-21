@@ -1,19 +1,16 @@
 import {Flowbite, getTheme} from "flowbite-react";
 import React, {JSX} from "react";
 // import {NodokuI18n} from "nodoku-i18n";
-import {
-    contentMarkdownProvider,
-    ImageUrlProvider,
-    NdContentBlock,
-    NdPageSkin, parseMarkdownAsContent, parseYamlContentAsSkin,
-    RenderingPage,
-    RenderingPriority,
-    skinYamlProvider
-} from "nodoku-core";
+import {parseMarkdownAsContent, parseYamlContentAsSkin, RenderingPage, RenderingPriority} from "nodoku-core";
+import {ImageProvider} from "nodoku-core";
+import {NdImageProps} from "nodoku-core";
 import {nodokuComponentResolver} from "@/nodoku-component-resolver"
 import {NodokuI18n} from "nodoku-i18n";
-import OnFallbackLngTextUpdateStrategy = NodokuI18n.Simplelocalize.OnFallbackLngTextUpdateStrategy;
 import fs from "node:fs";
+import {NodokuComponents} from "nodoku-components";
+import OnFallbackLngTextUpdateStrategy = NodokuI18n.Simplelocalize.OnFallbackLngTextUpdateStrategy;
+import NdImageProvider = NodokuComponents.NdImageProvider;
+import {commonImageProvider} from "@/app/components/common-image-provider";
 // import OnFallbackLngTextUpdateStrategy = NodokuI18n.Simplelocalize.OnFallbackLngTextUpdateStrategy;
 // import LanguageDef = NodokuI18n.LanguageDef;
 // import {HomeProps} from "@/app/[lng]/page";
@@ -48,13 +45,17 @@ export const dynamic = "force-static"
 // }
 
 
-const imageUrlProvider: ImageUrlProvider = async (imageUrl: string): Promise<string> => {
-    if (imageUrl.startsWith("../")) {
-        const k = imageUrl.lastIndexOf("../")
-        return "/" + imageUrl.substring(k + "../".length, imageUrl.length);
-    }
-    return imageUrl;
-}
+// const imageProvider: ImageProvider = async (imageProps: NdImageProps): Promise<JSX.Element> => {
+//
+//     const {url, alt, imageStyle} = imageProps;
+//
+//     let convertedUrl = url;
+//     if (url.startsWith("../")) {
+//         const k = url.lastIndexOf("../")
+//         convertedUrl = "/" + url.substring(k + "../".length, url.length);
+//     }
+//     return await NdImageProvider({url: url, alt, imageStyle});
+// }
 
 export default async function Home({params}: { params: Promise<{ lng: string }> }): Promise<JSX.Element> {
 
@@ -86,7 +87,7 @@ export default async function Home({params}: { params: Promise<{ lng: string }> 
                     content={content}
                     i18nextProvider={NodokuI18n.Simplelocalize.i18nForNodoku}
                     // i18nextProvider={undefined}
-                    imageUrlProvider={imageUrlProvider}
+                    imageProvider={commonImageProvider}
                     componentResolver={nodokuComponentResolver}
                 />
             </Flowbite>

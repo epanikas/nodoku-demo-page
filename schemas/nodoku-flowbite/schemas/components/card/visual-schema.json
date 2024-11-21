@@ -11,8 +11,11 @@
     "containerStyle": {
       "$ref": "../../../../../node_modules/nodoku-core/schemas/skin-common-schema.json#/definitions/ThemeStyle"
     },
-    "imageStyle": {
+    "imageContainerStyle": {
       "$ref": "../../../../../node_modules/nodoku-core/schemas/skin-common-schema.json#/definitions/ThemeStyle"
+    },
+    "imageStyle": {
+      "$ref": "../../../../../node_modules/nodoku-core/schemas/skin-common-schema.json#/definitions/ImageStyle"
     },
     "innerContainerStyle": {
       "$ref": "../../../../../node_modules/nodoku-core/schemas/skin-common-schema.json#/definitions/ThemeStyle"

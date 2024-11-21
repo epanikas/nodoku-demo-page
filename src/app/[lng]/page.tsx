@@ -1,7 +1,7 @@
 import {Flowbite, getTheme} from "flowbite-react";
 import React, {JSX} from "react";
 import {
-    ImageUrlProvider,
+    ImageProvider,
     parseMarkdownAsContent,
     parseYamlContentAsSkin,
     RenderingPage,
@@ -11,6 +11,10 @@ import {nodokuComponentResolver} from "@/nodoku-component-resolver"
 import * as fs from "node:fs";
 import {NodokuI18n} from "nodoku-i18n";
 import OnFallbackLngTextUpdateStrategy = NodokuI18n.Simplelocalize.OnFallbackLngTextUpdateStrategy;
+import {NdImageProps} from "nodoku-core";
+import {NodokuComponents} from "nodoku-components";
+import NdImageProvider = NodokuComponents.NdImageProvider;
+import {commonImageProvider} from "@/app/components/common-image-provider";
 
 const customCarousel = {...getTheme()};
 
@@ -24,13 +28,6 @@ if (!runsOnServerSide) {
     throw new Error("in [lng]/page.tsx this config is intended on server side only");
 }
 
-const imageUrlProvider: ImageUrlProvider = async (imageUrl: string): Promise<string> => {
-    if (imageUrl.startsWith("../")) {
-        const k = imageUrl.lastIndexOf("../")
-        return "/" + imageUrl.substring(k + "../".length, imageUrl.length);
-    }
-    return imageUrl;
-}
 
 export default async function Home({params}: { params: Promise<{ lng: string }> }): Promise<JSX.Element> {
 
@@ -57,7 +54,7 @@ export default async function Home({params}: { params: Promise<{ lng: string }> 
                 skin={skin}
                 content={content}
                 i18nextProvider={NodokuI18n.Simplelocalize.i18nForNodoku}
-                imageUrlProvider={imageUrlProvider}
+                imageProvider={commonImageProvider}
                 componentResolver={nodokuComponentResolver}
             />
         </Flowbite>

@@ -18,6 +18,9 @@ rows:
         decoration: mb-10
       components:
         - mambaui/hero-one:
+            theme:
+              bgImageStyle:
+                decoration: blur-sm bg-[url('/images/design-table.jpg')]
             selector:
               attributes:
                 id: hero
@@ -27,6 +30,9 @@ rows:
         decoration: mb-10
       components:
         - mambaui/hero-two:
+            theme:
+              bgImageStyle:
+                decoration: blur-sm bg-[url('/images/design-table.jpg')]
             selector:
               attributes:
                 id: hero
@@ -53,6 +59,9 @@ rows:
         decoration: mb-10
       components:
         - mambaui/hero-left-text:
+            theme:
+              bgImageStyle:
+                decoration: blur-sm bg-[url('/images/design-table.jpg')]
             selector:
               attributes:
                 id: hero
@@ -62,6 +71,9 @@ rows:
         decoration: mb-10
       components:
         - mambaui/hero-right-text:
+            theme:
+              bgImageStyle:
+                decoration: blur-sm bg-[url('/images/design-table.jpg')]
             selector:
               attributes:
                 id: hero
@@ -81,6 +93,13 @@ rows:
         decoration: mb-10
       components:
         - flowbite/carousel:
+            themes:
+              - bgImageStyle:
+                  decoration: blur-sm bg-[url('/images/postit-board.jpg')]
+              - bgImageStyle:
+                  decoration: blur-sm bg-[url('/images/3d-view-puzzle-pieces.jpg')]
+              - bgImageStyle:
+                  decoration: blur-sm bg-[url('/images/design-table.jpg')]
             selector:
               attributes:
                 sectionName: nodoku-way
@@ -90,6 +109,13 @@ rows:
         decoration: mb-10 mx-5 gap-4
       components:
         - flowbite/card:
+            themes:
+              - bgImageStyle:
+                  decoration: blur-sm bg-[url('/images/postit-board.jpg')]
+              - bgImageStyle:
+                  decoration: blur-sm bg-[url('/images/3d-view-puzzle-pieces.jpg')]
+              - bgImageStyle:
+                  decoration: blur-sm bg-[url('/images/design-table.jpg')]
             selector:
               attributes:
                 sectionName: nodoku-way
@@ -99,6 +125,13 @@ rows:
         decoration: mb-10 mx-5 gap-4
       components:
         - flowbite/horizontal-card:
+            themes:
+              - bgImageStyle:
+                  decoration: blur-sm bg-[url('/images/postit-board.jpg')]
+              - bgImageStyle:
+                  decoration: blur-sm bg-[url('/images/3d-view-puzzle-pieces.jpg')]
+              - bgImageStyle:
+                  decoration: blur-sm bg-[url('/images/design-table.jpg')]
             selector:
               attributes:
                 sectionName: nodoku-way
@@ -109,6 +142,9 @@ rows:
             theme:
               containerStyle:
                 decoration: mb-12
+              bgImageStyle:
+                decoration: blur-sm bg-[url('/images/design-table.jpg')]
+
             selector:
               attributes:
                 id: hero

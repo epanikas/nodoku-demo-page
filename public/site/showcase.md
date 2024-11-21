@@ -261,7 +261,6 @@ nd-block:
 
 ## a content-first static site generator for landing pages
 
-![bg-image](../images/design-table.jpg)
 
 ![hero-image](../images/svg/Business_SVG.svg "hero image")
 

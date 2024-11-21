@@ -87,12 +87,67 @@ rows:
             selector:
               attributes:
                 sectionName: example-result-header
+
   - row:
       theme:
-        decoration: mt-10 mx-5 gap-5
+        decoration: mt-10 mx-5
       components:
         - mambaui/hero-left-text:
             selector:
               attributes:
                 id: product-1
+
+  - row:
+      theme:
+        decoration: mt-10 mx-5
+      components:
+        - core/typography:
+            selector:
+              attributes:
+                sectionName: generated-with-nodoku
+
+  - row:
+      theme:
+        decoration: mt-10 mx-5
+      components:
+        - core/typography:
+            selector:
+              attributes:
+                sectionName: advantages-header
+
+
+  - row:
+      maxCols: 5
+      theme:
+        rowDisplay: flex
+        decoration: mt-10 text-white
+        componentHolder:
+          decoration: p-7
+      components:
+        - flowbite/card:
+            theme:
+              containerStyle:
+                decoration: overflow-hidden
+              imageContainerStyle:
+                decoration: text-center bg-red-300 p-5
+              innerContainerStyle:
+                decoration: text-black
+              imageStyle:
+                base: object-cover
+                decoration: aspect-square rounded-full h-20
+                imageWidth: '150'
+            themes:
+              - imageContainerStyle:
+                  decoration: text-center bg-red-300 p-5
+              - imageContainerStyle:
+                  decoration: text-center bg-green-300 p-5
+              - imageContainerStyle:
+                  decoration: text-center bg-blue-300 p-5
+            selector:
+              attributes:
+                sectionName: advantages
+
+
+
+
 

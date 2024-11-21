@@ -1,6 +1,6 @@
 import React, {JSX} from "react";
 import {
-    ImageUrlProvider,
+    ImageProvider,
     parseMarkdownAsContent,
     parseYamlContentAsSkin,
     RenderingPage,
@@ -9,15 +9,16 @@ import {
 import {nodokuComponentResolver} from "@/nodoku-component-resolver"
 import ComponentPlaceholder from "@/app/components/component-placeholder";
 import fs from "node:fs";
+import {commonImageProvider} from "@/app/components/common-image-provider";
 
 
-const imageUrlProvider: ImageUrlProvider = async (imageUrl: string): Promise<string> => {
-    if (imageUrl.startsWith("../")) {
-        const k = imageUrl.lastIndexOf("../")
-        return "/" + imageUrl.substring(k + "../".length, imageUrl.length);
-    }
-    return imageUrl;
-}
+// const imageProvider: ImageProvider = async (imageUrl: string): Promise<string> => {
+//     if (imageUrl.startsWith("../")) {
+//         const k = imageUrl.lastIndexOf("../")
+//         return "/" + imageUrl.substring(k + "../".length, imageUrl.length);
+//     }
+//     return imageUrl;
+// }
 
 export default async function NodokuSampleScaledDown({params}: { params: { lng: string, mdFile: string, yamlFile: string } }): Promise<JSX.Element> {
 
@@ -42,7 +43,7 @@ export default async function NodokuSampleScaledDown({params}: { params: { lng: 
                         content={content}
                         componentResolver={nodokuComponentResolver}
                         skin={skin}
-                        imageUrlProvider={imageUrlProvider}
+                        imageProvider={commonImageProvider}
                         // i18nextProvider={NodokuI18n.Simplelocalize.i18nForNodoku}
                         i18nextProvider={undefined}
                     />
