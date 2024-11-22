@@ -108,16 +108,19 @@ rows:
 
   - row:
       theme:
-        decoration: mt-10 mx-5
+        decoration: m-10 mx-5
       components:
         - core/typography:
+            theme:
+              contentContainerStyle:
+                decoration: pb-5
             selector:
               attributes:
                 sectionName: advantages-header
 
 
   - row:
-      maxCols: 5
+      maxCols: 4
       theme:
         rowDisplay: flex
         decoration: mt-10 text-white
@@ -127,11 +130,13 @@ rows:
         - flowbite/card:
             theme:
               containerStyle:
-                decoration: overflow-hidden
+                decoration: overflow-hidden rounded-t-lg
+              bgColorStyle:
+                decoration: opacity-90 bg-gray-100 dark:bg-gray-900
               imageContainerStyle:
                 decoration: text-center bg-red-300 p-5
               innerContainerStyle:
-                decoration: text-black
+                decoration: text-black text-lg dark:text-white leading-relaxed
               imageStyle:
                 base: object-cover
                 decoration: aspect-square rounded-full h-20
@@ -140,9 +145,17 @@ rows:
               - imageContainerStyle:
                   decoration: text-center bg-red-300 p-5
               - imageContainerStyle:
-                  decoration: text-center bg-green-300 p-5
+                  decoration: text-center bg-orange-300 p-5
               - imageContainerStyle:
-                  decoration: text-center bg-blue-300 p-5
+                  decoration: text-center bg-cyan-300 p-5
+              - imageContainerStyle:
+                  decoration: text-center bg-lime-300 p-5
+              - imageContainerStyle:
+                  decoration: text-center bg-violet-300 p-5
+              - imageContainerStyle:
+                  decoration: text-center bg-pink-300 p-5
+              - imageContainerStyle:
+                  decoration: text-center bg-sky-300 p-5
             selector:
               attributes:
                 sectionName: advantages
