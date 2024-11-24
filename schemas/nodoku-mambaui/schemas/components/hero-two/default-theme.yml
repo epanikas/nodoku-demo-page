@@ -28,3 +28,21 @@ footerStyle:
 codeHighlightTheme:
     hljsLightTheme: a11y-light
     hljsDarkTheme: a11y-dark
+    lightDisplay: light:inline-block
+    darkDisplay: dark:inline-block
+    codeContainer:
+        base: text-center w-full
+        decoration: ''
+    preContainer:
+        base: text-left w-full
+        decoration: border-2 border-gray-200
+    pre:
+        base: w-full overflow-scroll
+        decoration: ''
+listTheme:
+    listStyle:
+        base: inline-block list-disc space-y-1 list-outside
+        decoration: ''
+    listItemStyle:
+        base: ml-4,
+        decoration: ''

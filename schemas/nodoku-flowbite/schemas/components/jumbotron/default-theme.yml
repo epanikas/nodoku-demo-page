@@ -23,5 +23,23 @@ footerButtonStyle:
     base: inline-flex justify-center items-center py-3 px-5 sm:ms-4 text-base text-center focus:ring-4 focus:ring-gray-400
     decoration: border-black dark:border-white font-medium text-black dark:text-white rounded-lg border hover:text-gray-900 hover:bg-gray-100
 codeHighlightTheme:
-    light: a11y-light
-    dark: a11y-dark
+    hljsLightTheme: a11y-light
+    hljsDarkTheme: a11y-dark
+    lightDisplay: light:inline-block
+    darkDisplay: dark:inline-block
+    codeContainer:
+        base: text-center w-full
+        decoration: ''
+    preContainer:
+        base: text-left w-full
+        decoration: border-2 border-gray-200
+    pre:
+        base: w-full overflow-scroll
+        decoration: ''
+listTheme:
+    listStyle:
+        base: inline-block list-disc space-y-1 list-outside
+        decoration: ''
+    listItemStyle:
+        base: ml-4,
+        decoration: ''

@@ -2,6 +2,12 @@
 
 global:
   defaultTheme: light
+  theme:
+    paragraphStyle:
+      paragraphContainer:
+        base: text-lg leading-relaxed
+      paragraphStyle:
+        base: mb-4
   components:
     core/typography:
       theme:
@@ -16,6 +22,12 @@ rows:
   - row:
       components:
         - mambaui/hero-one:
+            theme:
+              paragraphStyle:
+                paragraphContainer:
+                  base: text-3xl
+              subTitleStyle:
+                decoration: mb-5
             selector:
               attributes:
                 sectionName: head-hero
@@ -67,12 +79,16 @@ rows:
             theme:
               innerContainerStyle:
                 decoration: p-4 w-full
+              paragraphStyle:
+                paragraphContainer:
+                  base: w-full
               codeHighlightTheme:
                 lightDisplay: block
                 darkDisplay: dark:block
                 codeContainer:
                   decoration: text-xl
-
+                pre:
+                  base: w-full overflow-x-auto
               imageStyle:
                 decoration: aspect-narrow grayscale
             selector:
@@ -123,7 +139,7 @@ rows:
       maxCols: 4
       theme:
         rowDisplay: flex
-        decoration: mt-10 text-white
+        decoration: mt-10 text-black dark:text-white
         componentHolder:
           decoration: p-7
       components:
@@ -133,29 +149,27 @@ rows:
                 decoration: overflow-hidden rounded-t-lg
               bgColorStyle:
                 decoration: opacity-90 bg-gray-100 dark:bg-gray-900
-              imageContainerStyle:
-                decoration: text-center bg-red-300 p-5
               innerContainerStyle:
-                decoration: text-black text-lg dark:text-white leading-relaxed
+                decoration: text-lg text-black dark:text-white leading-relaxed
               imageStyle:
                 base: object-cover
                 decoration: aspect-square rounded-full h-20
                 imageWidth: '150'
             themes:
               - imageContainerStyle:
-                  decoration: text-center bg-red-300 p-5
+                  decoration: text-center dark:bg-red-700 bg-red-300 p-5
               - imageContainerStyle:
-                  decoration: text-center bg-orange-300 p-5
+                  decoration: text-center dark:bg-orange-700 bg-orange-300 p-5
               - imageContainerStyle:
-                  decoration: text-center bg-cyan-300 p-5
+                  decoration: text-center dark:bg-cyan-700 bg-cyan-300 p-5
               - imageContainerStyle:
-                  decoration: text-center bg-lime-300 p-5
+                  decoration: text-center dark:bg-lime-700 bg-lime-300 p-5
               - imageContainerStyle:
-                  decoration: text-center bg-violet-300 p-5
+                  decoration: text-center dark:bg-violet-700 bg-violet-300 p-5
               - imageContainerStyle:
-                  decoration: text-center bg-pink-300 p-5
+                  decoration: text-center dark:bg-pink-700 bg-pink-300 p-5
               - imageContainerStyle:
-                  decoration: text-center bg-sky-300 p-5
+                  decoration: text-center dark:bg-sky-700 bg-sky-300 p-5
             selector:
               attributes:
                 sectionName: advantages

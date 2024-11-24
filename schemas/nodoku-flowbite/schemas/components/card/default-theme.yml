@@ -29,5 +29,23 @@ footerButtonStyle:
     base: inline-flex items-center text-center focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800
     decoration: px-3 py-2 text-sm font-medium text-white bg-blue-700 hover:bg-blue-800 rounded-lg dark:bg-blue-600 dark:hover:bg-blue-700
 codeHighlightTheme:
-    light: a11y-light
-    dark: a11y-dark
+    hljsLightTheme: a11y-light
+    hljsDarkTheme: a11y-dark
+    lightDisplay: light:inline-block
+    darkDisplay: dark:inline-block
+    codeContainer:
+        base: text-center w-full
+        decoration: ''
+    preContainer:
+        base: text-left w-full
+        decoration: border-2 border-gray-200
+    pre:
+        base: w-full overflow-scroll
+        decoration: ''
+listTheme:
+    listStyle:
+        base: inline-block list-disc space-y-1 list-outside
+        decoration: ''
+    listItemStyle:
+        base: ml-4,
+        decoration: ''

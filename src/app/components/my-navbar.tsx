@@ -48,7 +48,7 @@ export default function MyNavbar(props: NavbarProps) {
 
     return (
 
-        <Navbar fluid rounded className={"bg-gray-100"}>
+        <Navbar fluid rounded className={"bg-gray-100 fixed top-0 left-0 right-0 z-40"}>
             <NavbarBrand href="https://flowbite-react.com">
                 <HiOutlineMap size={40} className={"dark:text-white"}/>
                 <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">Nodoku</span>

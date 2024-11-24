@@ -21,7 +21,7 @@
       "$ref": "../../../../../node_modules/nodoku-core/schemas/skin-common-schema.json#/definitions/ThemeStyle"
     },
     "paragraphStyle": {
-      "$ref": "../../../../../node_modules/nodoku-core/schemas/skin-common-schema.json#/definitions/ThemeStyle"
+      "$ref": "../../../../../node_modules/nodoku-components/schemas/components/paragraphs/visual-schema.json"
     },
     "footerStyle": {
       "$ref": "../../../../../node_modules/nodoku-core/schemas/skin-common-schema.json#/definitions/ThemeStyle"

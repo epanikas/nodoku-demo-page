@@ -190,7 +190,7 @@ nd-block:
     sectionName: generated-with-nodoku
 ```
 
-# And Yes!<br>This very page was generated with Nodoku!
+# And Yes!<br><br>This very page was generated with Nodoku!
 
 Check out the source code of this page at <br>[https://github.com/epanikas/nodoku-demo-page](https://github.com/epanikas/nodoku-demo-page)
 
@@ -290,7 +290,7 @@ This allows not only for the lightning fast page loading, but also for **_Search
 
 No Javascript code is required to be executed prior to page scanning by the web search engine.
 
-Consequently, the whole page naturally becomes SEO friendly.
+Consequently, the whole page naturally becomes **_SEO friendly_**.
 
 
 
