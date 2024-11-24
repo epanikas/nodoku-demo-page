@@ -66,7 +66,7 @@ export default async function RootLayout({ children, params }: Readonly<{ childr
 
     return (
         <html lang={lng} dir={lng == "il" ? "rtl" : dir(lng)}>
-            <body className={"bg-white dark:bg-black text-black dark:text-white"}>
+            <body className={"bg-white dark:bg-black text-black dark:text-white"} style={{paddingTop: "60px"}}>
                 <MyNavbar languages={await NodokuI18n.Simplelocalize.allLanguages()} selectedLng={lng} menu={menu(lng)}/>
                 {children}
                 <script src="/scripts/crop-height-50-percents.js" type="text/javascript"/>

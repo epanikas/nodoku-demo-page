@@ -1,20 +1,11 @@
 import {Flowbite, getTheme} from "flowbite-react";
 import React, {JSX} from "react";
-import {
-    ImageProvider,
-    parseMarkdownAsContent,
-    parseYamlContentAsSkin,
-    RenderingPage,
-    RenderingPriority
-} from "nodoku-core";
+import {parseMarkdownAsContent, parseYamlContentAsSkin, RenderingPage, RenderingPriority} from "nodoku-core";
 import {nodokuComponentResolver} from "@/nodoku-component-resolver"
 import * as fs from "node:fs";
 import {NodokuI18n} from "nodoku-i18n";
-import OnFallbackLngTextUpdateStrategy = NodokuI18n.Simplelocalize.OnFallbackLngTextUpdateStrategy;
-import {NdImageProps} from "nodoku-core";
-import {NodokuComponents} from "nodoku-components";
-import NdImageProvider = NodokuComponents.NdImageProvider;
 import {commonImageProvider} from "@/app/components/common-image-provider";
+import OnFallbackLngTextUpdateStrategy = NodokuI18n.Simplelocalize.OnFallbackLngTextUpdateStrategy;
 
 const customCarousel = {...getTheme()};
 

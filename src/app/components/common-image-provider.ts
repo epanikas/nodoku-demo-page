@@ -13,5 +13,5 @@ export const commonImageProvider: ImageProvider = async (imageProps: NdImageProp
         const k = url.lastIndexOf("../")
         convertedUrl = "/" + url.substring(k + "../".length, url.length);
     }
-    return await NdImageProvider({url: url, alt, imageStyle});
+    return await NdImageProvider({url: convertedUrl, alt, imageStyle});
 }

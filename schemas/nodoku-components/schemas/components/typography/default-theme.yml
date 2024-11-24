@@ -15,3 +15,5 @@ preContainer:
 codeHighlightTheme:
   hljsLightTheme: a11y-light
   hljsDarkTheme: a11y-dark
+  pre:
+    base: not-prose

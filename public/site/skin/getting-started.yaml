@@ -1,0 +1,21 @@
+# yaml-language-server: $schema=../../../schemas/visual-schema.json
+
+global:
+  defaultTheme: light
+
+rows:
+  - row:
+      maxCols: 1
+      theme:
+        componentHolder:
+          decoration: mt-5
+      components:
+        - core/typography:
+            theme:
+              contentContainerStyle:
+                base: prose prose-amber dark:prose-invert
+              containerStyle:
+                decoration: container mx-auto
+            selector:
+              attributes:
+                sectionName: getting-started
