@@ -4,6 +4,8 @@ import {dir} from 'i18next'
 import MyNavbar, {NavbarMenuItem} from "@/app/components/my-navbar";
 import React from "react";
 import {NodokuI18n} from "nodoku-i18n";
+import {i18nStore} from "@/app/components/nodoku-i18n-config";
+
 
 export const metadata: Metadata = {
     title: "Nodoku demo page",
@@ -15,11 +17,15 @@ if (!runsOnServerSide) {
     throw new Error("this config is intended on server side only");
 }
 
+// const store = await geti18nstore();
+
 export async function generateStaticParams(): Promise<{lng: string}[]> {
-    const params = (await NodokuI18n.Simplelocalize.allLanguages())
-        .map((l: NodokuI18n.LanguageDef) => ({lng: l.key}));
+
+
+    const params: {lng: string}[] = (await i18nStore.allLanguages())
+        .map((l: NodokuI18n.LanguageDef): {lng: string} => ({lng: l.key}));
     // const params = [{lng: "en"}]
-    console.log("in generateStaticParams", params.map(p => p.lng).join(", "))
+    console.log("in generateStaticParams", params.map((p: {lng: string}) => p.lng).join(", "))
     return params;
 }
 
@@ -54,7 +60,7 @@ function menu(lng: string): NavbarMenuItem[] {
     ];
 }
 
-export const dynamic = "force-static";
+// export const dynamic = "force-static";
 
 export default async function RootLayout({ children, params }: Readonly<{ children: React.ReactNode, params: Promise<{lng: string}> }>) {
 
@@ -67,7 +73,7 @@ export default async function RootLayout({ children, params }: Readonly<{ childr
     return (
         <html lang={lng} dir={lng == "il" ? "rtl" : dir(lng)}>
             <body className={"bg-white dark:bg-black text-black dark:text-white"} style={{paddingTop: "60px"}}>
-                <MyNavbar languages={await NodokuI18n.Simplelocalize.allLanguages()} selectedLng={lng} menu={menu(lng)}/>
+                <MyNavbar languages={await i18nStore.allLanguages()} selectedLng={lng} menu={menu(lng)}/>
                 {children}
                 <script src="/scripts/crop-height-50-percents.js" type="text/javascript"/>
             </body>

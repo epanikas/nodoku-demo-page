@@ -1,3 +1,6 @@
+# yaml-language-server: $schema=./visual-schema.json
+
+
 bgImageStyle:
     base: -z-20 bg-cover bg-no-repeat bg-center
     decoration: blur-sm
@@ -28,10 +31,10 @@ subTitleStyle:
 paragraphStyle:
     base: mt-4 mb-2 text-lg
     decoration: ''
-footerContainerStyle:
+ctaContainerStyle:
     base: mt-5 flex flex-col space-y-4 sm:items-center sm:justify-center sm:flex-row sm:space-y-0 sm:space-x-4 lg:justify-start
     decoration: ''
-footerStyle:
+ctaStyle:
     base: px-8 py-3 text-lg font-semibold rounded bg-violet-400 dark:bg-violet-600 text-gray-900 dark:text-gray-50
     decoration: ''
 codeHighlightTheme:

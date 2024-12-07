@@ -11,6 +11,9 @@
     "containerStyle": {
       "$ref": "../../../../../node_modules/nodoku-core/schemas/skin-common-schema.json#/definitions/ThemeStyle"
     },
+    "imageContainerStyle": {
+      "$ref": "../../../../../node_modules/nodoku-core/schemas/skin-common-schema.json#/definitions/ImageStyle"
+    },
     "imageStyle": {
       "$ref": "../../../../../node_modules/nodoku-core/schemas/skin-common-schema.json#/definitions/ImageStyle"
     },
@@ -26,10 +29,10 @@
     "paragraphStyle": {
       "$ref": "../../../../../node_modules/nodoku-components/schemas/components/paragraphs/visual-schema.json"
     },
-    "footerContainerStyle": {
+    "ctaContainerStyle": {
       "$ref": "../../../../../node_modules/nodoku-core/schemas/skin-common-schema.json#/definitions/ThemeStyle"
     },
-    "footerStyle": {
+    "ctaButtonStyle": {
       "$ref": "../../../../../node_modules/nodoku-core/schemas/skin-common-schema.json#/definitions/ThemeStyle"
     },
     "codeHighlightTheme": {

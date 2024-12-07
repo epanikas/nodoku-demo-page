@@ -1,4 +1,4 @@
-import React from "react";
+import {JSX} from "react";
 // import {allLanguages} from "@/app/i18n/server-i18n-conf";
 // import LanguageDef from "@/app/i18n/language-def";
 import Content from './mdx-page.mdx';

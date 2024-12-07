@@ -1,3 +1,5 @@
+# yaml-language-server: $schema=./visual-schema.json
+
 containerStyle:
 #    base: flex flex-col items-center md:flex-row md:max-w-xl
     base: flex flex-col items-center md:flex-row h-full overflow-hidden
@@ -26,10 +28,10 @@ subTitleStyle:
 paragraphStyle:
     base: mb-3 font-normal
     decoration: ''
-footerContainerStyle:
+ctaContainerStyle:
     base: absolute bottom-0 right-0
     decoration: p-4
-footerButtonStyle:
+ctaButtonStyle:
     base: inline-flex items-center text-center focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800
     decoration: px-3 py-2 text-sm font-medium text-white bg-blue-700 hover:bg-blue-800 rounded-lg dark:bg-blue-600 dark:hover:bg-blue-700
 codeHighlightTheme:

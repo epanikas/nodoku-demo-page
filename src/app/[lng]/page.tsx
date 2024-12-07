@@ -1,11 +1,11 @@
+import * as fs from "node:fs";
 import {Flowbite, getTheme} from "flowbite-react";
 import React, {JSX} from "react";
 import {parseMarkdownAsContent, parseYamlContentAsSkin, RenderingPage, RenderingPriority} from "nodoku-core";
-import {nodokuComponentResolver} from "@/nodoku-component-resolver"
-import * as fs from "node:fs";
 import {NodokuI18n} from "nodoku-i18n";
+import {nodokuComponentResolver} from "@/nodoku-component-resolver"
 import {commonImageProvider} from "@/app/components/common-image-provider";
-import OnFallbackLngTextUpdateStrategy = NodokuI18n.Simplelocalize.OnFallbackLngTextUpdateStrategy;
+import {i18nStore} from "@/app/components/nodoku-i18n-config";
 
 const customCarousel = {...getTheme()};
 
@@ -34,17 +34,21 @@ export default async function Home({params}: { params: Promise<{ lng: string }> 
     // console.log("JSON.stringify(content)", JSON.stringify(content))
     // console.log("JSON.stringify(content)", JSON.stringify(content))
 
-    await NodokuI18n.Simplelocalize.initI18nStore( ["nodoku-landing"/*, "docs", "faq"*/], 'en', false,
-            OnFallbackLngTextUpdateStrategy.reset_reviewed_status)
+    // await NodokuI18n.Simplelocalize.initI18nStore( ["nodoku-landing"/*, "docs", "faq"*/], 'en', "auto", "auto",
+    //         OnFallbackLngTextUpdateStrategy.reset_reviewed_status)
+
+    if (process.env.NODE_ENV === "development") {
+        await i18nStore.reloadResources();
+    }
 
     return (
         <Flowbite theme={{theme: customCarousel}}>
             <RenderingPage
                 lng={lng}
-                renderingPriority={RenderingPriority.content_first}
+                renderingPriority={RenderingPriority.skin_first}
                 skin={skin}
                 content={content}
-                i18nextProvider={NodokuI18n.Simplelocalize.i18nForNodoku}
+                i18nextProvider={NodokuI18n.Simplelocalize.i18nForNodoku(i18nStore)}
                 imageProvider={commonImageProvider}
                 componentResolver={nodokuComponentResolver}
             />

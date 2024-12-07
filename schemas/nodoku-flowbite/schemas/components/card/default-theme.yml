@@ -1,3 +1,5 @@
+# yaml-language-server: $schema=./visual-schema.json
+
 containerStyle:
     base: w-full pb-10 h-full
     decoration: border rounded-lg shadow border-gray-200 dark:border-gray-700
@@ -12,7 +14,7 @@ imageStyle:
     decoration: aspect-video
 innerContainerStyle:
     base: p-5
-    decoration:
+    decoration: ''
 titleStyle:
     base: mb-2 text-3xl font-bold tracking-tight
     decoration: ''
@@ -22,10 +24,10 @@ subTitleStyle:
 paragraphStyle:
     base: mb-3 font-normal
     decoration: ''
-footerContainerStyle:
+ctaContainerStyle:
     base: absolute bottom-0 right-0
     decoration: p-3
-footerButtonStyle:
+ctaButtonStyle:
     base: inline-flex items-center text-center focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800
     decoration: px-3 py-2 text-sm font-medium text-white bg-blue-700 hover:bg-blue-800 rounded-lg dark:bg-blue-600 dark:hover:bg-blue-700
 codeHighlightTheme:

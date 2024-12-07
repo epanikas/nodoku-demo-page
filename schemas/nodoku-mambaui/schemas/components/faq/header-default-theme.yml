@@ -1,3 +1,6 @@
+# yaml-language-server: $schema=./visual-schema.json
+
+
 bgImageStyle:
     base: ''
     decoration: ''

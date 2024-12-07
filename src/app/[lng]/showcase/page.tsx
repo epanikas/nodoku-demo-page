@@ -5,17 +5,19 @@ import {parseMarkdownAsContent, parseYamlContentAsSkin, RenderingPage, Rendering
 import {ImageProvider} from "nodoku-core";
 import {NdImageProps} from "nodoku-core";
 import {nodokuComponentResolver} from "@/nodoku-component-resolver"
-import {NodokuI18n} from "nodoku-i18n";
+// import {NodokuI18n} from "nodoku-i18n";
 import fs from "node:fs";
 import {NodokuComponents} from "nodoku-components";
-import OnFallbackLngTextUpdateStrategy = NodokuI18n.Simplelocalize.OnFallbackLngTextUpdateStrategy;
-import NdImageProvider = NodokuComponents.NdImageProvider;
+// import OnFallbackLngTextUpdateStrategy = NodokuI18n.Simplelocalize.OnFallbackLngTextUpdateStrategy;
+// import NdImageProvider = NodokuComponents.NdImageProvider;
 import {commonImageProvider} from "@/app/components/common-image-provider";
 // import OnFallbackLngTextUpdateStrategy = NodokuI18n.Simplelocalize.OnFallbackLngTextUpdateStrategy;
 // import LanguageDef = NodokuI18n.LanguageDef;
 // import {HomeProps} from "@/app/[lng]/page";
 // import {genStaticParamsWithSkinAndContent} from "@/app/utils/common-static-params";
 
+import {i18nStore} from "@/app/components/nodoku-i18n-config";
+import {NodokuI18n} from "nodoku-i18n";
 
 
 const customCarousel = {...getTheme()};
@@ -68,25 +70,28 @@ export default async function Home({params}: { params: Promise<{ lng: string }> 
     // const skin: NdPageSkin = new NdPageSkin(); //await skinYamlProvider("http://localhost:3001/site/skin/showcase.yaml")
     // const content: NdContentBlock[] = []; //await contentMarkdownProvider("http://localhost:3001/site/showcase.md", "en", "showcase")
     const skin = parseYamlContentAsSkin(fs.readFileSync("./public/site/skin/showcase.yaml").toString());
-    const content = parseMarkdownAsContent(fs.readFileSync("./public/site/showcase.md").toString(), "en", "showcase")
+    const content = parseMarkdownAsContent(fs.readFileSync("./public/site/nodoku-landing.md").toString(), "en", "nodoku-landing")
 
     // console.log("JSON.stringify(content)", JSON.stringify(content.filter(b => b.id.startsWith("sectionName=nodoku-way")).map(b => b.title)))
     // console.log("JSON.stringify(content)", JSON.stringify(content.filter(b => b.id.startsWith("sectionName=nodoku-way")).map(b => b.subTitle)))
 
-    await NodokuI18n.Simplelocalize.initI18nStore( ["showcase"/*, "docs", "faq"*/], 'en', false,
-        OnFallbackLngTextUpdateStrategy.reset_reviewed_status)
+    // await NodokuI18n.Simplelocalize.initI18nStore( ["showcase"/*, "docs", "faq"*/], 'en', "auto", "auto",
+    //     OnFallbackLngTextUpdateStrategy.reset_reviewed_status)
 
         // console.log("=============== content ", JSON.stringify(skin))
 
-        return (
+    if (process.env.NODE_ENV === "development") {
+        await i18nStore.reloadResources();
+    }
+
+    return (
             <Flowbite theme={{theme: customCarousel}}>
                 <RenderingPage
                     lng={lng}
                     renderingPriority={RenderingPriority.skin_first}
                     skin={skin}
                     content={content}
-                    i18nextProvider={NodokuI18n.Simplelocalize.i18nForNodoku}
-                    // i18nextProvider={undefined}
+                    i18nextProvider={NodokuI18n.Simplelocalize.i18nForNodoku(i18nStore)}
                     imageProvider={commonImageProvider}
                     componentResolver={nodokuComponentResolver}
                 />

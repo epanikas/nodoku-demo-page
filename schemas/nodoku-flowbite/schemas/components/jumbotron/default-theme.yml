@@ -1,3 +1,5 @@
+# yaml-language-server: $schema=./visual-schema.json
+
 containerStyle:
     base: py-8 px-4 text-center lg:py-16
     decoration: ''
@@ -16,10 +18,10 @@ subTitleStyle:
 paragraphStyle:
     base: mb-4 lg:text-2xl font-normal md:text-xl sm:px-16 lg:px-48
     decoration: ''
-footerStyle:
+ctaContainerStyle:
     base: flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0
     decoration: ''
-footerButtonStyle:
+ctaButtonStyle:
     base: inline-flex justify-center items-center py-3 px-5 sm:ms-4 text-base text-center focus:ring-4 focus:ring-gray-400
     decoration: border-black dark:border-white font-medium text-black dark:text-white rounded-lg border hover:text-gray-900 hover:bg-gray-100
 codeHighlightTheme:
