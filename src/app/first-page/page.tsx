@@ -2,7 +2,12 @@ import React, {JSX} from "react";
 import {parseMarkdownAsContent, parseYamlContentAsSkin, RenderingPage, RenderingPriority} from "nodoku-core";
 import {nodokuComponentResolver} from "@/nodoku-component-resolver"
 import * as fs from "node:fs";
-import {commonImageProvider} from "@/app/components/common-image-provider";
+import {commonImageProvider} from "@/app/components/common-provider";
+import {commonHtmlSanitizer} from "@/app/components/common-provider";
+import {NodokuI18n} from "nodoku-i18n";
+import {i18nStore} from "@/app/components/nodoku-i18n-config";
+import {nameToIconConverters} from "@/app/components/common-provider";
+import {NodokuIcons} from "nodoku-icons";
 
 
 export default async function Home(): Promise<JSX.Element> {
@@ -16,9 +21,11 @@ export default async function Home(): Promise<JSX.Element> {
             renderingPriority={RenderingPriority.content_first}
             skin={skin}
             content={content}
-            i18nextProvider={undefined}
-            imageProvider={commonImageProvider}
             componentResolver={nodokuComponentResolver}
+            imageProvider={commonImageProvider}
+            htmlSanitizer={commonHtmlSanitizer}
+            i18nextProvider={NodokuI18n.Simplelocalize.i18nForNodoku(i18nStore)}
+            i18nextPostProcessor={NodokuIcons.iconTextPostProcessorFactory(nameToIconConverters)}
         />
     );
 }

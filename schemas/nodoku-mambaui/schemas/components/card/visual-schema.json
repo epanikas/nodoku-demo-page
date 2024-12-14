@@ -29,8 +29,11 @@
     "ctaContainerStyle": {
       "$ref": "../../../../../node_modules/nodoku-core/schemas/skin-common-schema.json#/definitions/ThemeStyle"
     },
-    "ctaStyle": {
-      "$ref": "../../../../../node_modules/nodoku-core/schemas/skin-common-schema.json#/definitions/ThemeStyle"
+    "ctaButtonStyle": {
+      "type": "array",
+      "items": {
+        "$ref": "../../../../../node_modules/nodoku-core/schemas/skin-common-schema.json#/definitions/ThemeStyle"
+      }
     },
     "codeHighlightTheme": {
       "$ref": "../../../../../node_modules/nodoku-components/schemas/components/highlighted-code/visual-schema.json"

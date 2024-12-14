@@ -1,0 +1,39 @@
+# yaml-language-server: $schema=./visual-schema.json
+
+containerStyle:
+    base: px-4 divide-y dark:bg-gray-800 bg-gray-100 dark:text-gray-100 text-gray-800
+    decoration: ''
+innerContainerStyle:
+    base: container flex flex-col justify-between py-10 mx-auto space-y-8 lg:flex-row lg:space-y-0
+    decoration: ''
+contentContainerStyle:
+    base: grid grid-cols-2 text-sm gap-x-3 gap-y-8 lg:w-2/3 sm:grid-cols-4
+    decoration: ''
+imageContainerStyle:
+    base: flex items-center justify-center w-12 h-12 rounded-full bg-violet-400 dark:bg-violet-600
+    decoration: ''
+imageStyle:
+    base: ''
+    decoration: ''
+brandNameStyle:
+    base: self-center text-2xl font-semibold
+    decoration: ''
+sectionTitleStyle:
+    base: tracking-wide uppercase dark:text-gray-50 text-gray-900
+    decoration: ''
+copyrightNoticeStyle:
+    base: py-6 text-sm text-center text-gray-400 dark:text-gray-600
+    decoration: ''
+subTitleStyle:
+    base: ''
+    decoration: ''
+paragraphStyle:
+    base: ''
+    decoration: ''
+listTheme:
+    listStyle:
+        base: ''
+        decoration: ''
+    listItemStyle:
+        base: ''
+        decoration: ''

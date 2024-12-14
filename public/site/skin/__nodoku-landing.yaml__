@@ -152,7 +152,8 @@ rows:
               innerContainerStyle:
                 decoration: text-lg text-black dark:text-white leading-relaxed
               imageStyle:
-                base: inline-block
+                base: object-cover
+                decoration: aspect-square rounded-full h-20
                 imageWidth: '150'
             themes:
               - imageContainerStyle:
@@ -172,18 +173,6 @@ rows:
             selector:
               attributes:
                 sectionName: advantages
-
-
-
-
-
-  - row:
-      maxCols: 1
-      components:
-        - mambaui/footer-four:
-            selector:
-              attributes:
-                sectionName: footer
 
 
 

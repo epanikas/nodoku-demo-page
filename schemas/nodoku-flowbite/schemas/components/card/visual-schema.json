@@ -33,14 +33,18 @@
       "$ref": "../../../../../node_modules/nodoku-core/schemas/skin-common-schema.json#/definitions/ThemeStyle"
     },
     "ctaButtonStyle": {
-      "$ref": "../../../../../node_modules/nodoku-core/schemas/skin-common-schema.json#/definitions/ThemeStyle"
+      "type": "array",
+      "items": {
+        "$ref": "../../../../../node_modules/nodoku-core/schemas/skin-common-schema.json#/definitions/ThemeStyle"
+      }
     },
     "codeHighlightTheme": {
       "$ref": "../../../../../node_modules/nodoku-components/schemas/components/highlighted-code/visual-schema.json"
     },
     "listTheme": {
       "$ref": "../../../../../node_modules/nodoku-components/schemas/components/list-comp/visual-schema.json"
-    }
+    },
+    "additionalProperties": false
   },
   "additionalProperties": false
 }

@@ -14,7 +14,7 @@ const apiKey: string = process.env.SIMPLELOCALIZE_API_KEY || "n-a";
 console.log("<<< started initializing store")
 
 const saveMissing = true;
-const loadImmediately: boolean = process.env.NODE_ENV === "development"
+const loadOnInit: boolean = process.env.NODE_ENV === "development"
 const translationFetchMode: "api" | "cdn" = process.env.NODE_ENV === "development" ? "api" : "cdn"
 const onFallbackLngTextUpdateStrategy = OnFallbackLngTextUpdateStrategy.reset_reviewed_status;
 const onMissingKeyStrategy: OnMissingKeyStrategy = process.env.NODE_ENV === "development" ? OnMissingKeyStrategy.upload : OnMissingKeyStrategy.save_to_file;
@@ -22,6 +22,6 @@ const onMissingKeyStrategy: OnMissingKeyStrategy = process.env.NODE_ENV === "dev
 
 export const i18nStore: NodokuI18n.I18nStore = await NodokuI18n.Simplelocalize.initI18nStore(apiKey, projectToken, "all",
     ["nodoku-landing", "getting-started", "showcase"], 'en', translationFetchMode,
-    saveMissing, loadImmediately, onMissingKeyStrategy, onFallbackLngTextUpdateStrategy);
+    saveMissing, loadOnInit, onMissingKeyStrategy, onFallbackLngTextUpdateStrategy);
 
 console.log(">>> ended initializing store")

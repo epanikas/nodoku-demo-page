@@ -346,6 +346,32 @@
                     ],
                     "additionalItems": false,
                     "additionalProperties": false
+                },
+
+                "mambaui/footer-four": {
+                    "type": "object",
+                    "properties": {
+                        "selector": {
+                            "$ref": "../node_modules/nodoku-core/schemas/skin-common-schema.json#/definitions/Selector"
+                        },
+                        "theme": {
+                            "$ref": "./nodoku-mambaui/schemas/components/footer-four/visual-schema.json",
+                            "additionalProperties": false
+                        },
+                        "themes": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "./nodoku-mambaui/schemas/components/footer-four/visual-schema.json",
+                                "additionalProperties": false
+                            },
+                            "additionalItems": false
+                        }
+                    },
+                    "required": [
+                        "selector"
+                    ],
+                    "additionalItems": false,
+                    "additionalProperties": false
                 }
             },
             "additionalProperties": false
@@ -417,6 +443,10 @@
                         {
                             "$ref": "./nodoku-mambaui/schemas/components/faq/header-visual-schema.json",
                             "additionalProperties": false
+                        },
+                        {
+                            "$ref": "./nodoku-mambaui/schemas/components/footer-four/visual-schema.json",
+                            "additionalProperties": false
                         }
                     ],
                     "additionalProperties": false
@@ -471,6 +501,10 @@
                             },
                             {
                                 "$ref": "./nodoku-mambaui/schemas/components/faq/header-visual-schema.json",
+                                "additionalProperties": false
+                            },
+                            {
+                                "$ref": "./nodoku-mambaui/schemas/components/footer-four/visual-schema.json",
                                 "additionalProperties": false
                             }
                         ],
@@ -716,6 +750,26 @@
                                     "type": "array",
                                     "items": {
                                         "$ref": "./nodoku-mambaui/schemas/components/faq/header-visual-schema.json",
+                                        "additionalProperties": false
+                                    },
+                                    "additionalItems": false
+                                }
+                            },
+                            "additionalItems": false,
+                            "additionalProperties": false
+                        },
+
+                        "mambaui/footer-four": {
+                            "type": "object",
+                            "properties": {
+                                "theme": {
+                                    "$ref": "./nodoku-mambaui/schemas/components/footer-four/visual-schema.json",
+                                    "additionalProperties": false
+                                },
+                                "themes": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "./nodoku-mambaui/schemas/components/footer-four/visual-schema.json",
                                         "additionalProperties": false
                                     },
                                     "additionalItems": false

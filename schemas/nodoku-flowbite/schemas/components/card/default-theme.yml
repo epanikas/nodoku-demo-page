@@ -25,11 +25,11 @@ paragraphStyle:
     base: mb-3 font-normal
     decoration: ''
 ctaContainerStyle:
-    base: absolute bottom-0 right-0
+    base: absolute bottom-0 right-0 flex flex-row
     decoration: p-3
 ctaButtonStyle:
-    base: inline-flex items-center text-center focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800
-    decoration: px-3 py-2 text-sm font-medium text-white bg-blue-700 hover:bg-blue-800 rounded-lg dark:bg-blue-600 dark:hover:bg-blue-700
+    - base: flex inline-flex items-center text-center nowrap focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800
+      decoration: m-2 px-3 py-2 text-sm font-medium text-white bg-blue-700 hover:bg-blue-800 rounded-lg dark:bg-blue-600 dark:hover:bg-blue-700
 codeHighlightTheme:
     hljsLightTheme: a11y-light
     hljsDarkTheme: a11y-dark

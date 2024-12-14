@@ -32,8 +32,8 @@ ctaContainerStyle:
     base: absolute bottom-0 right-0
     decoration: p-4
 ctaButtonStyle:
-    base: inline-flex items-center text-center focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800
-    decoration: px-3 py-2 text-sm font-medium text-white bg-blue-700 hover:bg-blue-800 rounded-lg dark:bg-blue-600 dark:hover:bg-blue-700
+    - base: inline-flex items-center text-center focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800
+      decoration: px-3 py-2 text-sm font-medium text-white bg-blue-700 hover:bg-blue-800 rounded-lg dark:bg-blue-600 dark:hover:bg-blue-700
 codeHighlightTheme:
     hljsLightTheme: a11y-light
     hljsDarkTheme: a11y-dark

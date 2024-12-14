@@ -1,10 +1,13 @@
 import * as fs from "node:fs";
 import React, {JSX} from "react";
-import {parseMarkdownAsContent, parseYamlContentAsSkin, RenderingPage, RenderingPriority, NdTranslatableText} from "nodoku-core";
+import {parseMarkdownAsContent, parseYamlContentAsSkin, RenderingPage, RenderingPriority} from "nodoku-core";
 import {NodokuI18n} from "nodoku-i18n";
 import {nodokuComponentResolver} from "@/nodoku-component-resolver"
-import {commonImageProvider} from "@/app/components/common-image-provider";
+import {commonImageProvider} from "@/app/components/common-provider";
+import {commonHtmlSanitizer} from "@/app/components/common-provider";
+import {nameToIconConverters} from "@/app/components/common-provider";
 import {i18nStore} from "@/app/components/nodoku-i18n-config";
+import {NodokuIcons} from "nodoku-icons";
 
 
 // export const dynamic = "force-static"
@@ -58,9 +61,11 @@ export default async function Home({params}: { params: Promise<{ lng: string }> 
             renderingPriority={RenderingPriority.content_first}
             skin={skin}
             content={content}
-            i18nextProvider={NodokuI18n.Simplelocalize.i18nForNodoku(i18nStore)}
-            imageProvider={commonImageProvider}
             componentResolver={nodokuComponentResolver}
+            imageProvider={commonImageProvider}
+            htmlSanitizer={commonHtmlSanitizer}
+            i18nextProvider={NodokuI18n.Simplelocalize.i18nForNodoku(i18nStore)}
+            i18nextPostProcessor={NodokuIcons.iconTextPostProcessorFactory(nameToIconConverters)}
         />
     );
 }

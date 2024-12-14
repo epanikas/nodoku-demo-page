@@ -1,23 +1,14 @@
 import {Flowbite, getTheme} from "flowbite-react";
 import React, {JSX} from "react";
-// import {NodokuI18n} from "nodoku-i18n";
 import {parseMarkdownAsContent, parseYamlContentAsSkin, RenderingPage, RenderingPriority} from "nodoku-core";
-import {ImageProvider} from "nodoku-core";
-import {NdImageProps} from "nodoku-core";
 import {nodokuComponentResolver} from "@/nodoku-component-resolver"
-// import {NodokuI18n} from "nodoku-i18n";
 import fs from "node:fs";
-import {NodokuComponents} from "nodoku-components";
-// import OnFallbackLngTextUpdateStrategy = NodokuI18n.Simplelocalize.OnFallbackLngTextUpdateStrategy;
-// import NdImageProvider = NodokuComponents.NdImageProvider;
-import {commonImageProvider} from "@/app/components/common-image-provider";
-// import OnFallbackLngTextUpdateStrategy = NodokuI18n.Simplelocalize.OnFallbackLngTextUpdateStrategy;
-// import LanguageDef = NodokuI18n.LanguageDef;
-// import {HomeProps} from "@/app/[lng]/page";
-// import {genStaticParamsWithSkinAndContent} from "@/app/utils/common-static-params";
-
+import {commonImageProvider} from "@/app/components/common-provider";
+import {commonHtmlSanitizer} from "@/app/components/common-provider";
+import {nameToIconConverters} from "@/app/components/common-provider";
 import {i18nStore} from "@/app/components/nodoku-i18n-config";
 import {NodokuI18n} from "nodoku-i18n";
+import {NodokuIcons} from "nodoku-icons";
 
 
 const customCarousel = {...getTheme()};
@@ -91,9 +82,11 @@ export default async function Home({params}: { params: Promise<{ lng: string }> 
                     renderingPriority={RenderingPriority.skin_first}
                     skin={skin}
                     content={content}
-                    i18nextProvider={NodokuI18n.Simplelocalize.i18nForNodoku(i18nStore)}
-                    imageProvider={commonImageProvider}
                     componentResolver={nodokuComponentResolver}
+                    imageProvider={commonImageProvider}
+                    htmlSanitizer={commonHtmlSanitizer}
+                    i18nextProvider={NodokuI18n.Simplelocalize.i18nForNodoku(i18nStore)}
+                    i18nextPostProcessor={NodokuIcons.iconTextPostProcessorFactory(nameToIconConverters)}
                 />
             </Flowbite>
         );

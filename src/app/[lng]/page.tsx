@@ -4,8 +4,11 @@ import React, {JSX} from "react";
 import {parseMarkdownAsContent, parseYamlContentAsSkin, RenderingPage, RenderingPriority} from "nodoku-core";
 import {NodokuI18n} from "nodoku-i18n";
 import {nodokuComponentResolver} from "@/nodoku-component-resolver"
-import {commonImageProvider} from "@/app/components/common-image-provider";
+import {commonImageProvider} from "@/app/components/common-provider";
+import {commonHtmlSanitizer} from "@/app/components/common-provider";
+import {nameToIconConverters} from "@/app/components/common-provider";
 import {i18nStore} from "@/app/components/nodoku-i18n-config";
+import {NodokuIcons} from "nodoku-icons";
 
 const customCarousel = {...getTheme()};
 
@@ -37,9 +40,10 @@ export default async function Home({params}: { params: Promise<{ lng: string }> 
     // await NodokuI18n.Simplelocalize.initI18nStore( ["nodoku-landing"/*, "docs", "faq"*/], 'en', "auto", "auto",
     //         OnFallbackLngTextUpdateStrategy.reset_reviewed_status)
 
-    if (process.env.NODE_ENV === "development") {
-        await i18nStore.reloadResources();
-    }
+    // if (process.env.NODE_ENV === "development") {
+    //     await i18nStore.reloadResources();
+    // }
+
 
     return (
         <Flowbite theme={{theme: customCarousel}}>
@@ -48,9 +52,11 @@ export default async function Home({params}: { params: Promise<{ lng: string }> 
                 renderingPriority={RenderingPriority.skin_first}
                 skin={skin}
                 content={content}
-                i18nextProvider={NodokuI18n.Simplelocalize.i18nForNodoku(i18nStore)}
-                imageProvider={commonImageProvider}
                 componentResolver={nodokuComponentResolver}
+                imageProvider={commonImageProvider}
+                htmlSanitizer={commonHtmlSanitizer}
+                i18nextProvider={NodokuI18n.Simplelocalize.i18nForNodoku(i18nStore)}
+                i18nextPostProcessor={NodokuIcons.iconTextPostProcessorFactory(nameToIconConverters)}
             />
         </Flowbite>
     );

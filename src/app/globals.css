@@ -7,3 +7,7 @@
     text-decoration: underline;
     font-weight: 500;
 }
+
+svg {
+    display: inline-block;
+}

@@ -15,6 +15,8 @@ Nodoku uses **_Markdown_** file as content supplier, and a **_Yaml_** file as vi
 
 |[Get started](/getting-started)|
 
+|[Learn more](/getting-started)|
+
 ```yaml
 nd-block:
   attributes:
@@ -66,6 +68,8 @@ structure the content file, so that it can be submitted to the Nodoku parser.
 
 |[Get started](/getting-started)|
 
+|[Learn more](/getting-started)|
+
 
 # Step 2: _Skin_
 ## Skin the MD file using simple **Yaml config** and available components
@@ -83,6 +87,8 @@ including Carousel, Hero and different types of Card components.
 
 |[Get started](/getting-started)|
 
+|[Learn more](/getting-started)|
+
 # Step 3: _Fine tune_
 ## Use configuration options to fine tune your landing page presentation
 
@@ -98,6 +104,8 @@ Normally the Nodoku components support Tailwind CSS out of the box,
 so you can fine tune ivsual presetnation using Tailwind.
 
 |[Get started](/getting-started)|
+
+|[Learn more](/getting-started)|
 
 
 ```yaml
@@ -224,6 +232,8 @@ The content is created in a textual form in a Markdown file, and at this moment 
 
 |[Get started](/getting-started)|
 
+|[Learn more](/getting-started)|
+
 
 # Content and presentation are strictly separated 
 
@@ -236,6 +246,8 @@ This approach is illustrated by the fact that the content and the design are rep
 Keeping content and design concepts strictly separated allows for independent editing of both, without worrying about the impact that one might have on another.
 
 |[Get started](/getting-started)|
+
+|[Learn more](/getting-started)|
 
 
 # Built-in multilingual localization 
@@ -254,6 +266,8 @@ Check out [nodoku-i18n](https://github.com/nodoku/nodoku-i18n) for more details.
 
 |[Get started](/getting-started)|
 
+|[Learn more](/getting-started)|
+
 # Nodoku components are naturally responsive
 
 ![step-1](icon:react-icons/hi:HiOutlineDeviceMobile "step 1")
@@ -265,6 +279,8 @@ The currently available sets of Nodoku components, [**_Nodoku-Flowbite_**](https
 The Nodoku skin - a Yaml file providing visual customization - is based on the Tailwind CSS styling engine, which gives large possibilities for responsive design tuning.  
 
 |[Get started](/getting-started)|
+
+|[Learn more](/getting-started)|
 
 
 # Layout, based either on CSS grid or CSS flex
@@ -283,6 +299,8 @@ This allows, depending on your particular requirements, adapt the layout that be
 
 |[Get started](/getting-started)|
 
+|[Learn more](/getting-started)|
+
 
 # SEO friendly, thanks to Server-Side rendering
 
@@ -300,6 +318,8 @@ Consequently, the whole page naturally becomes **_SEO friendly_**.
 
 |[Get started](/getting-started)|
 
+|[Learn more](/getting-started)|
+
 
 # Extensible with new visual components
 
@@ -313,4 +333,58 @@ This implementation is responsible for the ultimate component rendering, using t
 
 Consequently, the end-user can easily extend the existing set of components by custom ones, as required.
 
+
 |[Get started](/getting-started)|
+
+|[Learn more](/getting-started)|
+
+```yaml
+nd-block:
+  attributes:
+    sectionName: footer
+```
+
+# {Brand}
+
+![logo](icon:react-icons/hi2:HiOutlineMap "Nodoku logo")
+
+{companyName}Nodoku
+
+{copyrightNotice}© 2024 Nodoku. All rights reserved.
+
+# Product
+
+|[Features](/features)|
+
+|[Integrations](/integrations)|
+
+|[Pricing](/pricing)|
+
+|[FAQ](/faq)|
+
+# Company
+
+|[Privacy](/privacy)|
+
+|[Terms of Service](/terms-of-service)|
+
+|[Pricing](/pricing)|
+
+|[FAQ](/faq)|
+
+
+# Developers
+
+|[Public API](/public-api)|
+
+|[Documentation](/docs)|
+
+|[Guides](/guides)|
+
+# Social
+
+|[{icon:react-icons/ci:CiFacebook} Facebook](/public-api)|
+
+|[{icon:react-icons/ci:CiTwitter} Twitter](/public-api)|
+
+|[{icon:react-icons/ci:CiLinkedin} LinkedIn](/public-api)|

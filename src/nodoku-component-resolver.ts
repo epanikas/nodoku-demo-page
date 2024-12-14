@@ -18,6 +18,7 @@ components.set("mambaui/hero-right-text", {compo: NodokuMambaUi.HeroRightText, c
 components.set("mambaui/card", {compo: NodokuMambaUi.Card, compoDef: new NdComponentDefinition(1, "./schemas/nodoku-mambaui/schemas/components/card/default-theme.yml")});
 components.set("mambaui/faq-one-question", {compo: NodokuMambaUi.FaqOneQuestion, compoDef: new NdComponentDefinition(1, "./schemas/nodoku-mambaui/schemas/components/faq/one-question-default-theme.yml")});
 components.set("mambaui/faq-header", {compo: NodokuMambaUi.FaqHeader, compoDef: new NdComponentDefinition(1, "./schemas/nodoku-mambaui/schemas/components/faq/header-default-theme.yml")});
+components.set("mambaui/footer-four", {compo: NodokuMambaUi.FooterFour, compoDef: new NdComponentDefinition("unlimited", "./schemas/nodoku-mambaui/schemas/components/footer-four/default-theme.yml")});
 
 export async function nodokuComponentResolver(componentName: string): Promise<{compo: AsyncFunctionComponent, compoDef: NdComponentDefinition}> {
     const f: {compo: AsyncFunctionComponent, compoDef: NdComponentDefinition} | undefined = components.get(componentName);

@@ -1,6 +1,5 @@
 # yaml-language-server: $schema=./visual-schema.json
 
-
 bgImageStyle:
     base: -z-20 bg-cover bg-no-repeat bg-center
     decoration: blur-sm
@@ -26,11 +25,11 @@ paragraphStyle:
     base: ''
     decoration: ''
 ctaContainerStyle:
-    base: 'absolute inset-x-0 bottom-0 mx-5 my-5'
+    base: 'absolute inset-x-0 bottom-0 mx-5 my-5 flex flex-row'
     decoration: ''
 ctaButtonStyle:
-    base: 'flex items-center justify-center w-full p-3 font-semibold tracking-wide rounded-md bg-violet-400 dark:bg-violet-600 text-gray-900 dark:text-gray-50 mb-5'
-    decoration: ''
+    - base: 'flex items-center justify-center flex-grow m-2 p-3 font-semibold tracking-wide rounded-md bg-violet-400 dark:bg-violet-600 text-gray-900 dark:text-gray-50 mb-5'
+      decoration: ''
 codeHighlightTheme:
     hljsLightTheme: a11y-light
     hljsDarkTheme: a11y-dark

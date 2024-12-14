@@ -1,6 +1,5 @@
 import React, {JSX} from "react";
 import {
-    ImageProvider,
     parseMarkdownAsContent,
     parseYamlContentAsSkin,
     RenderingPage,
@@ -9,7 +8,12 @@ import {
 import {nodokuComponentResolver} from "@/nodoku-component-resolver"
 import ComponentPlaceholder from "@/app/components/component-placeholder";
 import fs from "node:fs";
-import {commonImageProvider} from "@/app/components/common-image-provider";
+import {commonImageProvider} from "@/app/components/common-provider";
+import {commonHtmlSanitizer} from "@/app/components/common-provider";
+import {NodokuI18n} from "nodoku-i18n";
+import {i18nStore} from "@/app/components/nodoku-i18n-config";
+import {nameToIconConverters} from "@/app/components/common-provider";
+import {NodokuIcons} from "nodoku-icons";
 
 
 // const imageProvider: ImageProvider = async (imageUrl: string): Promise<string> => {
@@ -41,11 +45,12 @@ export default async function NodokuSampleScaledDown({params}: { params: { lng: 
                         lng={lng}
                         renderingPriority={RenderingPriority.skin_first}
                         content={content}
-                        componentResolver={nodokuComponentResolver}
                         skin={skin}
+                        componentResolver={nodokuComponentResolver}
                         imageProvider={commonImageProvider}
-                        // i18nextProvider={NodokuI18n.Simplelocalize.i18nForNodoku}
-                        i18nextProvider={undefined}
+                        htmlSanitizer={commonHtmlSanitizer}
+                        i18nextProvider={NodokuI18n.Simplelocalize.i18nForNodoku(i18nStore)}
+                        i18nextPostProcessor={NodokuIcons.iconTextPostProcessorFactory(nameToIconConverters)}
                     />
                 </div>
             </div>

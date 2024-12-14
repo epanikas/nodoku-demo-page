@@ -1,6 +1,5 @@
 # yaml-language-server: $schema=./visual-schema.json
 
-
 bgImageStyle:
     base: -z-20 bg-cover bg-no-repeat bg-center
     decoration: blur-sm
@@ -25,9 +24,9 @@ paragraphStyle:
 ctaContainerStyle:
     base: mt-5 flex flex-wrap justify-center
     decoration: ''
-ctaStyle:
-    base: px-8 py-3 m-2 text-lg font-semibold rounded dark:bg-gray-800 bg-gray-100
-    decoration: ''
+ctaButtonStyle:
+    - base: px-8 py-3 m-2 text-lg font-semibold rounded dark:bg-gray-800 bg-gray-100
+      decoration: ''
 codeHighlightTheme:
     hljsLightTheme: a11y-light
     hljsDarkTheme: a11y-dark
