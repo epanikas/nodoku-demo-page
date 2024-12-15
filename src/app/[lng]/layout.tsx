@@ -77,7 +77,7 @@ export default async function RootLayout({ children, params }: Readonly<{ childr
                 <MyNavbar languages={await i18nStore.allLanguages()} selectedLng={lng} menu={menu(lng)}/>
                 {children}
                 <MyFooter lng={lng} />
-                <script src="/scripts/crop-height-50-percents.js" type="text/javascript"/>
+                {/*<script src="/scripts/crop-height-50-percents.js" type="text/javascript"/>*/}
             </body>
         </html>
     );
