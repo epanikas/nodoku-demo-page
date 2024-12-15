@@ -1,13 +1,65 @@
 import {NextRequest, NextResponse} from "next/server";
 // import {i18nStore} from "@/app/components/nodoku-server-i18n-config";
 import {LANGUAGE_COOKIE} from "@/app/components/common-i18n-config";
+import {json} from "node:stream/consumers";
 
 
 const projectToken = process.env.SIMPLELOCALIZE_PROJECT_TOKEN;
 const environment = "_latest"
 const cdn = `https://cdn.simplelocalize.io/${projectToken}/${environment}`
 
-const allLanguages: {key: string}[] = (await fetch(`${cdn}/_languages`).then(res => res.json())).map((l: any) => ({key: l.key}));
+console.log("process.env.SIMPLELOCALIZE_PROJECT_TOKEN defined ", process.env.SIMPLELOCALIZE_PROJECT_TOKEN !== undefined)
+
+const jsonlangs = "[\n" +
+    "    {\n" +
+    "        \"key\": \"ar\",\n" +
+    "        \"name\": \"Arabic\",\n" +
+    "        \"isDefault\": false\n" +
+    "    },\n" +
+    "    {\n" +
+    "        \"key\": \"de\",\n" +
+    "        \"name\": \"German\",\n" +
+    "        \"isDefault\": false\n" +
+    "    },\n" +
+    "    {\n" +
+    "        \"key\": \"en\",\n" +
+    "        \"name\": \"English\",\n" +
+    "        \"isDefault\": true,\n" +
+    "        \"icon\": \"gb\"\n" +
+    "    },\n" +
+    "    {\n" +
+    "        \"key\": \"es\",\n" +
+    "        \"name\": \"Spanish\",\n" +
+    "        \"isDefault\": false\n" +
+    "    },\n" +
+    "    {\n" +
+    "        \"key\": \"fr\",\n" +
+    "        \"name\": \"French\",\n" +
+    "        \"isDefault\": false\n" +
+    "    },\n" +
+    "    {\n" +
+    "        \"key\": \"il\",\n" +
+    "        \"name\": \"Hebrew\",\n" +
+    "        \"isDefault\": false\n" +
+    "    },\n" +
+    "    {\n" +
+    "        \"key\": \"it\",\n" +
+    "        \"name\": \"Italian\",\n" +
+    "        \"isDefault\": false\n" +
+    "    },\n" +
+    "    {\n" +
+    "        \"key\": \"pt\",\n" +
+    "        \"name\": \"Portuguese\",\n" +
+    "        \"isDefault\": false\n" +
+    "    },\n" +
+    "    {\n" +
+    "        \"key\": \"ru\",\n" +
+    "        \"name\": \"Russian\",\n" +
+    "        \"isDefault\": false\n" +
+    "    }\n" +
+    "]"
+
+const allLanguages: {key: string}[] = /*(await fetch(`${cdn}/_languages`).then(res => res.json()))*/JSON.parse(jsonlangs).map((l: any) => ({key: l.key}));
 
 console.log("in middleware allLanguages ", allLanguages);
 
