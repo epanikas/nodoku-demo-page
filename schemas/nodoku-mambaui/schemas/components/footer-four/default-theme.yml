@@ -25,15 +25,5 @@ copyrightNoticeStyle:
     base: py-6 text-sm text-center text-gray-400 dark:text-gray-600
     decoration: ''
 subTitleStyle:
-    base: ''
+    base: pt-3 pr-3 pb-3
     decoration: ''
-paragraphStyle:
-    base: ''
-    decoration: ''
-listTheme:
-    listStyle:
-        base: ''
-        decoration: ''
-    listItemStyle:
-        base: ''
-        decoration: ''

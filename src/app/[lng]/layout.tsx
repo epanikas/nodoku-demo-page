@@ -5,6 +5,7 @@ import MyNavbar, {NavbarMenuItem} from "@/app/components/my-navbar";
 import React from "react";
 import {NodokuI18n} from "nodoku-i18n";
 import {i18nStore} from "@/app/components/nodoku-i18n-config";
+import MyFooter from "@/app/components/my-footer";
 
 
 export const metadata: Metadata = {
@@ -75,6 +76,7 @@ export default async function RootLayout({ children, params }: Readonly<{ childr
             <body className={"bg-white dark:bg-black text-black dark:text-white"} style={{paddingTop: "60px"}}>
                 <MyNavbar languages={await i18nStore.allLanguages()} selectedLng={lng} menu={menu(lng)}/>
                 {children}
+                <MyFooter lng={lng} />
                 <script src="/scripts/crop-height-50-percents.js" type="text/javascript"/>
             </body>
         </html>

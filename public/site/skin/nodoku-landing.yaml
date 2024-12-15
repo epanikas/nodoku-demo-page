@@ -176,16 +176,3 @@ rows:
 
 
 
-
-  - row:
-      maxCols: 1
-      components:
-        - mambaui/footer-four:
-            selector:
-              attributes:
-                sectionName: footer
-
-
-
-
-

@@ -23,25 +23,26 @@ if (!runsOnServerSide) {
 }
 
 
-export default async function Home({params}: { params: Promise<{ lng: string }> }): Promise<JSX.Element> {
+export default async function MyFooter(params: {lng: string}): Promise<JSX.Element> {
 
-    const {lng} = await params;
+    const {lng} = params;
 
     if (lng === "favicon.ico") {
         return <></>
     }
 
-    const skin = parseYamlContentAsSkin(fs.readFileSync("./public/site/skin/nodoku-landing.yaml").toString());
-    const content = parseMarkdownAsContent(fs.readFileSync("./public/site/nodoku-landing.md").toString(), "en", "nodoku-landing")
+    const skin = parseYamlContentAsSkin(fs.readFileSync("./public/site/skin/footer.yaml").toString());
+    const content = parseMarkdownAsContent(fs.readFileSync("./public/site/footer.md").toString(), "en", "footer")
 
     // console.log("JSON.stringify(content)", JSON.stringify(content))
     // console.log("JSON.stringify(content)", JSON.stringify(content))
 
+    // await NodokuI18n.Simplelocalize.initI18nStore( ["nodoku-landing"/*, "docs", "faq"*/], 'en', "auto", "auto",
+    //         OnFallbackLngTextUpdateStrategy.reset_reviewed_status)
 
     if (process.env.NODE_ENV === "development") {
         await i18nStore.reloadResources();
     }
-
 
     return (
         <Flowbite theme={{theme: customCarousel}}>

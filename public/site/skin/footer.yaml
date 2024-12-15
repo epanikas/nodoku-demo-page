@@ -1,0 +1,34 @@
+# yaml-language-server: $schema=../../../schemas/visual-schema.json
+
+global:
+  defaultTheme: light
+  theme:
+    paragraphStyle:
+      paragraphContainer:
+        base: text-lg leading-relaxed
+      paragraphStyle:
+        base: mb-4
+  components:
+    core/typography:
+      theme:
+        containerStyle:
+          decoration: mx-auto
+        contentContainerStyle:
+          decoration: text-center
+
+
+
+rows:
+
+  - row:
+      maxCols: 1
+      components:
+        - mambaui/footer-four:
+            selector:
+              attributes:
+                sectionName: footer
+
+
+
+
+

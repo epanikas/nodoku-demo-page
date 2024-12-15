@@ -17,7 +17,7 @@ const saveMissing = true;
 const loadOnInit: boolean = process.env.NODE_ENV === "development"
 const translationFetchMode: "api" | "cdn" = process.env.NODE_ENV === "development" ? "api" : "cdn"
 const onFallbackLngTextUpdateStrategy = OnFallbackLngTextUpdateStrategy.reset_reviewed_status;
-const onMissingKeyStrategy: OnMissingKeyStrategy = process.env.NODE_ENV === "development" ? OnMissingKeyStrategy.upload : OnMissingKeyStrategy.save_to_file;
+const onMissingKeyStrategy: OnMissingKeyStrategy = OnMissingKeyStrategy.save_to_file;//process.env.NODE_ENV === "development" ? OnMissingKeyStrategy.upload : OnMissingKeyStrategy.save_to_file;
 
 
 export const i18nStore: NodokuI18n.I18nStore = await NodokuI18n.Simplelocalize.initI18nStore(apiKey, projectToken, "all",
