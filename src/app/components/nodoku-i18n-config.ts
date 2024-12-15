@@ -21,7 +21,7 @@ const onMissingKeyStrategy: OnMissingKeyStrategy = OnMissingKeyStrategy.save_to_
 
 
 export const i18nStore: NodokuI18n.I18nStore = await NodokuI18n.Simplelocalize.initI18nStore(apiKey, projectToken, "all",
-    ["nodoku-landing", "getting-started", "showcase"], 'en', translationFetchMode,
+    ["nodoku-landing", "getting-started", "showcase", "footer"], 'en', translationFetchMode,
     saveMissing, loadOnInit, onMissingKeyStrategy, onFallbackLngTextUpdateStrategy);
 
 console.log(">>> ended initializing store")
