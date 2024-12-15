@@ -85,7 +85,7 @@ export default async function Home({params}: { params: Promise<{ lng: string }> 
                     componentResolver={nodokuComponentResolver}
                     imageProvider={commonImageProvider}
                     htmlSanitizer={commonHtmlSanitizer}
-                    i18nextProvider={NodokuI18n.Simplelocalize.i18nForNodoku(i18nStore)}
+                    i18nextProvider={NodokuI18n.i18nForNodoku(i18nStore)}
                     i18nextPostProcessor={NodokuIcons.iconTextPostProcessorFactory(nameToIconConverters)}
                 />
             </Flowbite>

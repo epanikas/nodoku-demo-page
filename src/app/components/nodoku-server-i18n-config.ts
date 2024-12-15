@@ -1,6 +1,9 @@
 import {NodokuI18n} from "nodoku-i18n";
-import OnFallbackLngTextUpdateStrategy = NodokuI18n.Simplelocalize.OnFallbackLngTextUpdateStrategy;
-import OnMissingKeyStrategy = NodokuI18n.Simplelocalize.OnMissingKeyStrategy;
+import OnFallbackLngTextUpdateStrategy = NodokuI18n.OnFallbackLngTextUpdateStrategy;
+import OnMissingKeyStrategy = NodokuI18n.OnMissingKeyStrategy;
+import {SimplelocalizeMissingKeyStorage} from "nodoku-i18n/simplelocalize/storage";
+import {SimplelocalizeBackendApiClientImpl} from "nodoku-i18n/simplelocalize/client";
+import MissingKeyStorage = NodokuI18n.MissingKeyStorage;
 
 var runsOnServerSide = typeof window === 'undefined';
 if (!runsOnServerSide) {
@@ -20,8 +23,19 @@ const onFallbackLngTextUpdateStrategy = OnFallbackLngTextUpdateStrategy.reset_re
 const onMissingKeyStrategy: OnMissingKeyStrategy = OnMissingKeyStrategy.save_to_file;//process.env.NODE_ENV === "development" ? OnMissingKeyStrategy.upload : OnMissingKeyStrategy.save_to_file;
 
 
-export const i18nStore: NodokuI18n.I18nStore = await NodokuI18n.Simplelocalize.initI18nStore(apiKey, projectToken, "all",
-    ["nodoku-landing", "getting-started", "showcase", "footer"], 'en', translationFetchMode,
-    saveMissing, loadOnInit, onMissingKeyStrategy, onFallbackLngTextUpdateStrategy);
+const client: SimplelocalizeBackendApiClientImpl =
+    new SimplelocalizeBackendApiClientImpl(apiKey, projectToken, translationFetchMode);
+
+const missingKeyStorage: MissingKeyStorage =
+    new SimplelocalizeMissingKeyStorage(client, () => Promise.resolve(), onMissingKeyStrategy, onFallbackLngTextUpdateStrategy);
+
+
+export const i18nStore: NodokuI18n.I18nStore = await NodokuI18n.initI18nStore(/*apiKey, projectToken,*/
+    "all",
+    ["nodoku-landing", "getting-started", "showcase", "footer"], 'en',
+    translationFetchMode,
+    saveMissing,
+    loadOnInit,
+    client, missingKeyStorage/*onMissingKeyStrategy, onFallbackLngTextUpdateStrategy*/);
 
 console.log(">>> ended initializing store")

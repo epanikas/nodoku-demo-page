@@ -1,12 +1,16 @@
 import {NextRequest, NextResponse} from "next/server";
-// import {i18nStore} from "@/app/components/nodoku-server-i18n-config";
 import {LANGUAGE_COOKIE} from "@/app/components/common-i18n-config";
-import {json} from "node:stream/consumers";
+import {SimplelocalizeBackendApiClientImpl} from "nodoku-i18n/simplelocalize/client";
 
+const projectToken: string = process.env.SIMPLELOCALIZE_PROJECT_TOKEN || "n-a";
+const apiKey: string = process.env.SIMPLELOCALIZE_API_KEY || "n-a";
 
-const projectToken = process.env.SIMPLELOCALIZE_PROJECT_TOKEN;
 const environment = "_latest"
 const cdn = `https://cdn.simplelocalize.io/${projectToken}/${environment}`
+
+
+const client: SimplelocalizeBackendApiClientImpl =
+    new SimplelocalizeBackendApiClientImpl(apiKey, projectToken, "cdn");
 
 console.log("process.env.SIMPLELOCALIZE_PROJECT_TOKEN defined ", process.env.SIMPLELOCALIZE_PROJECT_TOKEN !== undefined)
 
@@ -59,7 +63,9 @@ const jsonlangs = "[\n" +
     "    }\n" +
     "]"
 
-const allLanguages: {key: string}[] = /*(await fetch(`${cdn}/_languages`).then(res => res.json()))*/JSON.parse(jsonlangs).map((l: any) => ({key: l.key}));
+// const allLanguages: {key: string}[] = JSON.parse(jsonlangs).map((l: any) => ({key: l.key}));
+// const allLanguages: {key: string}[] = (await fetch(`${cdn}/_languages`).then(res => res.json())).map((l: any) => ({key: l.key}));
+const allLanguages: {key: string}[] = (await client.allLanguages()).map((l: any) => ({key: l.key}));
 
 console.log("in middleware allLanguages ", allLanguages);
 
