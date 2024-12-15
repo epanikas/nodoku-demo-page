@@ -2,6 +2,7 @@
 
 import React, {JSX, useEffect, useState} from "react";
 import styles from "./language-selector.module.scss";
+import {LANGUAGE_COOKIE} from "@/app/components/common-i18n-config";
 
 interface FlagIconProps {
     countryCode: string;
@@ -41,9 +42,10 @@ export const LanguageSwitcher = ({languages, selectedLng}: {selectedLng: string,
 
         if (chunkedUrl) {
             const restOfUrl = chunkedUrl[2]
+            document.cookie = `${LANGUAGE_COOKIE}=${lng}; path=/`;
             window.location.assign(`/${lng}${restOfUrl}`)
         } else {
-            document.cookie = `language=${lng}; path=/`;
+            document.cookie = `${LANGUAGE_COOKIE}=${lng}; path=/`;
             window.location.reload();
         }
 

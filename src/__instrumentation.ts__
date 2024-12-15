@@ -5,7 +5,7 @@ import {StoreHolder} from "@/app/components/store-holder";
 import {NodokuI18n} from "../../nodoku-i18n";
 import OnFallbackLngTextUpdateStrategy = NodokuI18n.Simplelocalize.OnFallbackLngTextUpdateStrategy;
 import OnMissingKeyStrategy = NodokuI18n.Simplelocalize.OnMissingKeyStrategy;
-import {storeHolder} from "@/app/components/nodoku-i18n-config";
+import {storeHolder} from "@/app/components/nodoku-server-i18n-config";
 import {store} from "next/dist/build/output/store";
 
 export async function register() {

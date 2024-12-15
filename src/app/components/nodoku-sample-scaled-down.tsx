@@ -1,3 +1,4 @@
+import fs from "node:fs";
 import React, {JSX} from "react";
 import {
     parseMarkdownAsContent,
@@ -7,11 +8,10 @@ import {
 } from "nodoku-core";
 import {nodokuComponentResolver} from "@/nodoku-component-resolver"
 import ComponentPlaceholder from "@/app/components/component-placeholder";
-import fs from "node:fs";
 import {commonImageProvider} from "@/app/components/common-provider";
 import {commonHtmlSanitizer} from "@/app/components/common-provider";
 import {NodokuI18n} from "nodoku-i18n";
-import {i18nStore} from "@/app/components/nodoku-i18n-config";
+import {i18nStore} from "@/app/components/nodoku-server-i18n-config";
 import {nameToIconConverters} from "@/app/components/common-provider";
 import {NodokuIcons} from "nodoku-icons";
 

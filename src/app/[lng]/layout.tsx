@@ -4,7 +4,7 @@ import {dir} from 'i18next'
 import MyNavbar, {NavbarMenuItem} from "@/app/components/my-navbar";
 import React from "react";
 import {NodokuI18n} from "nodoku-i18n";
-import {i18nStore} from "@/app/components/nodoku-i18n-config";
+import {i18nStore} from "@/app/components/nodoku-server-i18n-config";
 import MyFooter from "@/app/components/my-footer";
 
 

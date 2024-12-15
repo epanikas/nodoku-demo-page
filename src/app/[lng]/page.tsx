@@ -7,7 +7,7 @@ import {nodokuComponentResolver} from "@/nodoku-component-resolver"
 import {commonImageProvider} from "@/app/components/common-provider";
 import {commonHtmlSanitizer} from "@/app/components/common-provider";
 import {nameToIconConverters} from "@/app/components/common-provider";
-import {i18nStore} from "@/app/components/nodoku-i18n-config";
+import {i18nStore} from "@/app/components/nodoku-server-i18n-config";
 import {NodokuIcons} from "nodoku-icons";
 
 const customCarousel = {...getTheme()};

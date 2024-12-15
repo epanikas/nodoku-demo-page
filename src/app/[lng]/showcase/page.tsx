@@ -1,12 +1,12 @@
+import fs from "node:fs";
 import {Flowbite, getTheme} from "flowbite-react";
 import React, {JSX} from "react";
 import {parseMarkdownAsContent, parseYamlContentAsSkin, RenderingPage, RenderingPriority} from "nodoku-core";
 import {nodokuComponentResolver} from "@/nodoku-component-resolver"
-import fs from "node:fs";
 import {commonImageProvider} from "@/app/components/common-provider";
 import {commonHtmlSanitizer} from "@/app/components/common-provider";
 import {nameToIconConverters} from "@/app/components/common-provider";
-import {i18nStore} from "@/app/components/nodoku-i18n-config";
+import {i18nStore} from "@/app/components/nodoku-server-i18n-config";
 import {NodokuI18n} from "nodoku-i18n";
 import {NodokuIcons} from "nodoku-icons";
 

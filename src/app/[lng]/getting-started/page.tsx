@@ -6,7 +6,7 @@ import {nodokuComponentResolver} from "@/nodoku-component-resolver"
 import {commonImageProvider} from "@/app/components/common-provider";
 import {commonHtmlSanitizer} from "@/app/components/common-provider";
 import {nameToIconConverters} from "@/app/components/common-provider";
-import {i18nStore} from "@/app/components/nodoku-i18n-config";
+import {i18nStore} from "@/app/components/nodoku-server-i18n-config";
 import {NodokuIcons} from "nodoku-icons";
 
 
@@ -29,7 +29,7 @@ export default async function Home({params}: { params: Promise<{ lng: string }> 
     // let actualI18nStore = await geti18nstore();
     if (process.env.NODE_ENV === "development") {
         // console.log("reloading await import(\"@/app/components/nodoku-i18n-config\")")
-        // const {geti18store} = await import("@/app/components/nodoku-i18n-config");
+        // const {geti18store} = await import("@/app/components/nodoku-server-i18n-config");
         // actualI18nStore = geti18store();
         await i18nStore.reloadResources();
     }
