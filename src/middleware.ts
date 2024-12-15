@@ -65,11 +65,14 @@ const jsonlangs = "[\n" +
 
 // const allLanguages: {key: string}[] = JSON.parse(jsonlangs).map((l: any) => ({key: l.key}));
 // const allLanguages: {key: string}[] = (await fetch(`${cdn}/_languages`).then(res => res.json())).map((l: any) => ({key: l.key}));
-const allLanguages: {key: string}[] = (await client.allLanguages()).map((l: any) => ({key: l.key}));
+// const allLanguages: {key: string}[] = (await client.allLanguages()).map((l: any) => ({key: l.key}));
 
-console.log("in middleware allLanguages ", allLanguages);
+
 
 export async function middleware(request: NextRequest) {
+
+    const allLanguages: {key: string}[] = (await client.allLanguages()).map((l: any) => ({key: l.key}));
+    console.log("in middleware allLanguages ", allLanguages);
 
     console.log("received host ", request.nextUrl.host)
     console.log("received pathname ", request.nextUrl.pathname)
