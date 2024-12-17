@@ -1,7 +1,7 @@
 import type {Metadata} from "next";
 import "../globals.css";
 import {dir} from 'i18next'
-import MyNavbar, {NavbarMenuItem} from "@/app/components/my-navbar";
+// import MyNavbar, {NavbarMenuItem} from "@/app/components/my-navbar";
 import React from "react";
 import {NodokuI18n} from "nodoku-i18n";
 import {i18nStore} from "@/app/components/nodoku-server-i18n-config";
@@ -30,36 +30,36 @@ export async function generateStaticParams(): Promise<{lng: string}[]> {
     return params;
 }
 
-function menu(lng: string): NavbarMenuItem[] {
-    return [
-        {
-            label: "Home",
-            link: `/${lng}`,
-            subItems: []
-        },
-        {
-            label: "Docs",
-            link: `/${lng}/docs`,
-            subItems: []
-        },
-        {
-            label: "Components",
-            link: "#",
-            subItems: [
-                {
-                    label: "Based on Flowbite",
-                    link: `/${lng}/docs/flowbite-components`,
-                    subItems: []
-                },
-                {
-                    label: "Based on Mamba UI",
-                    link: `/${lng}/docs/mambaui-components`,
-                    subItems: []
-                }
-            ]
-        }
-    ];
-}
+// function menu(lng: string): NavbarMenuItem[] {
+//     return [
+//         {
+//             label: "Home",
+//             link: `/${lng}`,
+//             subItems: []
+//         },
+//         {
+//             label: "Docs",
+//             link: `/${lng}/docs`,
+//             subItems: []
+//         },
+//         {
+//             label: "Components",
+//             link: "#",
+//             subItems: [
+//                 {
+//                     label: "Based on Flowbite",
+//                     link: `/${lng}/docs/flowbite-components`,
+//                     subItems: []
+//                 },
+//                 {
+//                     label: "Based on Mamba UI",
+//                     link: `/${lng}/docs/mambaui-components`,
+//                     subItems: []
+//                 }
+//             ]
+//         }
+//     ];
+// }
 
 // export const dynamic = "force-static";
 
@@ -74,7 +74,7 @@ export default async function RootLayout({ children, params }: Readonly<{ childr
     return (
         <html lang={lng} dir={lng == "il" ? "rtl" : dir(lng)}>
             <body className={"bg-white dark:bg-black text-black dark:text-white"} style={{paddingTop: "60px"}}>
-                <MyNavbar languages={await i18nStore.allLanguages()} selectedLng={lng} menu={menu(lng)}/>
+                {/*<MyNavbar languages={await i18nStore.allLanguages()} selectedLng={lng} menu={menu(lng)}/>*/}
                 {children}
                 <MyFooter lng={lng} />
                 {/*<script src="/scripts/crop-height-50-percents.js" type="text/javascript"/>*/}
