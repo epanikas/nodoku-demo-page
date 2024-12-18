@@ -91,6 +91,9 @@ export async function middleware(request: NextRequest) {
     if (chunkedUrl) {
         resp = NextResponse.next();
         lang = chunkedUrl[1]
+    } else if (request.nextUrl.pathname === "/first-page") {
+        resp = NextResponse.next();
+        lang = "unset"
     } else {
         const langCookie = request.cookies.get(LANGUAGE_COOKIE);
         lang = langCookie ? langCookie.value : 'en';
@@ -99,7 +102,9 @@ export async function middleware(request: NextRequest) {
         resp = NextResponse.rewrite(destination);
     }
     console.log("setting language cookie", lang, "domain", request.nextUrl.hostname);
-    resp.cookies.set(LANGUAGE_COOKIE, lang, {path: "/", domain: request.nextUrl.hostname});
+    if (lang !== "unset") {
+        resp.cookies.set(LANGUAGE_COOKIE, lang, {path: "/", domain: request.nextUrl.hostname});
+    }
     return resp;
 }
 

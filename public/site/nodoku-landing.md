@@ -56,7 +56,7 @@ nd-block:
 # Step 1: _Think_
 ## Create content promoting your product or service as an **MD file**
 
-![step-1](../images/postit-board.jpg "step 1")
+![step-1](../images/postit-board.jpg__ "step 1")
 
 Concentrate on the subject of your product / service to highlight its advantages.
 
@@ -74,7 +74,7 @@ structure the content file, so that it can be submitted to the Nodoku parser.
 # Step 2: _Skin_
 ## Skin the MD file using simple **Yaml config** and available components
 
-![step-2](../images/3d-view-puzzle-pieces.jpg "step 2")
+![step-2](../images/3d-view-puzzle-pieces.jpg__ "step 2")
 
 Once you are happy with the message your landing page conveys,
 start by skinning it up.
@@ -92,7 +92,7 @@ including Carousel, Hero and different types of Card components.
 # Step 3: _Fine tune_
 ## Use configuration options to fine tune your landing page presentation
 
-![step-3](../images/design-table.jpg "step 3")
+![step-3](../images/design-table.jpg__ "step 3")
 
 If the default presentation doesn't suit your needs, you can tweak it up
 using the config options of each component to fine tune it for your needs.
@@ -126,7 +126,7 @@ nd-block:
 
 # Create an MD file
 
-![step-1](../images/postit-board.jpg "step 1")
+![step-1](../images/postit-board.jpg__ "step 1")
 
 create a Markdown content file, describing your product 
 
@@ -143,7 +143,7 @@ And another line of description.
 # Draft a skin Yaml file
 
 
-![step-2](../images/3d-view-puzzle-pieces.jpg "step 2")
+![step-2](../images/3d-view-puzzle-pieces.jpg__ "step 2")
 
 
 draft a Yaml file configuring the visual representation
@@ -187,7 +187,7 @@ Description of my product.
 
 And another line of description.
 
-![my-awesome-product](../images/still-life-with-plants-deco.jpg "My Awesome Product")
+![my-awesome-product](../images/still-life-with-plants-deco.jpg__ "My Awesome Product")
 
 [image by Freepik](https://www.freepik.com/free-photo/still-life-with-plants-deco_20734103.htm#fromView=search&page=1&position=0&uuid=6672daf1-0fe9-4f7d-afb6-46705817ca8c)
 
