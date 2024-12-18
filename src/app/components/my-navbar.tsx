@@ -14,7 +14,7 @@ import {
 } from "flowbite-react";
 import React from "react";
 import {HiOutlineMap} from "react-icons/hi2";
-import "flag-icons/css/flag-icons.css";
+// import "flag-icons/css/flag-icons.css";
 import {LanguageSwitcher} from "@/app/components/language-switcher";
 
 export class NavbarMenuItem {
