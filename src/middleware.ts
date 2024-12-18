@@ -5,8 +5,8 @@ import {SimplelocalizeBackendApiClientImpl} from "nodoku-i18n/simplelocalize/cli
 const projectToken: string = process.env.SIMPLELOCALIZE_PROJECT_TOKEN || "n-a";
 const apiKey: string = process.env.SIMPLELOCALIZE_API_KEY || "n-a";
 
-const environment = "_latest"
-const cdn = `https://cdn.simplelocalize.io/${projectToken}/${environment}`
+// const environment = "_latest"
+// const cdn = `https://cdn.simplelocalize.io/${projectToken}/${environment}`
 
 
 const client: SimplelocalizeBackendApiClientImpl =
@@ -14,54 +14,54 @@ const client: SimplelocalizeBackendApiClientImpl =
 
 console.log("process.env.SIMPLELOCALIZE_PROJECT_TOKEN defined ", process.env.SIMPLELOCALIZE_PROJECT_TOKEN !== undefined)
 
-const jsonlangs = "[\n" +
-    "    {\n" +
-    "        \"key\": \"ar\",\n" +
-    "        \"name\": \"Arabic\",\n" +
-    "        \"isDefault\": false\n" +
-    "    },\n" +
-    "    {\n" +
-    "        \"key\": \"de\",\n" +
-    "        \"name\": \"German\",\n" +
-    "        \"isDefault\": false\n" +
-    "    },\n" +
-    "    {\n" +
-    "        \"key\": \"en\",\n" +
-    "        \"name\": \"English\",\n" +
-    "        \"isDefault\": true,\n" +
-    "        \"icon\": \"gb\"\n" +
-    "    },\n" +
-    "    {\n" +
-    "        \"key\": \"es\",\n" +
-    "        \"name\": \"Spanish\",\n" +
-    "        \"isDefault\": false\n" +
-    "    },\n" +
-    "    {\n" +
-    "        \"key\": \"fr\",\n" +
-    "        \"name\": \"French\",\n" +
-    "        \"isDefault\": false\n" +
-    "    },\n" +
-    "    {\n" +
-    "        \"key\": \"il\",\n" +
-    "        \"name\": \"Hebrew\",\n" +
-    "        \"isDefault\": false\n" +
-    "    },\n" +
-    "    {\n" +
-    "        \"key\": \"it\",\n" +
-    "        \"name\": \"Italian\",\n" +
-    "        \"isDefault\": false\n" +
-    "    },\n" +
-    "    {\n" +
-    "        \"key\": \"pt\",\n" +
-    "        \"name\": \"Portuguese\",\n" +
-    "        \"isDefault\": false\n" +
-    "    },\n" +
-    "    {\n" +
-    "        \"key\": \"ru\",\n" +
-    "        \"name\": \"Russian\",\n" +
-    "        \"isDefault\": false\n" +
-    "    }\n" +
-    "]"
+// const jsonlangs = "[\n" +
+//     "    {\n" +
+//     "        \"key\": \"ar\",\n" +
+//     "        \"name\": \"Arabic\",\n" +
+//     "        \"isDefault\": false\n" +
+//     "    },\n" +
+//     "    {\n" +
+//     "        \"key\": \"de\",\n" +
+//     "        \"name\": \"German\",\n" +
+//     "        \"isDefault\": false\n" +
+//     "    },\n" +
+//     "    {\n" +
+//     "        \"key\": \"en\",\n" +
+//     "        \"name\": \"English\",\n" +
+//     "        \"isDefault\": true,\n" +
+//     "        \"icon\": \"gb\"\n" +
+//     "    },\n" +
+//     "    {\n" +
+//     "        \"key\": \"es\",\n" +
+//     "        \"name\": \"Spanish\",\n" +
+//     "        \"isDefault\": false\n" +
+//     "    },\n" +
+//     "    {\n" +
+//     "        \"key\": \"fr\",\n" +
+//     "        \"name\": \"French\",\n" +
+//     "        \"isDefault\": false\n" +
+//     "    },\n" +
+//     "    {\n" +
+//     "        \"key\": \"il\",\n" +
+//     "        \"name\": \"Hebrew\",\n" +
+//     "        \"isDefault\": false\n" +
+//     "    },\n" +
+//     "    {\n" +
+//     "        \"key\": \"it\",\n" +
+//     "        \"name\": \"Italian\",\n" +
+//     "        \"isDefault\": false\n" +
+//     "    },\n" +
+//     "    {\n" +
+//     "        \"key\": \"pt\",\n" +
+//     "        \"name\": \"Portuguese\",\n" +
+//     "        \"isDefault\": false\n" +
+//     "    },\n" +
+//     "    {\n" +
+//     "        \"key\": \"ru\",\n" +
+//     "        \"name\": \"Russian\",\n" +
+//     "        \"isDefault\": false\n" +
+//     "    }\n" +
+//     "]"
 
 // const allLanguages: {key: string}[] = JSON.parse(jsonlangs).map((l: any) => ({key: l.key}));
 // const allLanguages: {key: string}[] = (await fetch(`${cdn}/_languages`).then(res => res.json())).map((l: any) => ({key: l.key}));
@@ -91,7 +91,7 @@ export async function middleware(request: NextRequest) {
     if (chunkedUrl) {
         resp = NextResponse.next();
         lang = chunkedUrl[1]
-    } else if (request.nextUrl.pathname === "/first-page") {
+    } else if (request.nextUrl.pathname.startsWith("/first-page") || request.nextUrl.pathname.startsWith("/images")) {
         resp = NextResponse.next();
         lang = "unset"
     } else {
@@ -117,6 +117,6 @@ export const config = {
          * - favicon.ico (favicon file)
          * Feel free to modify this pattern to include more paths.
          */
-        '/((?!_next/static|_next/image|favicon.ico|.*\\.(?:svg|png|jpg|jpeg|gif|webp)$).*)',
+        '/((?!_next/static|_next/image|favicon.ico|images|.*\\.(?:svg|png|jpg|jpeg|gif|webp)$).*)',
     ],
 }
