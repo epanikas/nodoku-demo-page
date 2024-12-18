@@ -38,7 +38,9 @@ export const commonImageProvider: NdImageProvider = async (imageProps: NdImagePr
         )
     }
 
-    return await NodokuComponents.imageProvider({url: convertedUrl, alt, imageStyle});
+    // return await NodokuComponents.imageProvider({url: convertedUrl, alt, imageStyle});
+
+    return <img className={`${imageStyle?.base} ${imageStyle?.decoration}`} src={url} alt={alt} loading={"lazy"}/>;
 }
 
 

@@ -1,13 +1,15 @@
 import type {Metadata} from "next";
 import "../globals.css";
 import {dir} from 'i18next'
-import MyNavbar, {NavbarMenuItem} from "@/app/components/my-navbar";
+// import {NavbarMenuItem} from "@/app/components/my-navbar";
 import React from "react";
 import {NodokuI18n} from "nodoku-i18n";
 import {i18nStore} from "@/app/components/nodoku-server-i18n-config";
-import MyFooter from "@/app/components/my-footer";
+// import MyFooter from "@/app/components/my-footer";
 import "nodoku-components/a11y-light"
 import "nodoku-components/a11y-dark"
+import dynamic from "next/dynamic";
+import {NavbarMenuItem} from "@/app/components/my-navbar-menu-item";
 
 
 export const metadata: Metadata = {
@@ -64,6 +66,10 @@ function menu(lng: string): NavbarMenuItem[] {
 }
 
 // export const dynamic = "force-static";
+
+const MyFooter = dynamic(() => import("@/app/components/my-footer"))
+const MyNavbar = dynamic(() => import("@/app/components/my-navbar"))
+
 
 export default async function RootLayout({ children, params }: Readonly<{ children: React.ReactNode, params: Promise<{lng: string}> }>) {
 

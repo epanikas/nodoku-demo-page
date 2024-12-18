@@ -16,18 +16,7 @@ import React from "react";
 import {HiOutlineMap} from "react-icons/hi2";
 // import "flag-icons/css/flag-icons.css";
 import {LanguageSwitcher} from "@/app/components/language-switcher";
-
-export class NavbarMenuItem {
-    label: string;
-    link: string;
-    subItems: NavbarMenuItem[] = [];
-
-    constructor(label: string, link: string) {
-        this.label = label;
-        this.link = link;
-    }
-
-}
+import {NavbarMenuItem} from "@/app/components/my-navbar-menu-item";
 
 export class NavbarProps {
     languages: { key: string;

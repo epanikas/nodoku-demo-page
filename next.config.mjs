@@ -11,6 +11,8 @@ const nextConfig = (phase, {defaultConfig}) => {
      * @type {import('next').NextConfig}
      */
     const nextConfig = {
+        // output: 'export',
+
         /* config options here */
         ...defaultConfig,
         pageExtensions: ['js', 'jsx', 'md', 'mdx', 'ts', 'tsx'],
