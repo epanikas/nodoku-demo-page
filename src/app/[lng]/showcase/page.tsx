@@ -8,7 +8,7 @@ import {commonHtmlSanitizer} from "@/app/components/common-provider";
 import {nameToIconConverters} from "@/app/components/common-provider";
 import {i18nStore} from "@/app/components/nodoku-server-i18n-config";
 import {NodokuI18n} from "nodoku-i18n";
-import {NodokuIcons} from "nodoku-icons";
+// import {NodokuIcons} from "nodoku-icons";
 
 
 const customCarousel = {...getTheme()};
@@ -86,7 +86,7 @@ export default async function Home({params}: { params: Promise<{ lng: string }> 
                     imageProvider={commonImageProvider}
                     htmlSanitizer={commonHtmlSanitizer}
                     i18nextProvider={NodokuI18n.i18nForNodoku(i18nStore)}
-                    i18nextPostProcessor={NodokuIcons.iconTextPostProcessorFactory(nameToIconConverters)}
+                    i18nextPostProcessor={undefined}
                 />
             </Flowbite>
         );

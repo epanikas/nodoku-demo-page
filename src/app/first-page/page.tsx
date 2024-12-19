@@ -4,10 +4,6 @@ import {parseMarkdownAsContent, parseYamlContentAsSkin, RenderingPage, Rendering
 import {nodokuComponentResolver} from "@/nodoku-component-resolver"
 import {commonImageProvider} from "@/app/components/common-provider";
 import {commonHtmlSanitizer} from "@/app/components/common-provider";
-import {NodokuI18n} from "nodoku-i18n";
-import {i18nStore} from "@/app/components/nodoku-server-i18n-config";
-import {nameToIconConverters} from "@/app/components/common-provider";
-import {NodokuIcons} from "nodoku-icons";
 
 
 export default async function Home(): Promise<JSX.Element> {

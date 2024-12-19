@@ -13,7 +13,7 @@ import {
     NavbarToggle
 } from "flowbite-react";
 import React from "react";
-import {HiOutlineMap} from "react-icons/hi2";
+// import {HiOutlineMap} from "react-icons/hi2";
 // import "flag-icons/css/flag-icons.css";
 import {LanguageSwitcher} from "@/app/components/language-switcher";
 import {NavbarMenuItem} from "@/app/components/my-navbar-menu-item";
@@ -39,7 +39,7 @@ export default function MyNavbar(props: NavbarProps) {
 
         <Navbar fluid rounded className={"bg-gray-100 fixed top-0 left-0 right-0 z-40"}>
             <NavbarBrand href="https://flowbite-react.com">
-                <HiOutlineMap size={40} className={"dark:text-white"}/>
+                {/*<HiOutlineMap size={40} className={"dark:text-white"}/>*/}
                 <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">Nodoku</span>
             </NavbarBrand>
 

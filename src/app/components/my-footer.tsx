@@ -8,7 +8,7 @@ import {commonImageProvider} from "@/app/components/common-provider";
 import {commonHtmlSanitizer} from "@/app/components/common-provider";
 import {nameToIconConverters} from "@/app/components/common-provider";
 import {i18nStore} from "@/app/components/nodoku-server-i18n-config";
-import {NodokuIcons} from "nodoku-icons";
+// import {NodokuIcons} from "nodoku-icons";
 
 const customCarousel = {...getTheme()};
 
@@ -55,7 +55,7 @@ export default async function MyFooter(params: {lng: string}): Promise<JSX.Eleme
                 imageProvider={commonImageProvider}
                 htmlSanitizer={commonHtmlSanitizer}
                 i18nextProvider={NodokuI18n.i18nForNodoku(i18nStore)}
-                i18nextPostProcessor={NodokuIcons.iconTextPostProcessorFactory(nameToIconConverters)}
+                i18nextPostProcessor={undefined}
             />
         </Flowbite>
     );
