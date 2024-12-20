@@ -1,5 +1,4 @@
 import * as fs from "node:fs";
-import {Flowbite, getTheme} from "flowbite-react";
 import React, {JSX} from "react";
 import {parseMarkdownAsContent, parseYamlContentAsSkin, RenderingPage, RenderingPriority} from "nodoku-core";
 import {NodokuI18n} from "nodoku-i18n";
@@ -8,14 +7,8 @@ import {commonImageProvider} from "@/app/components/common-provider";
 import {commonHtmlSanitizer} from "@/app/components/common-provider";
 import {nameToIconConverters} from "@/app/components/common-provider";
 import {i18nStore} from "@/app/components/nodoku-server-i18n-config";
-// import {NodokuIcons} from "nodoku-icons";
+import {NodokuIcons} from "nodoku-icons";
 
-const customCarousel = {...getTheme()};
-
-customCarousel.carousel.item.base = "height block w-full";
-customCarousel.carousel.scrollContainer.base = "snap-mandatory flex h-full overflow-y-hidden overflow-x-scroll scroll-smooth rounded-none";
-
-export const dynamic = "force-static"
 
 var runsOnServerSide = typeof window === 'undefined';
 if (!runsOnServerSide) {
@@ -45,7 +38,6 @@ export default async function MyFooter(params: {lng: string}): Promise<JSX.Eleme
     }
 
     return (
-        <Flowbite theme={{theme: customCarousel}}>
             <RenderingPage
                 lng={lng}
                 renderingPriority={RenderingPriority.skin_first}
@@ -55,9 +47,8 @@ export default async function MyFooter(params: {lng: string}): Promise<JSX.Eleme
                 imageProvider={commonImageProvider}
                 htmlSanitizer={commonHtmlSanitizer}
                 i18nextProvider={NodokuI18n.i18nForNodoku(i18nStore)}
-                i18nextPostProcessor={undefined}
+                i18nextPostProcessor={NodokuIcons.iconTextPostProcessorFactory(nameToIconConverters)}
             />
-        </Flowbite>
     );
 }
 

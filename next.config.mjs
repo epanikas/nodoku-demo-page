@@ -1,5 +1,6 @@
 
-import createMDX from '@next/mdx'
+import createMDX from "@next/mdx"
+import withBundleAnalyzer from "@next/bundle-analyzer"
 import path from "node:path";
 
 const withMDX = createMDX({
@@ -18,7 +19,7 @@ const nextConfig = (phase, {defaultConfig}) => {
         pageExtensions: ['js', 'jsx', 'md', 'mdx', 'ts', 'tsx'],
         webpack: ((config, opts) => {
 
-            config.resolve.alias["flowbite-react"] = path.resolve('./node_modules/flowbite-react');
+            // config.resolve.alias["flowbite-react"] = path.resolve('./node_modules/flowbite-react');
             config.resolve.alias["flowbite"] = path.resolve('./node_modules/flowbite');
 
             return config;
@@ -29,7 +30,7 @@ const nextConfig = (phase, {defaultConfig}) => {
 
     nextConfig.transpilePackages = ["nodoku-core", "nodoku-components", "nodoku-flowbite", "nodoku-mambaui"]
 
-    return withMDX(nextConfig)
+    return withBundleAnalyzer({enabled: process.env.ANALYZE === 'true', openAnalyzer: true, analyzerMode: "static"})(withMDX(nextConfig))
 }
 
 export default nextConfig;

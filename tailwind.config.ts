@@ -1,4 +1,4 @@
-import flowbite from "flowbite-react/tailwind";
+// import flowbite from "flowbite-react/tailwind";
 import type {Config} from "tailwindcss";
 import * as typo from '@tailwindcss/typography';
 
@@ -31,7 +31,8 @@ const config: Config = {
         "./public/**/*.html",
         "./src/**/*.{html,js}",
         "./public/site/**/*.yaml",
-        flowbite.content(),
+        // flowbite.content(),
+        // "node_modules/flowbite-react/dist/esm/components/Carousel/*.mjs",
     ],
 
     theme: {
@@ -58,7 +59,7 @@ const config: Config = {
     },
     plugins: [
         // require("flowbite/plugin")
-        flowbite.plugin(),
+        // flowbite.plugin(),
         typo.default(),
     ],
     // prefix: 'tw-',

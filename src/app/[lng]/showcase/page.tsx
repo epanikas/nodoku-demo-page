@@ -1,5 +1,5 @@
 import fs from "node:fs";
-import {Flowbite, getTheme} from "flowbite-react";
+// import {Flowbite, getTheme} from "flowbite-react";
 import React, {JSX} from "react";
 import {parseMarkdownAsContent, parseYamlContentAsSkin, RenderingPage, RenderingPriority} from "nodoku-core";
 import {nodokuComponentResolver} from "@/nodoku-component-resolver"
@@ -8,13 +8,13 @@ import {commonHtmlSanitizer} from "@/app/components/common-provider";
 import {nameToIconConverters} from "@/app/components/common-provider";
 import {i18nStore} from "@/app/components/nodoku-server-i18n-config";
 import {NodokuI18n} from "nodoku-i18n";
-// import {NodokuIcons} from "nodoku-icons";
+import {NodokuIcons} from "nodoku-icons";
 
 
-const customCarousel = {...getTheme()};
-
-customCarousel.carousel.item.base = "height kaka afadsfa  block w-full";
-customCarousel.carousel.scrollContainer.base = "snap-mandatory flex h-full overflow-y-hidden overflow-x-scroll scroll-smooth rounded-none";
+// const customCarousel = {...getTheme()};
+//
+// customCarousel.carousel.item.base = "height kaka afadsfa  block w-full";
+// customCarousel.carousel.scrollContainer.base = "snap-mandatory flex h-full overflow-y-hidden overflow-x-scroll scroll-smooth rounded-none";
 
 // export async function generateStaticParams(): Promise<{ params: { lng: string } }[]> {
 //     const pageParams = (await NodokuI18n.Simplelocalize.allLanguages()).map((l: LanguageDef) => {
@@ -76,19 +76,20 @@ export default async function Home({params}: { params: Promise<{ lng: string }> 
     }
 
     return (
-            <Flowbite theme={{theme: customCarousel}}>
-                <RenderingPage
-                    lng={lng}
-                    renderingPriority={RenderingPriority.skin_first}
-                    skin={skin}
-                    content={content}
-                    componentResolver={nodokuComponentResolver}
-                    imageProvider={commonImageProvider}
-                    htmlSanitizer={commonHtmlSanitizer}
-                    i18nextProvider={NodokuI18n.i18nForNodoku(i18nStore)}
-                    i18nextPostProcessor={undefined}
-                />
-            </Flowbite>
+            // <Flowbite theme={{theme: customCarousel}}>
+            //     <RenderingPage
+            //         lng={lng}
+            //         renderingPriority={RenderingPriority.skin_first}
+            //         skin={skin}
+            //         content={content}
+            //         componentResolver={nodokuComponentResolver}
+            //         imageProvider={commonImageProvider}
+            //         htmlSanitizer={commonHtmlSanitizer}
+            //         i18nextProvider={NodokuI18n.i18nForNodoku(i18nStore)}
+            //         i18nextPostProcessor={undefined}
+            //     />
+            // </Flowbite>
+        <div>my showcase</div>
         );
 }
 

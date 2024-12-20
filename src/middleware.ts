@@ -91,7 +91,11 @@ export async function middleware(request: NextRequest) {
     if (chunkedUrl) {
         resp = NextResponse.next();
         lang = chunkedUrl[1]
-    } else if (request.nextUrl.pathname.startsWith("/first-page") || request.nextUrl.pathname.startsWith("/images")) {
+    } else if (request.nextUrl.pathname.startsWith("/first-page")
+        || request.nextUrl.pathname.startsWith("/images")
+        || request.nextUrl.pathname.endsWith(".js")
+        || request.nextUrl.pathname.endsWith(".js.map")) {
+
         resp = NextResponse.next();
         lang = "unset"
     } else {

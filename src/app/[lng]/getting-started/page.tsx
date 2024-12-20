@@ -7,7 +7,7 @@ import {commonImageProvider} from "@/app/components/common-provider";
 import {commonHtmlSanitizer} from "@/app/components/common-provider";
 import {nameToIconConverters} from "@/app/components/common-provider";
 import {i18nStore} from "@/app/components/nodoku-server-i18n-config";
-// import {NodokuIcons} from "nodoku-icons";
+import {NodokuIcons} from "nodoku-icons";
 
 
 // export const dynamic = "force-static"
@@ -65,7 +65,7 @@ export default async function Home({params}: { params: Promise<{ lng: string }> 
             imageProvider={commonImageProvider}
             htmlSanitizer={commonHtmlSanitizer}
             i18nextProvider={NodokuI18n.i18nForNodoku(i18nStore)}
-            i18nextPostProcessor={undefined}
+            i18nextPostProcessor={NodokuIcons.iconTextPostProcessorFactory(nameToIconConverters)}
         />
     );
 }
