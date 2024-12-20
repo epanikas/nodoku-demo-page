@@ -86,7 +86,7 @@ export default async function RootLayout({ children, params }: Readonly<{ childr
                 {children}
                 <MyFooter lng={lng} />
                 {/*<script src="/scripts/crop-height-50-percents.js" type="text/javascript"/>*/}
-                <script src="/scripts/flowbite.min.js" type="text/javascript" defer={true}/>
+                <script defer src="/scripts/flowbite.min.js" type="text/javascript" />
             </body>
         </html>
     );
