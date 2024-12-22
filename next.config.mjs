@@ -17,9 +17,14 @@ const nextConfig = (phase, {defaultConfig}) => {
         /* config options here */
         ...defaultConfig,
         pageExtensions: ['js', 'jsx', 'md', 'mdx', 'ts', 'tsx'],
+        // experimental: {
+        //     optimizePackageImports: ['flowbite'],
+        // },
+
         webpack: ((config, opts) => {
 
             // config.resolve.alias["flowbite-react"] = path.resolve('./node_modules/flowbite-react');
+            // config.resolve.alias["flowbite-react/components/Carousel"] = path.resolve('./node_modules/flowbite-react/dist/esm/components/Carousel/index.mjs');
             config.resolve.alias["flowbite"] = path.resolve('./node_modules/flowbite');
 
             return config;

@@ -1,4 +1,4 @@
-// import flowbite from "flowbite-react/tailwind";
+// import flowbite from "flowbite/plugin";
 import type {Config} from "tailwindcss";
 import * as typo from '@tailwindcss/typography';
 
@@ -32,6 +32,7 @@ const config: Config = {
         "./src/**/*.{html,js}",
         "./public/site/**/*.yaml",
         // flowbite.content(),
+        "./node_modules/flowbite/**/*.js"
         // "node_modules/flowbite-react/dist/esm/components/Carousel/*.mjs",
     ],
 

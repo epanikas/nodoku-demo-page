@@ -67,9 +67,6 @@ rows:
         decoration: mt-10 mx-5 gap-5
       components:
         - flowbite/carousel:
-            theme:
-              imageStyle:
-                base: object-cover object-center w-full rounded-t-md aspect-narrow bg-gray-500 dark:bg-gray-500
             selector:
               attributes:
                 sectionName: nodoku-way
