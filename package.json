@@ -8,13 +8,17 @@
     "dev-debug": "cross-env NODE_ENV=development NODE_OPTIONS='--inspect' && next dev -p 3001",
     "build": "next build --debug",
     "build-analyze": "cross-env ANALYZE=true  next build --debug",
+    "build-purgecss": "next build --debug  && npm run purgecss",
     "build-update": "shx rm -rf .next && shx rm -f missing-keys.json && next build --debug && env-cmd nodoku-i18n-upload-missing-keys-to-simplelocalize",
     "start": "env-cmd next start -p 3001",
     "lint": "next lint",
     "upload-missing": "env-cmd nodoku-i18n-upload-missing-keys-to-simplelocalize",
     "gen-component-resolver": "nodoku-gen-component-resolver",
     "gen-skin-schema": "nodoku-gen-skin-schema",
-    "postcss": "postcss -o  ./output.css ./src/app/globals.css"
+    "postcss": "postcss -o  ./output.css ./src/app/globals.css",
+    "purgecss1": "purgecss --content .next/server/app/*.html --css .next/static/css/*.css --output ./ --config ./purgecss.json ",
+    "purgecss2": "purgecss --content .next/server/app/*.html --css .next/static/css/*.css --output ./ --config purgecss.mjs ",
+    "purgecss": "tsx ./src/bin/purgecss-launch.ts ./purgecss.mjs"
   },
   "dependencies": {
     "@mdx-js/loader": "^3.0.1",
@@ -63,9 +67,11 @@
     "eslint-config-next": "^15.0.3",
     "postcss": "^8.4.38",
     "postcss-cli": "^11.0.0",
+    "purgecss": "^7.0.2",
     "shx": "^0.3.4",
     "source-map-loader": "^5.0.0",
     "tailwindcss": "^3.4.3",
+    "tsx": "^4.19.0",
     "typescript": "^5"
   }
 }
