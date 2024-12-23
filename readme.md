@@ -27,3 +27,12 @@ https://stackoverflow.com/questions/73547632/lower-core-web-vitals-esp-tti-and-t
 
 # How to Setup Tailwind with PurgeCSS and PostCSS?
 https://dev.to/dawnind/how-to-setup-tailwind-with-purgecss-and-postcss-3341
+
+# CSS Styles from unrelated pages and components are merged if they're using the same shared component
+https://github.com/vercel/next.js/discussions/70168
+
+# postcss-import postcss plugin to resolve @import rule in global.css
+https://www.npmjs.com/package/postcss-import
+
+# How to include css files in Nextjs 14
+https://stackoverflow.com/questions/77854056/how-to-include-css-files-in-nextjs-14

@@ -6,10 +6,11 @@ import React from "react";
 import {NodokuI18n} from "nodoku-i18n";
 import {i18nStore} from "@/app/components/nodoku-server-i18n-config";
 // import MyFooter from "@/app/components/my-footer";
-import "nodoku-components/a11y-light"
-import "nodoku-components/a11y-dark"
+// import "nodoku-components/a11y-light"
+// import "nodoku-components/a11y-dark"
 import dynamic from "next/dynamic";
 import {NavbarMenuItem} from "@/app/components/my-navbar-menu-item";
+// import NavHeader from "@/app/components/nav-header";
 
 
 export const metadata: Metadata = {
@@ -83,6 +84,7 @@ export default async function RootLayout({ children, params }: Readonly<{ childr
         <html lang={lng} dir={lng == "il" ? "rtl" : dir(lng)}>
             <body className={"bg-white dark:bg-black text-black dark:text-white"} style={{paddingTop: "60px"}}>
                 <MyNavbar languages={await i18nStore.allLanguages()} selectedLng={lng} menu={menu(lng)}/>
+                {/*<NavHeader lng={lng} />*/}
                 {children}
                 <MyFooter lng={lng} />
                 {/*<script src="/scripts/crop-height-50-percents.js" type="text/javascript"/>*/}

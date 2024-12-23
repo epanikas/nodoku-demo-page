@@ -7,6 +7,7 @@
 
 const config = {
   plugins: {
+    "postcss-import": {},
     "autoprefixer": {},
     "tailwindcss": {},
     // purgeCSSPlugin: ["purgeCSSPlugin", {content: "test"}]

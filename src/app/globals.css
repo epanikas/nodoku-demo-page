@@ -1,3 +1,10 @@
+/*@import "nodoku-components/styles/hljs/a11y-dark";*/
+@import "nodoku-components/esm/hljs/styles/prefixed-a11y-light.css";
+@import "nodoku-components/esm/hljs/styles/prefixed-a11y-dark.css";
+/*@import "~/node_modules/nodoku-components/esm/hljs/styles/prefixed-a11y-light.css";*/
+/*@import "~/node_modules/nodoku-components/esm/hljs/styles/prefixed-a11y-dark.css";*/
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

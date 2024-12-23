@@ -69,6 +69,7 @@
     "eslint-config-next": "^15.0.3",
     "postcss": "^8.4.38",
     "postcss-cli": "^11.0.0",
+    "postcss-import": "^16.1.0",
     "purgecss": "^7.0.2",
     "shx": "^0.3.4",
     "source-map-loader": "^5.0.0",
