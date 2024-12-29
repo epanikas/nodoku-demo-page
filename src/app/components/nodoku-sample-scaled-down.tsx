@@ -51,6 +51,7 @@ export default async function NodokuSampleScaledDown({params}: { params: { lng: 
                         htmlSanitizer={commonHtmlSanitizer}
                         i18nextProvider={NodokuI18n.i18nForNodoku(i18nStore)}
                         i18nextPostProcessor={undefined}
+                        clientSideComponentProvider={undefined}
                     />
                 </div>
             </div>

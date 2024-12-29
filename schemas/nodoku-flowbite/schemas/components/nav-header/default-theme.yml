@@ -1,0 +1,53 @@
+# yaml-language-server: $schema=./visual-schema.json
+
+containerStyle:
+    base: w-full pb-10 h-full
+    decoration: border rounded-lg shadow border-gray-200 dark:border-gray-700
+bgImageStyle:
+    base: -z-20 bg-cover bg-no-repeat
+    decoration: blur-sm
+bgColorStyle:
+    base: -z-10
+    decoration: opacity-90 bg-gray-300 dark:bg-gray-700
+imageStyle:
+    base: rounded-t-lg object-cover
+    decoration: aspect-video
+innerContainerStyle:
+    base: p-5
+    decoration: ''
+titleStyle:
+    base: mb-2 text-3xl font-bold tracking-tight
+    decoration: ''
+subTitleStyle:
+    base: mb-2 text-2xl tracking-tight
+    decoration: ''
+paragraphStyle:
+    base: mb-3 font-normal
+    decoration: ''
+ctaContainerStyle:
+    base: absolute bottom-0 right-0 flex flex-row
+    decoration: p-3
+ctaButtonStyle:
+    - base: flex inline-flex items-center text-center nowrap focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800
+      decoration: m-2 px-3 py-2 text-sm font-medium text-white bg-blue-700 hover:bg-blue-800 rounded-lg dark:bg-blue-600 dark:hover:bg-blue-700
+codeHighlightTheme:
+    hljsLightTheme: a11y-light
+    hljsDarkTheme: a11y-dark
+    lightDisplay: light:inline-block
+    darkDisplay: dark:inline-block
+    codeContainer:
+        base: text-center w-full
+        decoration: ''
+    preContainer:
+        base: text-left w-full
+        decoration: border-2 border-gray-200
+    pre:
+        base: w-full overflow-scroll
+        decoration: ''
+listTheme:
+    listStyle:
+        base: inline-block list-disc space-y-1 list-outside
+        decoration: ''
+    listItemStyle:
+        base: ml-4,
+        decoration: ''

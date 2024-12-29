@@ -32,7 +32,7 @@ const missingKeyStorage: MissingKeyStorage =
 
 export const i18nStore: NodokuI18n.I18nStore = await NodokuI18n.initI18nStore(/*apiKey, projectToken,*/
     "all",
-    ["nodoku-landing", "getting-started", "showcase", "footer"], 'en',
+    ["nodoku-landing", "getting-started", "showcase", "footer", "nav-header"], 'en',
     translationFetchMode,
     saveMissing,
     loadOnInit,

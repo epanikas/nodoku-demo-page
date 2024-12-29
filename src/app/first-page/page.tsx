@@ -22,6 +22,7 @@ export default async function Home(): Promise<JSX.Element> {
             htmlSanitizer={commonHtmlSanitizer}
             i18nextProvider={undefined}
             i18nextPostProcessor={undefined}
+            clientSideComponentProvider={undefined}
         />
     );
 }

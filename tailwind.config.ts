@@ -4,6 +4,8 @@ import * as typo from '@tailwindcss/typography';
 
 
 const config: Config = {
+    darkMode: 'class',
+
     content: [
         // "./node_modules/flowbite-react/lib/**/*.js",
         // './node_modules/flowbite/**/*.js',
@@ -32,7 +34,7 @@ const config: Config = {
         "./src/**/*.{html,js}",
         "./public/site/**/*.yaml",
         // flowbite.content(),
-        "./node_modules/flowbite/**/*.js"
+        // "./node_modules/flowbite/**/*.js"
         // "node_modules/flowbite-react/dist/esm/components/Carousel/*.mjs",
     ],
 

@@ -1,16 +1,14 @@
 import type {Metadata} from "next";
 import "../globals.css";
 import {dir} from 'i18next'
-// import {NavbarMenuItem} from "@/app/components/my-navbar";
 import React from "react";
 import {NodokuI18n} from "nodoku-i18n";
 import {i18nStore} from "@/app/components/nodoku-server-i18n-config";
-// import MyFooter from "@/app/components/my-footer";
 // import "nodoku-components/a11y-light"
 // import "nodoku-components/a11y-dark"
 import dynamic from "next/dynamic";
-import {NavbarMenuItem} from "@/app/components/my-navbar-menu-item";
-// import NavHeader from "@/app/components/nav-header";
+import NavHeader from "@/app/components/nav-header";
+import LanguageDef = NodokuI18n.LanguageDef;
 
 
 export const metadata: Metadata = {
@@ -35,36 +33,38 @@ export async function generateStaticParams(): Promise<{lng: string}[]> {
     return params;
 }
 
-function menu(lng: string): NavbarMenuItem[] {
-    return [
-        {
-            label: "Home",
-            link: `/${lng}`,
-            subItems: []
-        },
-        {
-            label: "Docs",
-            link: `/${lng}/docs`,
-            subItems: []
-        },
-        {
-            label: "Components",
-            link: "#",
-            subItems: [
-                {
-                    label: "Based on Flowbite",
-                    link: `/${lng}/docs/flowbite-components`,
-                    subItems: []
-                },
-                {
-                    label: "Based on Mamba UI",
-                    link: `/${lng}/docs/mambaui-components`,
-                    subItems: []
-                }
-            ]
-        }
-    ];
-}
+// function menu(lng: string): NavbarMenuItem[] {
+//     return [
+//         {
+//             label: "Home",
+//             link: `/${lng}`,
+//             subItems: []
+//         },
+//         {
+//             label: "Docs",
+//             link: `/${lng}/docs`,
+//             subItems: []
+//         },
+//         {
+//             label: "Components",
+//             link: "#",
+//             subItems: [
+//                 {
+//                     label: "Based on Flowbite",
+//                     link: `/${lng}/docs/flowbite-components`,
+//                     subItems: []
+//                 },
+//                 {
+//                     label: "Based on Mamba UI",
+//                     link: `/${lng}/docs/mambaui-components`,
+//                     subItems: []
+//                 }
+//             ]
+//         }
+//     ];
+// }
+
+
 
 // export const dynamic = "force-static";
 
@@ -76,21 +76,23 @@ export default async function RootLayout({ children, params }: Readonly<{ childr
 
     const { lng } = await params;
 
+    const languages: LanguageDef[] = await i18nStore.allLanguages()
+
     // console.log("rendering RootLayout for", lng)
 
     // throw new Error("this is error on layout, should be thrown at build time")
 
+    const actualDir = lng == "il" ? "rtl" : dir(lng);
+
     return (
-        <html lang={lng} dir={lng == "il" ? "rtl" : dir(lng)}>
-            <body className={"bg-white dark:bg-black text-black dark:text-white"} style={{paddingTop: "60px"}}>
-                <MyNavbar languages={await i18nStore.allLanguages()} selectedLng={lng} menu={menu(lng)}/>
-                {/*<NavHeader lng={lng} />*/}
-                {children}
-                <MyFooter lng={lng} />
-                {/*<script src="/scripts/crop-height-50-percents.js" type="text/javascript"/>*/}
-                {/*<script async src="/scripts/flowbite.js" type="text/javascript" />*/}
-                {/*<script defer src="/scripts/load-flowbite.js" type="module" />*/}
-            </body>
+        <html lang={lng} dir={actualDir} className={actualDir}>
+        <body className={"bg-white dark:bg-black text-black dark:text-white"} style={{paddingTop: "60px"}}>
+            {/*<MyNavbar languages={await i18nStore.allLanguages()} selectedLng={lng} menu={menu(lng)}/>*/}
+            <NavHeader lng={lng} languages={languages}/>
+            {children}
+            <MyFooter lng={lng} />
+            {/*{<script async src="/scripts/flowbite.min.js" type="text/javascript" />}*/}
+        </body>
         </html>
     );
 }

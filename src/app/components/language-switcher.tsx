@@ -3,6 +3,7 @@
 import React, {JSX, useEffect, useState} from "react";
 import styles from "./language-selector.module.scss";
 import {LANGUAGE_COOKIE} from "@/app/components/common-i18n-config";
+import "flag-icons/css/flag-icons.css";
 
 interface FlagIconProps {
     countryCode: string;
@@ -21,13 +22,17 @@ function FlagIcon(props: FlagIconProps) {
 
 const LANGUAGE_SELECTOR_ID = 'language-selector';
 
+console.log("adding language switcher...")
+
 export const LanguageSwitcher = ({languages, selectedLng}: {selectedLng: string, languages: { key: string;
         name: string;
         isDefault: boolean;
         icon: string }[]}): JSX.Element => {
 
     const [isOpen, setIsOpen] = useState(false);
+
     const selectedLanguage = languages.find(language => language.key === selectedLng);
+    console.log("using useState...", isOpen)
 
     const handleLanguageChange = async (lng: string) => {
 
@@ -71,11 +76,11 @@ export const LanguageSwitcher = ({languages, selectedLng}: {selectedLng: string,
 
     return (
         <>
-            <div className="flex items-center z-40 mr-2 ">
+            <div className="flex items-center z-40 mr-2 z-100">
                 <div className="relative inline-block text-left">
                     <div>
                         <button
-                            onClick={() => setIsOpen(!isOpen)}
+                            onClick={() => {setIsOpen(!isOpen)}}
                             type="button"
                             className="inline-flex items-center justify-center w-full rounded-md border border-gray-300 px-1 py-1 bg-white dark:bg-black text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                             id={LANGUAGE_SELECTOR_ID}

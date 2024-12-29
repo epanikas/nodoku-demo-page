@@ -60,6 +60,7 @@ export default async function Home({params}: { params: Promise<{ lng: string }> 
                 htmlSanitizer={commonHtmlSanitizer}
                 i18nextProvider={NodokuI18n.i18nForNodoku(i18nStore)}
                 i18nextPostProcessor={NodokuIcons.iconTextPostProcessorFactory(nameToIconConverters)}
+                clientSideComponentProvider={undefined}
             />
         // </Flowbite>
     );

@@ -48,6 +48,7 @@ export default async function MyFooter(params: {lng: string}): Promise<JSX.Eleme
                 htmlSanitizer={commonHtmlSanitizer}
                 i18nextProvider={NodokuI18n.i18nForNodoku(i18nStore)}
                 i18nextPostProcessor={NodokuIcons.iconTextPostProcessorFactory(nameToIconConverters)}
+                clientSideComponentProvider={undefined}
             />
     );
 }

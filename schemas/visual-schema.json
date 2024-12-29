@@ -166,6 +166,32 @@
                     "additionalProperties": false
                 },
 
+                "flowbite/nav-header": {
+                    "type": "object",
+                    "properties": {
+                        "selector": {
+                            "$ref": "../node_modules/nodoku-core/schemas/skin-common-schema.json#/definitions/Selector"
+                        },
+                        "theme": {
+                            "$ref": "./nodoku-flowbite/schemas/components/nav-header/visual-schema.json",
+                            "additionalProperties": false
+                        },
+                        "themes": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "./nodoku-flowbite/schemas/components/nav-header/visual-schema.json",
+                                "additionalProperties": false
+                            },
+                            "additionalItems": false
+                        }
+                    },
+                    "required": [
+                        "selector"
+                    ],
+                    "additionalItems": false,
+                    "additionalProperties": false
+                },
+
                 "mambaui/hero-one": {
                     "type": "object",
                     "properties": {
@@ -417,6 +443,10 @@
                             "additionalProperties": false
                         },
                         {
+                            "$ref": "./nodoku-flowbite/schemas/components/nav-header/visual-schema.json",
+                            "additionalProperties": false
+                        },
+                        {
                             "$ref": "./nodoku-mambaui/schemas/components/hero-one/visual-schema.json",
                             "additionalProperties": false
                         },
@@ -473,6 +503,10 @@
                             },
                             {
                                 "$ref": "./nodoku-flowbite/schemas/components/jumbotron/visual-schema.json",
+                                "additionalProperties": false
+                            },
+                            {
+                                "$ref": "./nodoku-flowbite/schemas/components/nav-header/visual-schema.json",
                                 "additionalProperties": false
                             },
                             {
@@ -610,6 +644,26 @@
                                     "type": "array",
                                     "items": {
                                         "$ref": "./nodoku-flowbite/schemas/components/jumbotron/visual-schema.json",
+                                        "additionalProperties": false
+                                    },
+                                    "additionalItems": false
+                                }
+                            },
+                            "additionalItems": false,
+                            "additionalProperties": false
+                        },
+
+                        "flowbite/nav-header": {
+                            "type": "object",
+                            "properties": {
+                                "theme": {
+                                    "$ref": "./nodoku-flowbite/schemas/components/nav-header/visual-schema.json",
+                                    "additionalProperties": false
+                                },
+                                "themes": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "./nodoku-flowbite/schemas/components/nav-header/visual-schema.json",
                                         "additionalProperties": false
                                     },
                                     "additionalItems": false
