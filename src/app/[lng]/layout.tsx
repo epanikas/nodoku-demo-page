@@ -102,9 +102,9 @@ export default async function RootLayout({ children, params }: Readonly<{ childr
     //     }
     // `
     let cssStyles: JSX.Element[] = [];
-    // if (process.env.NODE_ENV !== "development") {
-    //     cssStyles = __getInlineStyles();
-    // }
+    if (process.env.NODE_ENV !== "development") {
+        cssStyles = __getInlineStyles();
+    }
 
     return (
         <html lang={lng} dir={actualDir} className={actualDir}>
@@ -114,7 +114,7 @@ export default async function RootLayout({ children, params }: Readonly<{ childr
         <head title={"this is my title"}>
             {/*<style type="text/css" lang="css">{css}</style>*/}
             <title>this is my title</title>
-            {/*{cssStyles}*/}
+            {cssStyles}
         </head>
         <body className={"bg-white dark:bg-black text-black dark:text-white"} style={{paddingTop: "60px"}}>
             {/*<MyNavbar languages={await i18nStore.allLanguages()} selectedLng={lng} menu={menu(lng)}/>*/}
