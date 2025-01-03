@@ -33,7 +33,7 @@ const nextConfig = (phase, {defaultConfig}) => {
 
     // console.log("default config ", nextConfig)
 
-    nextConfig.transpilePackages = ["nodoku-core", "nodoku-components", "nodoku-flowbite", "nodoku-mambaui"]
+    nextConfig.transpilePackages = ["nodoku-core", "nodoku-components", "nodoku-flowbite", "nodoku-mambaui", "nodoku-icons"]
 
     return withBundleAnalyzer({enabled: process.env.ANALYZE === 'true', openAnalyzer: true, analyzerMode: "static"})(withMDX(nextConfig))
 }
