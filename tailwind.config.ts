@@ -34,7 +34,7 @@ const config: Config = {
         "./src/**/*.{html,js}",
         "./public/site/**/*.yaml",
         // flowbite.content(),
-        // "./node_modules/flowbite/**/*.js"
+        "./node_modules/flowbite/lib/esm/components/carousel/*.js"
         // "node_modules/flowbite-react/dist/esm/components/Carousel/*.mjs",
     ],
 

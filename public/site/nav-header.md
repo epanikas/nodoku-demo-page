@@ -9,7 +9,7 @@ nd-block:
 
 ## **Nodoku** is a library aiming at creating beautiful and responsive landing pages effortlessly. **Nodoku** uses **_Markdown_** file as content supplier, and a **_Yaml_** file as visual configurator.
 
-![logo](icon:react-icons/hi2:HiOutlineMap "Nodoku logo")
+![logo](icon:nd-react-icons/hi2:HiOutlineMap "Nodoku logo")
 
 {companyName}Nodoku
 

@@ -220,7 +220,7 @@ nd-block:
 
 # Distraction-free content-first approach
 
-![step-1](icon:react-icons/hi:HiCode "step 1")
+![step-1](icon:nd-react-icons/hi:HiCode "step 1")
 
 Unlike Nodoku, the vast majority of site builders are using the so-called WYSIWYG (What You See Is What You Get) approach, when the site is being built gradually, by filling in the web-forms right on the visual elements.
 
@@ -237,7 +237,7 @@ The content is created in a textual form in a Markdown file, and at this moment 
 
 # Content and presentation are strictly separated 
 
-![step-1](icon:react-icons/hi:HiOutlineViewGrid "step 1")
+![step-1](icon:nd-react-icons/hi:HiOutlineViewGrid "step 1")
 
 Nodoku promotes a strict separation between the content and the presentation, allowing for a great deal of flexibility, when one can be changed without affecting the other.
 
@@ -252,7 +252,7 @@ Keeping content and design concepts strictly separated allows for independent ed
 
 # Built-in multilingual localization 
 
-![step-1](icon:react-icons/hi:HiOutlineGlobeAlt "step 1")
+![step-1](icon:nd-react-icons/hi:HiOutlineGlobeAlt "step 1")
 
 Nodoku has been designed from ground up keeping in mind the necessity of the content localization.
 
@@ -270,7 +270,7 @@ Check out [nodoku-i18n](https://github.com/nodoku/nodoku-i18n) for more details.
 
 # Nodoku components are naturally responsive
 
-![step-1](icon:react-icons/hi:HiOutlineDeviceMobile "step 1")
+![step-1](icon:nd-react-icons/hi:HiOutlineDeviceMobile "step 1")
 
 Each Nodoku component is carefully crafted such that it would be presented correctly on any browsing device.
 
@@ -285,7 +285,7 @@ The Nodoku skin - a Yaml file providing visual customization - is based on the T
 
 # Layout, based either on CSS grid or CSS flex
 
-![step-1](icon:react-icons/hi:HiOutlineTable "step 1")
+![step-1](icon:nd-react-icons/hi:HiOutlineTable "step 1")
 
 A Nodoku page is organized as a **_set of rows_**, each row having one or more visual components.
 
@@ -304,7 +304,7 @@ This allows, depending on your particular requirements, adapt the layout that be
 
 # SEO friendly, thanks to Server-Side rendering
 
-![step-1](icon:react-icons/hi:HiOutlineAnnotation "step 1")
+![step-1](icon:nd-react-icons/hi:HiOutlineAnnotation "step 1")
 
 Nodoku is using Server-Side Rendering, powered by the [NextJS](https://github.com/vercel/next.js) framework.
 
@@ -323,7 +323,7 @@ Consequently, the whole page naturally becomes **_SEO friendly_**.
 
 # Extensible with new visual components
 
-![step-1](icon:react-icons/hi:HiOutlinePuzzle "step 1")
+![step-1](icon:nd-react-icons/hi:HiOutlinePuzzle "step 1")
 
 Nodoku framework is extensible by design, since it is **_the end user that controls the mapping_** between visual components and Yaml skin configuration.
 

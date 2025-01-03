@@ -1,9 +1,9 @@
 import {NdImageProps, NdHtmlSanitizer, NdImageProvider} from "nodoku-core";
 import {JSX} from "react";
 import {NodokuComponents} from "nodoku-components";
-import {nameToReactIcon_hi} from "nodoku-icons/hi"
-import {nameToReactIcon_hi2} from "nodoku-icons/hi2"
-import {nameToReactIcon_ci} from "nodoku-icons/ci"
+import {nameToReactIcon_hi} from "nodoku-icons/nd-react-icons/hi"
+import {nameToReactIcon_hi2} from "nodoku-icons/nd-react-icons/hi2"
+import {nameToReactIcon_ci} from "nodoku-icons/nd-react-icons/ci"
 import {NodokuIcons} from "nodoku-icons";
 import {NdTrustedHtml} from "nodoku-core";
 import { JSDOM } from "jsdom";

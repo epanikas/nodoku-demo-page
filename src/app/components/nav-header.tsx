@@ -18,6 +18,7 @@ import {NodokuIcons} from "nodoku-icons";
 import {LanguageSwitcher} from "@/app/components/language-switcher";
 import LanguageDef = NodokuI18n.LanguageDef;
 import {UserAccount} from "@/app/components/user-account";
+import flagIconProvider = NodokuIcons.flagIconProvider;
 
 
 var runsOnServerSide = typeof window === 'undefined';
@@ -70,6 +71,11 @@ export default async function NavHeader(params: {lng: string, languages: Languag
         await i18nStore.reloadResources();
     }
 
+    const iconLanguages = await Promise.all(languages.map(async l => (
+        {...l,
+            icon: (await flagIconProvider(l.icon, "1x1", "fi fis fiCircle inline-block"))}
+    )));
+
     const clientSideComponentProvider = (c: string) => {
 
         const k: ClientSideComponentNameEnum | undefined = fromStringToClientSideComponentNameEnum(c);
@@ -78,9 +84,10 @@ export default async function NavHeader(params: {lng: string, languages: Languag
 
             switch (k) {
                 case "flowbite/nav-header:language-switcher":
-                    return <LanguageSwitcher languages={languages} selectedLng={lng} />
+                    return <LanguageSwitcher languages={iconLanguages} selectedLng={lng} />
                 case "flowbite/nav-header:user-account":
-                    return <UserAccount />
+                    // return <UserAccount />
+                    return <></>
             }
 
         }

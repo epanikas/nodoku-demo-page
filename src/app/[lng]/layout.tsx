@@ -1,20 +1,30 @@
+import {JSX} from "react"
 import type {Metadata} from "next";
-import "../globals.css";
 import {dir} from 'i18next'
 import React from "react";
 import {NodokuI18n} from "nodoku-i18n";
 import {i18nStore} from "@/app/components/nodoku-server-i18n-config";
 // import "nodoku-components/a11y-light"
 // import "nodoku-components/a11y-dark"
-import dynamic from "next/dynamic";
+// import dynamic from "next/dynamic";
 import NavHeader from "@/app/components/nav-header";
 import LanguageDef = NodokuI18n.LanguageDef;
+import Head from "next/head";
+import MyFooter from "@/app/components/my-footer";
+import {readFileSync} from "node:fs";
+import path from "node:path";
+import {readdirSync} from "node:fs";
+// import "../globals.css";
+if (process.env.NODE_ENV === "development") {
+    // @ts-ignore
+    await import("../globals.css");
+}
 
 
-export const metadata: Metadata = {
-    title: "Nodoku demo page",
-    description: "Demo page and documentation for Nodoku static site generator",
-};
+// export const metadata: Metadata = {
+//     title: "Nodoku demo page",
+//     description: "Demo page and documentation for Nodoku static site generator",
+// };
 
 var runsOnServerSide = typeof window === 'undefined';
 if (!runsOnServerSide) {
@@ -68,8 +78,8 @@ export async function generateStaticParams(): Promise<{lng: string}[]> {
 
 // export const dynamic = "force-static";
 
-const MyFooter = dynamic(() => import("@/app/components/my-footer"))
-const MyNavbar = dynamic(() => import("@/app/components/my-navbar"))
+// const MyFooter = dynamic(() => import("@/app/components/my-footer"))
+// const MyNavbar = dynamic(() => import("@/app/components/my-navbar"))
 
 
 export default async function RootLayout({ children, params }: Readonly<{ children: React.ReactNode, params: Promise<{lng: string}> }>) {
@@ -84,8 +94,28 @@ export default async function RootLayout({ children, params }: Readonly<{ childr
 
     const actualDir = lng == "il" ? "rtl" : dir(lng);
 
+    // throw new Error("stop processing and check css created");
+
+    // const css = `
+    //     .my-element {
+    //         background-color: #f00;
+    //     }
+    // `
+    let cssStyles: JSX.Element[] = [];
+    // if (process.env.NODE_ENV !== "development") {
+    //     cssStyles = __getInlineStyles();
+    // }
+
     return (
         <html lang={lng} dir={actualDir} className={actualDir}>
+        {/*<Head>*/}
+        {/*    <style type="text/css" lang="css">{css}</style>*/}
+        {/*</Head>*/}
+        <head title={"this is my title"}>
+            {/*<style type="text/css" lang="css">{css}</style>*/}
+            <title>this is my title</title>
+            {/*{cssStyles}*/}
+        </head>
         <body className={"bg-white dark:bg-black text-black dark:text-white"} style={{paddingTop: "60px"}}>
             {/*<MyNavbar languages={await i18nStore.allLanguages()} selectedLng={lng} menu={menu(lng)}/>*/}
             <NavHeader lng={lng} languages={languages}/>
@@ -95,4 +125,22 @@ export default async function RootLayout({ children, params }: Readonly<{ childr
         </body>
         </html>
     );
+}
+
+function __getInlineStyles(): JSX.Element[] {
+
+    const cssDir = path.join(process.cwd(), ".next/static/css");
+    const files = readdirSync(cssDir);
+
+    console.log("found css files ", files);
+
+    return files.filter((file: string) => /\.css$/.test(file)).map(file => (
+        <style
+            key={file}
+            data-href={`.next/static/css/${file}`}
+            dangerouslySetInnerHTML={{
+                __html: readFileSync(path.join(cssDir, file), 'utf-8'),
+            }}
+        />
+    ));
 }

@@ -1,33 +1,39 @@
 "use client"
 
 import React, {JSX, useEffect, useState} from "react";
-import styles from "./language-selector.module.scss";
+// import styles from "./language-selector.module.scss";
 import {LANGUAGE_COOKIE} from "@/app/components/common-i18n-config";
-import "flag-icons/css/flag-icons.css";
 
-interface FlagIconProps {
-    countryCode: string;
-    className: string;
-}
+// interface FlagIconProps {
+//     countryCode: string;
+//     className: string;
+// }
 
-function FlagIcon(props: FlagIconProps) {
-
-    const {countryCode, className} = props;
-    return (
-        <span
-            className={`fi fis ${styles.fiCircle} inline-block fi-${countryCode} ${className}`}
-        />
-    );
-}
+// function FlagIcon(props: FlagIconProps): JSX.Element {
+//
+//     const {countryCode, className} = props;
+//     // return (
+//     //     <span
+//     //         className={`fi fis ${styles.fiCircle} inline-block fi-${countryCode} ${className}`}
+//     //     />
+//     // );
+//     return flagIconProvider(countryCode, "1x1", "fi fis fiCircle inline-block")
+// }
 
 const LANGUAGE_SELECTOR_ID = 'language-selector';
 
 console.log("adding language switcher...")
 
-export const LanguageSwitcher = ({languages, selectedLng}: {selectedLng: string, languages: { key: string;
-        name: string;
-        isDefault: boolean;
-        icon: string }[]}): JSX.Element => {
+export const LanguageSwitcher = (
+    {languages, selectedLng}: {
+        selectedLng: string,
+        languages: {
+            key: string;
+            name: string;
+            isDefault: boolean;
+            icon: JSX.Element | undefined
+        }[]
+    }): JSX.Element => {
 
     const [isOpen, setIsOpen] = useState(false);
 
@@ -87,7 +93,8 @@ export const LanguageSwitcher = ({languages, selectedLng}: {selectedLng: string,
                             aria-haspopup="true"
                             aria-expanded={isOpen}
                         >
-                            <FlagIcon countryCode={selectedLanguage.icon} className={""}/>
+                            {/*<FlagIcon countryCode={selectedLanguage.icon} className={""}/>*/}
+                            {selectedLanguage.icon}
                         </button>
                     </div>
                     {isOpen && <div
@@ -104,13 +111,14 @@ export const LanguageSwitcher = ({languages, selectedLng}: {selectedLng: string,
                                         onClick={() => handleLanguageChange(language.key)}
                                         className={`${
                                             selectedLanguage.key === language.key
-                                                ? "bg-gray-100 text-gray-900"
+                                                ? "bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-gray-100"
                                                 : "text-gray-700"
-                                        } block px-4 py-2 text-sm text-left items-center inline-flex hover:bg-gray-100 rounded`}
+                                        } px-4 py-2 text-sm text-left items-center inline-flex hover:bg-gray-100 hover:dark:bg-gray-800 rounded`}
                                         role="menuitem"
                                     >
-                                        <FlagIcon countryCode={language.icon} className={"mr-2"}/>
-                                        <span className="truncate">{language.name}</span>
+                                        {/*<FlagIcon countryCode={language.icon} className={"mr-2"}/>*/}
+                                        <span className={"mr-2 rtl:ml-2"}>{language.icon}</span>
+                                        <span className="truncate text-black dark:text-white">{language.name}</span>
                                     </button>
                                 );
                             })}
