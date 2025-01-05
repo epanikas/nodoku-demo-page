@@ -140,36 +140,6 @@
                     "additionalProperties": false
                 },
 
-                "flowbite-react/carousel": {
-                    "type": "object",
-                    "properties": {
-                        "selector": {
-                            "$ref": "../node_modules/nodoku-core/schemas/skin-common-schema.json#/definitions/Selector"
-                        },
-                        "options": {
-                            "$ref": "./nodoku-flowbite/schemas/components/flowbite-react-carousel/options-schema.json",
-                            "additionalProperties": false
-                        },
-                        "theme": {
-                            "$ref": "./nodoku-flowbite/schemas/components/flowbite-react-carousel/visual-schema.json",
-                            "additionalProperties": false
-                        },
-                        "themes": {
-                            "type": "array",
-                            "items": {
-                                "$ref": "./nodoku-flowbite/schemas/components/flowbite-react-carousel/visual-schema.json",
-                                "additionalProperties": false
-                            },
-                            "additionalItems": false
-                        }
-                    },
-                    "required": [
-                        "selector"
-                    ],
-                    "additionalItems": false,
-                    "additionalProperties": false
-                },
-
                 "flowbite/jumbotron": {
                     "type": "object",
                     "properties": {
@@ -469,10 +439,6 @@
                             "additionalProperties": false
                         },
                         {
-                            "$ref": "./nodoku-flowbite/schemas/components/flowbite-react-carousel/visual-schema.json",
-                            "additionalProperties": false
-                        },
-                        {
                             "$ref": "./nodoku-flowbite/schemas/components/jumbotron/visual-schema.json",
                             "additionalProperties": false
                         },
@@ -533,10 +499,6 @@
                             },
                             {
                                 "$ref": "./nodoku-flowbite/schemas/components/carousel/visual-schema.json",
-                                "additionalProperties": false
-                            },
-                            {
-                                "$ref": "./nodoku-flowbite/schemas/components/flowbite-react-carousel/visual-schema.json",
                                 "additionalProperties": false
                             },
                             {
@@ -662,30 +624,6 @@
                                     "type": "array",
                                     "items": {
                                         "$ref": "./nodoku-flowbite/schemas/components/carousel/visual-schema.json",
-                                        "additionalProperties": false
-                                    },
-                                    "additionalItems": false
-                                }
-                            },
-                            "additionalItems": false,
-                            "additionalProperties": false
-                        },
-
-                        "flowbite-react/carousel": {
-                            "type": "object",
-                            "properties": {
-                                "options": {
-                                    "$ref": "./nodoku-flowbite/schemas/components/flowbite-react-carousel/options-schema.json",
-                                    "additionalProperties": false
-                                },
-                                "theme": {
-                                    "$ref": "./nodoku-flowbite/schemas/components/flowbite-react-carousel/visual-schema.json",
-                                    "additionalProperties": false
-                                },
-                                "themes": {
-                                    "type": "array",
-                                    "items": {
-                                        "$ref": "./nodoku-flowbite/schemas/components/flowbite-react-carousel/visual-schema.json",
                                         "additionalProperties": false
                                     },
                                     "additionalItems": false
