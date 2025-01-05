@@ -2,47 +2,45 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "type": "object",
   "properties": {
-    "bgImageStyle": {
+
+    "navStyle": {
       "$ref": "../../../../../node_modules/nodoku-core/schemas/skin-common-schema.json#/definitions/ThemeStyle"
     },
-    "bgColorStyle": {
+    "navInnerContainer": {
       "$ref": "../../../../../node_modules/nodoku-core/schemas/skin-common-schema.json#/definitions/ThemeStyle"
     },
-    "containerStyle": {
+    "logoBlockStyle": {
       "$ref": "../../../../../node_modules/nodoku-core/schemas/skin-common-schema.json#/definitions/ThemeStyle"
     },
-    "imageContainerStyle": {
+    "logoImageStyle": {
       "$ref": "../../../../../node_modules/nodoku-core/schemas/skin-common-schema.json#/definitions/ThemeStyle"
     },
-    "imageStyle": {
-      "$ref": "../../../../../node_modules/nodoku-core/schemas/skin-common-schema.json#/definitions/ImageStyle"
-    },
-    "innerContainerStyle": {
+    "logoLinkStyle": {
       "$ref": "../../../../../node_modules/nodoku-core/schemas/skin-common-schema.json#/definitions/ThemeStyle"
     },
-    "titleStyle": {
+    "logoCompanyNameStyle": {
       "$ref": "../../../../../node_modules/nodoku-core/schemas/skin-common-schema.json#/definitions/ThemeStyle"
     },
-    "subTitleStyle": {
+    "rightButtonsBlock": {
       "$ref": "../../../../../node_modules/nodoku-core/schemas/skin-common-schema.json#/definitions/ThemeStyle"
     },
-    "paragraphStyle": {
-      "$ref": "../../../../../node_modules/nodoku-components/schemas/components/paragraphs/visual-schema.json"
-    },
-    "ctaContainerStyle": {
+    "mainMenuBlock": {
       "$ref": "../../../../../node_modules/nodoku-core/schemas/skin-common-schema.json#/definitions/ThemeStyle"
     },
-    "ctaButtonStyle": {
-      "type": "array",
-      "items": {
-        "$ref": "../../../../../node_modules/nodoku-core/schemas/skin-common-schema.json#/definitions/ThemeStyle"
-      }
+    "mainMenuListStyle": {
+      "$ref": "../../../../../node_modules/nodoku-core/schemas/skin-common-schema.json#/definitions/ThemeStyle"
     },
-    "codeHighlightTheme": {
-      "$ref": "../../../../../node_modules/nodoku-components/schemas/components/highlighted-code/visual-schema.json"
+    "mainMenuFirstLevelItemStyle": {
+      "$ref": "../../../../../node_modules/nodoku-core/schemas/skin-common-schema.json#/definitions/ThemeStyle"
     },
-    "listTheme": {
-      "$ref": "../../../../../node_modules/nodoku-components/schemas/components/list-comp/visual-schema.json"
+    "mainMenuSecondLevelItemStyle": {
+      "$ref": "../../../../../node_modules/nodoku-core/schemas/skin-common-schema.json#/definitions/ThemeStyle"
+    },
+    "mainMenuDropdownContainer": {
+      "$ref": "../../../../../node_modules/nodoku-core/schemas/skin-common-schema.json#/definitions/ThemeStyle"
+    },
+    "mainMenuDropdownList": {
+      "$ref": "../../../../../node_modules/nodoku-core/schemas/skin-common-schema.json#/definitions/ThemeStyle"
     },
     "additionalProperties": false
   },

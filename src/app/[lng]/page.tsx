@@ -43,9 +43,9 @@ export default async function Home({params}: { params: Promise<{ lng: string }> 
     // console.log("JSON.stringify(content)", JSON.stringify(content))
 
 
-    if (process.env.NODE_ENV === "development") {
-        await i18nStore.reloadResources();
-    }
+    // if (process.env.NODE_ENV === "development") {
+    //     await i18nStore.reloadResources();
+    // }
 
 
     return (

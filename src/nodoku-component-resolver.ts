@@ -10,6 +10,7 @@ components.set("core/typography", {compo: NodokuComponents.Typography, compoDef:
 components.set("flowbite/card", {compo: NodokuFlowbite.Card, compoDef: new NdComponentDefinition(1, "./schemas/nodoku-flowbite/schemas/components/card/default-theme.yml")});
 components.set("flowbite/horizontal-card", {compo: NodokuFlowbite.HorizontalCard, compoDef: new NdComponentDefinition(1, "./schemas/nodoku-flowbite/schemas/components/horizontal-card/default-theme.yml")});
 components.set("flowbite/carousel", {compo: NodokuFlowbite.Carousel, compoDef: new NdComponentDefinition("unlimited", "./schemas/nodoku-flowbite/schemas/components/carousel/default-theme.yml")});
+components.set("flowbite-react/carousel", {compo: NodokuFlowbite.FlowbiteReactCarousel, compoDef: new NdComponentDefinition("unlimited", "./schemas/nodoku-flowbite/schemas/components/flowbite-react-carousel/default-theme.yml")});
 components.set("flowbite/jumbotron", {compo: NodokuFlowbite.Jumbotron, compoDef: new NdComponentDefinition(1, "./schemas/nodoku-flowbite/schemas/components/jumbotron/default-theme.yml")});
 components.set("flowbite/nav-header", {compo: NodokuFlowbite.NavHeader, compoDef: new NdComponentDefinition(1, "./schemas/nodoku-flowbite/schemas/components/nav-header/default-theme.yml")});
 components.set("mambaui/hero-one", {compo: NodokuMambaUi.HeroOne, compoDef: new NdComponentDefinition(1, "./schemas/nodoku-mambaui/schemas/components/hero-one/default-theme.yml")});
@@ -35,7 +36,6 @@ export const fromStringToClientSideComponentNameEnum = (c: string): ClientSideCo
     }
     return undefined;
 }
-
 
 
 export async function nodokuComponentResolver(componentName: string): Promise<{compo: AsyncFunctionComponent, compoDef: NdComponentDefinition}> {

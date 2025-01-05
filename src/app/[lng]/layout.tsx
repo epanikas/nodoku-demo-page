@@ -21,10 +21,10 @@ if (process.env.NODE_ENV === "development") {
 }
 
 
-// export const metadata: Metadata = {
-//     title: "Nodoku demo page",
-//     description: "Demo page and documentation for Nodoku static site generator",
-// };
+export const metadata: Metadata = {
+    title: "Nodoku demo page",
+    description: "Demo page and documentation for Nodoku static site generator",
+};
 
 var runsOnServerSide = typeof window === 'undefined';
 if (!runsOnServerSide) {
@@ -42,37 +42,6 @@ export async function generateStaticParams(): Promise<{lng: string}[]> {
     console.log("in generateStaticParams", params.map((p: {lng: string}) => p.lng).join(", "))
     return params;
 }
-
-// function menu(lng: string): NavbarMenuItem[] {
-//     return [
-//         {
-//             label: "Home",
-//             link: `/${lng}`,
-//             subItems: []
-//         },
-//         {
-//             label: "Docs",
-//             link: `/${lng}/docs`,
-//             subItems: []
-//         },
-//         {
-//             label: "Components",
-//             link: "#",
-//             subItems: [
-//                 {
-//                     label: "Based on Flowbite",
-//                     link: `/${lng}/docs/flowbite-components`,
-//                     subItems: []
-//                 },
-//                 {
-//                     label: "Based on Mamba UI",
-//                     link: `/${lng}/docs/mambaui-components`,
-//                     subItems: []
-//                 }
-//             ]
-//         }
-//     ];
-// }
 
 
 
@@ -96,6 +65,10 @@ export default async function RootLayout({ children, params }: Readonly<{ childr
 
     // throw new Error("stop processing and check css created");
 
+    if (process.env.NODE_ENV === "development") {
+        await i18nStore.reloadResources();
+    }
+
     // const css = `
     //     .my-element {
     //         background-color: #f00;
@@ -113,15 +86,13 @@ export default async function RootLayout({ children, params }: Readonly<{ childr
         {/*</Head>*/}
         <head title={"this is my title"}>
             {/*<style type="text/css" lang="css">{css}</style>*/}
-            <title>this is my title</title>
+            {/*<title>this is my title</title>*/}
             {cssStyles}
         </head>
         <body className={"bg-white dark:bg-black text-black dark:text-white"} style={{paddingTop: "60px"}}>
-            {/*<MyNavbar languages={await i18nStore.allLanguages()} selectedLng={lng} menu={menu(lng)}/>*/}
             <NavHeader lng={lng} languages={languages}/>
             {children}
             <MyFooter lng={lng} />
-            {/*{<script async src="/scripts/flowbite.min.js" type="text/javascript" />}*/}
         </body>
         </html>
     );

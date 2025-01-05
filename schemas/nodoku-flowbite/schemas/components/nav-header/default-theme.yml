@@ -1,53 +1,41 @@
 # yaml-language-server: $schema=./visual-schema.json
 
-containerStyle:
-    base: w-full pb-10 h-full
-    decoration: border rounded-lg shadow border-gray-200 dark:border-gray-700
-bgImageStyle:
-    base: -z-20 bg-cover bg-no-repeat
-    decoration: blur-sm
-bgColorStyle:
-    base: -z-10
-    decoration: opacity-90 bg-gray-300 dark:bg-gray-700
-imageStyle:
-    base: rounded-t-lg object-cover
-    decoration: aspect-video
-innerContainerStyle:
-    base: p-5
+navStyle:
+    base: bg-white border-gray-200 dark:bg-gray-900 dark:border-gray-700
     decoration: ''
-titleStyle:
-    base: mb-2 text-3xl font-bold tracking-tight
+logoImageStyle:
+    base: h-8
     decoration: ''
-subTitleStyle:
-    base: mb-2 text-2xl tracking-tight
+navInnerContainer:
+    base: flex flex-wrap items-center justify-between mx-auto p-4
     decoration: ''
-paragraphStyle:
-    base: mb-3 font-normal
+logoLinkStyle:
+    base: flex items-center space-x-3 rtl:space-x-reverse
     decoration: ''
-ctaContainerStyle:
-    base: absolute bottom-0 right-0 flex flex-row
-    decoration: p-3
-ctaButtonStyle:
-    - base: flex inline-flex items-center text-center nowrap focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800
-      decoration: m-2 px-3 py-2 text-sm font-medium text-white bg-blue-700 hover:bg-blue-800 rounded-lg dark:bg-blue-600 dark:hover:bg-blue-700
-codeHighlightTheme:
-    hljsLightTheme: a11y-light
-    hljsDarkTheme: a11y-dark
-    lightDisplay: light:inline-block
-    darkDisplay: dark:inline-block
-    codeContainer:
-        base: text-center w-full
-        decoration: ''
-    preContainer:
-        base: text-left w-full
-        decoration: border-2 border-gray-200
-    pre:
-        base: w-full overflow-scroll
-        decoration: ''
-listTheme:
-    listStyle:
-        base: inline-block list-disc space-y-1 list-outside
-        decoration: ''
-    listItemStyle:
-        base: ml-4,
-        decoration: ''
+logoBlockStyle:
+    base: w-20
+    decoration: ''
+logoCompanyNameStyle:
+    base: self-center text-2xl font-semibold whitespace-nowrap dark:text-white
+    decoration: ''
+rightButtonsBlock:
+    base: w-20 justify-end flex items-center md:order-2 space-x-1 md:space-x-0 rtl:space-x-reverse
+    decoration: ''
+mainMenuBlock:
+    base: hidden w-full md:block md:w-auto
+    decoration: ''
+mainMenuListStyle:
+    base: flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700
+    decoration: ''
+mainMenuFirstLevelItemStyle:
+    base: block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500 dark:bg-blue-600 md:dark:bg-transparent
+    decoration: ''
+mainMenuSecondLevelItemStyle:
+    base: block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white
+    decoration: ''
+mainMenuDropdownContainer:
+    base: absolute z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600
+    decoration: ''
+mainMenuDropdownList:
+    base: py-2 text-sm text-gray-700 dark:text-gray-400
+    decoration: ''

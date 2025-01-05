@@ -8,19 +8,7 @@
     "bgColorStyle": {
       "$ref": "../../../../../node_modules/nodoku-core/schemas/skin-common-schema.json#/definitions/ThemeStyle"
     },
-    "carouselContainerStyle": {
-      "$ref": "../../../../../node_modules/nodoku-core/schemas/skin-common-schema.json#/definitions/ThemeStyle"
-    },
-    "containerStyle": {
-      "$ref": "../../../../../node_modules/nodoku-core/schemas/skin-common-schema.json#/definitions/ThemeStyle"
-    },
-    "indicatorActiveClasses": {
-      "$ref": "../../../../../node_modules/nodoku-core/schemas/skin-common-schema.json#/definitions/ThemeStyle"
-    },
-    "indicatorInactiveClasses": {
-      "$ref": "../../../../../node_modules/nodoku-core/schemas/skin-common-schema.json#/definitions/ThemeStyle"
-    },
-    "slideAnimation": {
+    "slideContainerStyle": {
       "$ref": "../../../../../node_modules/nodoku-core/schemas/skin-common-schema.json#/definitions/ThemeStyle"
     },
     "titleStyle": {
@@ -28,9 +16,6 @@
     },
     "subTitleStyle": {
       "$ref": "../../../../../node_modules/nodoku-core/schemas/skin-common-schema.json#/definitions/ThemeStyle"
-    },
-    "paragraphContainerStyle": {
-      "$ref": "../../../../../node_modules/nodoku-components/schemas/components/paragraphs/visual-schema.json"
     },
     "paragraphStyle": {
       "$ref": "../../../../../node_modules/nodoku-components/schemas/components/paragraphs/visual-schema.json"

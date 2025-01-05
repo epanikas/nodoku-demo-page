@@ -33,9 +33,9 @@ export default async function MyFooter(params: {lng: string}): Promise<JSX.Eleme
     // await NodokuI18n.Simplelocalize.initI18nStore( ["nodoku-landing"/*, "docs", "faq"*/], 'en', "auto", "auto",
     //         OnFallbackLngTextUpdateStrategy.reset_reviewed_status)
 
-    if (process.env.NODE_ENV === "development") {
-        await i18nStore.reloadResources();
-    }
+    // if (process.env.NODE_ENV === "development") {
+    //     await i18nStore.reloadResources();
+    // }
 
     return (
             <RenderingPage

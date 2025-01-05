@@ -67,9 +67,9 @@ export default async function NavHeader(params: {lng: string, languages: Languag
     // await NodokuI18n.Simplelocalize.initI18nStore( ["nodoku-landing"/*, "docs", "faq"*/], 'en', "auto", "auto",
     //         OnFallbackLngTextUpdateStrategy.reset_reviewed_status)
 
-    if (process.env.NODE_ENV === "development") {
-        await i18nStore.reloadResources();
-    }
+    // if (process.env.NODE_ENV === "development") {
+    //     await i18nStore.reloadResources();
+    // }
 
     const iconLanguages = await Promise.all(languages.map(async l => (
         {...l,

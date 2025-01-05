@@ -1,6 +1,11 @@
 // import flowbite from "flowbite/plugin";
+// import flowbite from "flowbite-react/tailwind";
 import type {Config} from "tailwindcss";
 import * as typo from '@tailwindcss/typography';
+import {NodokuFlowbiteTailwind} from "nodoku-flowbite/tailwind";
+import {NodokuMambaUiTailwind} from "nodoku-mambaui/tailwind";
+import {NodokuCoreTailwind} from "nodoku-core/tailwind";
+import {NodokuComponentsTailwind} from "nodoku-components/tailwind";
 
 
 const config: Config = {
@@ -20,23 +25,29 @@ const config: Config = {
         // "./node_modules/flowbite-react/lib/**/*.js",
         // "./node_modules/nodoku-flowbite/**/*.js",
 
-        "./node_modules/nodoku-core/esm/**/*.js",
-        "./node_modules/nodoku-core/esm/**/*.jsx",
-        "./node_modules/nodoku-components/esm/**/*.js",
-        "./node_modules/nodoku-components/esm/**/*.jsx",
-        "./node_modules/nodoku-flowbite/esm/**/*.js",
-        "./node_modules/nodoku-flowbite/esm/**/*.jsx",
-        "./node_modules/nodoku-flowbite/schemas/**/*.yml",
-        "./node_modules/nodoku-mambaui/esm/**/*.js",
-        "./node_modules/nodoku-mambaui/esm/**/*.jsx",
-        "./node_modules/nodoku-mambaui/schemas/**/*.yml",
+        // "./node_modules/nodoku-core/esm/**/*.js",
+        // "./node_modules/nodoku-core/esm/**/*.jsx",
+        // "./node_modules/nodoku-components/esm/**/*.js",
+        // "./node_modules/nodoku-components/esm/**/*.jsx",
+        // "./node_modules/nodoku-flowbite/esm/**/*.js",
+        // "./node_modules/nodoku-flowbite/esm/**/*.jsx",
+
+
+        // "./node_modules/nodoku-flowbite/schemas/**/*.yml",
+        // "./node_modules/nodoku-mambaui/esm/**/*.js",
+        // "./node_modules/nodoku-mambaui/esm/**/*.jsx",
+        // "./node_modules/nodoku-mambaui/schemas/**/*.yml",
         "./public/**/*.html",
         "./src/**/*.{html,js}",
         "./public/site/**/*.yaml",
         // flowbite.content(),
-        "./node_modules/flowbite/lib/esm/components/carousel/*.js"
+        // "./node_modules/flowbite/lib/esm/components/carousel/*.js",
         // "node_modules/flowbite-react/dist/esm/components/Carousel/*.mjs",
-    ],
+    ]
+        .concat(NodokuCoreTailwind.tailwindConfig())
+        .concat(NodokuComponentsTailwind.tailwindConfig())
+        .concat(NodokuFlowbiteTailwind.tailwindConfig())
+        .concat(NodokuMambaUiTailwind.tailwindConfig()),
 
     theme: {
         extend: {
