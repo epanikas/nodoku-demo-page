@@ -85,28 +85,51 @@ rows:
               attributes:
                 sectionName: nodoku-way
 
-#  - row:
-#      theme:
-#        decoration: mt-10 mx-5 gap-5
-#      components:
-#        - flowbite/carousel:
-#            options:
-#              slideInterval: 5000
-#              showIndicators: false
-#              animationType: slide
-#            theme:
-#              slideAnimation:
-#                base: duration-[2000ms]
-#            themes:
-#              - bgImageStyle:
-#                  decoration: blur-sm bg-[url('/images/postit-board.jpg')]
-#              - bgImageStyle:
-#                  decoration: blur-sm bg-[url('/images/3d-view-puzzle-pieces.jpg')]
-#              - bgImageStyle:
-#                  decoration: blur-sm bg-[url('/images/design-table.jpg')]
-#            selector:
-#              attributes:
-#                sectionName: nodoku-way
+  - row:
+      theme:
+        decoration: mt-10 mx-5 gap-5
+      components:
+        - flowbite/carousel:
+            options:
+              slideInterval: 5000
+              showIndicators: false
+              animationType: slide-x
+            theme:
+              slideAnimation:
+                base: duration-[2000ms]
+            themes:
+              - bgImageStyle:
+                  decoration: blur-sm bg-[url('/images/postit-board.jpg')]
+              - bgImageStyle:
+                  decoration: blur-sm bg-[url('/images/3d-view-puzzle-pieces.jpg')]
+              - bgImageStyle:
+                  decoration: blur-sm bg-[url('/images/design-table.jpg')]
+            selector:
+              attributes:
+                sectionName: nodoku-way
+
+  - row:
+      theme:
+        decoration: mt-10 mx-5 gap-5
+      components:
+        - flowbite/carousel:
+            options:
+              slideInterval: 5000
+              showIndicators: false
+              animationType: slide-y
+            theme:
+              slideAnimation:
+                base: duration-[2000ms]
+            themes:
+              - bgImageStyle:
+                  decoration: blur-sm bg-[url('/images/postit-board.jpg')]
+              - bgImageStyle:
+                  decoration: blur-sm bg-[url('/images/3d-view-puzzle-pieces.jpg')]
+              - bgImageStyle:
+                  decoration: blur-sm bg-[url('/images/design-table.jpg')]
+            selector:
+              attributes:
+                sectionName: nodoku-way
 
 #  - row:
 #      theme:

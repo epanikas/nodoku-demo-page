@@ -13,7 +13,8 @@
         "animationType": {
           "type": "string",
           "enum": [
-            "slide",
+            "slide-x",
+            "slide-y",
             "fade-in-fade-out"
           ]
         }

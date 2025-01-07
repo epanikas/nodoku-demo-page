@@ -8,9 +8,9 @@ import {i18nStore} from "@/app/components/nodoku-server-i18n-config";
 // import "nodoku-components/a11y-dark"
 // import dynamic from "next/dynamic";
 import NavHeader from "@/app/components/nav-header";
+import MyFooter from "@/app/components/my-footer";
 import LanguageDef = NodokuI18n.LanguageDef;
 import Head from "next/head";
-import MyFooter from "@/app/components/my-footer";
 import {readFileSync} from "node:fs";
 import path from "node:path";
 import {readdirSync} from "node:fs";
@@ -48,7 +48,7 @@ export async function generateStaticParams(): Promise<{lng: string}[]> {
 // export const dynamic = "force-static";
 
 // const MyFooter = dynamic(() => import("@/app/components/my-footer"))
-// const MyNavbar = dynamic(() => import("@/app/components/my-navbar"))
+// const NavHeader = dynamic(() => import("@/app/components/nav-header"))
 
 
 export default async function RootLayout({ children, params }: Readonly<{ children: React.ReactNode, params: Promise<{lng: string}> }>) {
@@ -84,7 +84,7 @@ export default async function RootLayout({ children, params }: Readonly<{ childr
         {/*<Head>*/}
         {/*    <style type="text/css" lang="css">{css}</style>*/}
         {/*</Head>*/}
-        <head title={"this is my title"}>
+        <head>
             {/*<style type="text/css" lang="css">{css}</style>*/}
             {/*<title>this is my title</title>*/}
             {cssStyles}
