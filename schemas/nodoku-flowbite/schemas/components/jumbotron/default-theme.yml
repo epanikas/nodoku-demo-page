@@ -19,7 +19,7 @@ paragraphStyle:
     base: mb-4 lg:text-2xl font-normal md:text-xl sm:px-16 lg:px-48
     decoration: ''
 ctaContainerStyle:
-    base: flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0
+    base: flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0 mt-5
     decoration: ''
 ctaButtonStyle:
     - base: inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900
@@ -38,12 +38,12 @@ codeHighlightTheme:
         base: text-left w-full
         decoration: border-2 border-gray-200
     pre:
-        base: w-full overflow-scroll
+        base: ''
         decoration: ''
 listTheme:
     listStyle:
         base: inline-block list-disc space-y-1 list-outside
         decoration: ''
     listItemStyle:
-        base: ml-4,
+        base: ml-4
         decoration: ''

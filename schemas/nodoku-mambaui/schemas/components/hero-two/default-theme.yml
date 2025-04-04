@@ -39,12 +39,12 @@ codeHighlightTheme:
         base: text-left w-full
         decoration: border-2 border-gray-200
     pre:
-        base: w-full overflow-scroll
+        base: ''
         decoration: ''
 listTheme:
     listStyle:
         base: inline-block list-disc space-y-1 list-outside
         decoration: ''
     listItemStyle:
-        base: ml-4,
+        base: ml-4
         decoration: ''

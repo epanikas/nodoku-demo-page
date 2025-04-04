@@ -1,0 +1,174 @@
+# yaml-language-server: $schema=../../../schemas/visual-schema.json
+
+global:
+  defaultTheme: light
+  renderingPage:
+    base: dark:text-gray-200 text-gray-700
+  components:
+    core/typography:
+      theme:
+        containerStyle:
+          decoration: container mx-auto
+
+
+
+rows:
+  - row:
+      maxCols: 1
+      theme:
+        decoration: mb-10
+      components:
+        - core/typography:
+            selector:
+              attributes:
+                sectionName: components-header
+
+
+  - row:
+      maxCols: 1
+      theme:
+        decoration: mb-10
+      components:
+        - core/typography:
+            selector:
+              attributes:
+                sectionName: components-mambaui-hero-one-header
+
+  - row:
+      theme:
+        decoration: mb-10
+      components:
+        - mambaui/hero-one:
+            selector:
+              attributes:
+                sectionName: components-mambaui-hero-one-showcase
+
+  - row:
+      maxCols: 1
+      theme:
+        decoration: mb-10
+      components:
+        - core/typography:
+            selector:
+              attributes:
+                sectionName: components-mambaui-hero-two-header
+
+  - row:
+      theme:
+        decoration: mb-10
+      components:
+        - mambaui/hero-two:
+            selector:
+              attributes:
+                sectionName: components-mambaui-hero-two-showcase
+
+  - row:
+      maxCols: 1
+      theme:
+        decoration: mb-10
+      components:
+        - core/typography:
+            selector:
+              attributes:
+                sectionName: components-mambaui-hero-left-text-header
+
+  - row:
+      theme:
+        decoration: mb-10
+      components:
+        - mambaui/hero-left-text:
+            selector:
+              attributes:
+                sectionName: components-mambaui-hero-left-text-showcase
+
+  - row:
+      maxCols: 1
+      theme:
+        decoration: mb-10
+      components:
+        - core/typography:
+            selector:
+              attributes:
+                sectionName: components-mambaui-hero-right-text-header
+
+  - row:
+      theme:
+        decoration: mb-10
+      components:
+        - mambaui/hero-right-text:
+            selector:
+              attributes:
+                sectionName: components-mambaui-hero-right-text-showcase
+
+  - row:
+      maxCols: 1
+      theme:
+        decoration: mb-10
+      components:
+        - core/typography:
+            selector:
+              attributes:
+                sectionName: components-mambaui-footer-four-header
+
+  - row:
+      theme:
+        decoration: mb-10
+        componentHolder:
+          decoration: p-5
+      components:
+        - mambaui/footer-four:
+            selector:
+              attributes:
+                sectionName: components-mambaui-footer-four-showcase
+
+  - row:
+      maxCols: 1
+      theme:
+        decoration: mb-10
+      components:
+        - core/typography:
+            selector:
+              attributes:
+                sectionName: components-mambaui-card-header
+
+  - row:
+      theme:
+        decoration: mb-10
+        componentHolder:
+          decoration: p-5
+      components:
+        - mambaui/card:
+            selector:
+              attributes:
+                sectionName: components-mambaui-card-showcase
+
+  - row:
+      maxCols: 1
+      theme:
+        decoration: mb-10
+      components:
+        - core/typography:
+            selector:
+              attributes:
+                sectionName: components-mambaui-faq-header
+
+  - row:
+      theme:
+        componentHolder:
+          decoration: pt-5
+      components:
+        - mambaui/faq-header:
+            selector:
+              attributes:
+                sectionName: components-mambaui-faq-header-showcase
+
+  - row:
+      maxCols: 1
+      theme:
+        decoration: mb-10
+      components:
+        - mambaui/faq-one-question:
+            selector:
+              attributes:
+                sectionName: components-mambaui-faq-one-question-showcase
+

@@ -1,0 +1,83 @@
+# yaml-language-server: $schema=../../../schemas/visual-schema.json
+
+global:
+  defaultTheme: light
+  theme:
+    paragraphStyle:
+      paragraphContainer:
+        base: text-lg leading-relaxed
+      paragraphStyle:
+        base: pb-4
+  components:
+    core/typography:
+      theme:
+        containerStyle:
+          decoration: mx-auto
+        contentContainerStyle:
+          decoration: text-center
+
+
+
+rows:
+  - row:
+      theme:
+        componentHolder:
+          decoration: mb-5
+      components:
+        - mambaui/faq-header:
+            theme:
+              containerStyle:
+                decoration: dark:bg-red-700 bg-red-300
+            selector:
+              attributes:
+                sectionName: faq-general-header
+
+  - row:
+      maxCols: 1
+      theme:
+        decoration: gap-0
+        componentHolder:
+          decoration: mb-5
+      components:
+        - mambaui/faq-one-question:
+            theme:
+              typographyTheme:
+                codeHighlightTheme:
+                  codeContainer:
+                    decoration: pb-5
+            selector:
+              attributes:
+                sectionName: faq-general
+
+
+  - row:
+      theme:
+        componentHolder:
+          decoration: mb-5
+      components:
+        - mambaui/faq-header:
+            theme:
+              containerStyle:
+                decoration: dark:bg-orange-700 bg-orange-300
+            selector:
+              attributes:
+                sectionName: faq-installation-header
+
+  - row:
+      maxCols: 1
+      theme:
+        decoration: gap-0
+        componentHolder:
+          decoration: mb-5
+      components:
+        - mambaui/faq-one-question:
+            theme:
+              typographyTheme:
+                codeHighlightTheme:
+                  codeContainer:
+                    decoration: pb-5
+            selector:
+              attributes:
+                sectionName: faq-installation
+
+

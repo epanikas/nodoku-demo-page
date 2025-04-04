@@ -1,0 +1,165 @@
+# yaml-language-server: $schema=../../../schemas/visual-schema.json
+
+global:
+  defaultTheme: light
+  renderingPage:
+    base: dark:text-gray-200 text-gray-700
+  components:
+    core/typography:
+      theme:
+        containerStyle:
+          decoration: container mx-auto
+
+
+
+rows:
+  - row:
+      maxCols: 1
+      theme:
+        decoration: mb-10
+      components:
+        - core/typography:
+            selector:
+              attributes:
+                sectionName: components-header
+
+  - row:
+      maxCols: 1
+      theme:
+        decoration: mb-10
+      components:
+        - core/typography:
+            selector:
+              attributes:
+                sectionName: components-flowbite-nav-header-header
+
+  - row:
+      theme:
+        decoration: mb-10
+        componentHolder:
+          decoration: p-3 overflow-visible
+      components:
+        - flowbite/nav-header:
+            theme:
+              rightButtonsBlock:
+                base: w-20 justify-end flex items-center md:order-2 space-x-1 rtl:space-x-reverse
+            selector:
+              attributes:
+                sectionName: components-flowbite-nav-header-showcase
+
+  - row:
+      maxCols: 1
+      theme:
+        decoration: mb-10
+      components:
+        - core/typography:
+            selector:
+              attributes:
+                sectionName: components-flowbite-carousel-header
+
+  - row:
+      theme:
+        decoration: mb-10
+      components:
+        - flowbite/carousel:
+            options:
+              animationType: fade-in-fade-out
+            themes:
+              - bgColorStyle:
+                  decoration: text-center dark:bg-red-700 bg-red-300 p-5
+              - bgColorStyle:
+                  decoration: text-center dark:bg-orange-700 bg-orange-300 p-5
+              - bgColorStyle:
+                  decoration: text-center dark:bg-cyan-700 bg-cyan-300 p-5
+            selector:
+              attributes:
+                sectionName: components-flowbite-carousel-showcase
+
+  - row:
+      maxCols: 1
+      theme:
+        decoration: mb-10
+      components:
+        - core/typography:
+            selector:
+              attributes:
+                sectionName: components-flowbite-jumbotron-header
+
+  - row:
+      theme:
+        decoration: mb-10
+      components:
+        - flowbite/jumbotron:
+            theme:
+              bgColorStyle:
+                decoration: text-center dark:bg-cyan-700 bg-cyan-300 p-5
+            selector:
+              attributes:
+                sectionName: components-flowbite-jumbotron-showcase
+
+  - row:
+      maxCols: 1
+      theme:
+        decoration: mb-10
+      components:
+        - core/typography:
+            selector:
+              attributes:
+                sectionName: components-flowbite-card-header
+
+  - row:
+      theme:
+        rowDisplay: flex
+        decoration: mb-10
+        componentHolder:
+          decoration: p-3
+      components:
+        - flowbite/card:
+            theme:
+              imageStyle:
+                base: inline-block
+                imageWidth: '150'
+            themes:
+              - imageContainerStyle:
+                  decoration: text-center dark:bg-red-700 bg-red-300 p-5
+              - imageContainerStyle:
+                  decoration: text-center dark:bg-orange-700 bg-orange-300 p-5
+              - imageContainerStyle:
+                  decoration: text-center dark:bg-cyan-700 bg-cyan-300 p-5
+            selector:
+              attributes:
+                sectionName: components-flowbite-card-showcase
+
+  - row:
+      maxCols: 1
+      theme:
+        decoration: mb-10
+      components:
+        - core/typography:
+            selector:
+              attributes:
+                sectionName: components-flowbite-horizontal-card-header
+
+  - row:
+      theme:
+        rowDisplay: flex
+        decoration: mb-10
+        componentHolder:
+          decoration: p-3
+      components:
+        - flowbite/horizontal-card:
+            theme:
+              imageStyle:
+                base: inline-block
+                imageWidth: '150'
+            themes:
+              - imageContainerStyle:
+                  decoration: text-center dark:bg-red-700 bg-red-300 p-5
+              - imageContainerStyle:
+                  decoration: text-center dark:bg-orange-700 bg-orange-300 p-5
+              - imageContainerStyle:
+                  decoration: text-center dark:bg-cyan-700 bg-cyan-300 p-5
+            selector:
+              attributes:
+                sectionName: components-flowbite-horizontal-card-showcase
+

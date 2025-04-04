@@ -1,0 +1,436 @@
+# yaml-language-server: $schema=../../schemas/visual-schema.json
+
+global:
+  defaultTheme: light
+  theme:
+    paragraphStyle:
+      paragraphContainer:
+        base: text-lg leading-relaxed
+      paragraphStyle:
+        base: pb-4
+  components:
+    core/typography:
+      theme:
+        containerStyle:
+          decoration: mx-auto
+        contentContainerStyle:
+          decoration: text-center
+
+
+
+rows:
+  - row:
+      components:
+        - mambaui/hero-one:
+            theme:
+              paragraphStyle:
+                paragraphContainer:
+                  base: text-3xl
+              subTitleStyle:
+                decoration: mb-5
+            selector:
+              attributes:
+                sectionName: head-hero
+
+  - row:
+      components:
+        - mambaui/hero-left-text:
+            selector:
+              attributes:
+                sectionName: what-is-it
+
+  - row:
+      theme:
+        decoration: pt-10
+      components:
+        - core/typography:
+            selector:
+              attributes:
+                sectionName: how-it-works
+
+  - row:
+      theme:
+        decoration: mt-10 mx-5 gap-5
+      components:
+        - mambaui/card:
+            theme:
+              imageStyle:
+                base: object-cover object-center w-full rounded-t-md aspect-narrow bg-gray-500 dark:bg-gray-500
+#              ctaButtonStyle:
+#                - base: flex items-center justify-center flex-grow m-2 p-3 font-semibold tracking-wide rounded-md bg-violet-400 dark:bg-violet-600 text-gray-900 dark:text-gray-50 mb-5
+#                  decoration: ''
+#                - base: flex items-center justify-center flex-grow m-2 p-3 font-semibold tracking-wide rounded-md border border-violet-400 dark:border-violet-600 text-gray-900 dark:text-gray-50 mb-5
+#                  decoration: ''
+
+            selector:
+              attributes:
+                sectionName: nodoku-way
+
+#  - row:
+#      theme:
+#        decoration: mt-10 mx-5 gap-5
+#      components:
+#        - flowbite/carousel:
+#            options:
+#              slideInterval: 5000
+#              showIndicators: false
+#              animationType: fade-in-fade-out
+#            theme:
+#              slideAnimation:
+#                base: duration-[2000ms]
+#            themes:
+#              - bgImageStyle:
+#                  decoration: blur-sm bg-[url('/images/postit-board.jpg')]
+#              - bgImageStyle:
+#                  decoration: blur-sm bg-[url('/images/3d-view-puzzle-pieces.jpg')]
+#              - bgImageStyle:
+#                  decoration: blur-sm bg-[url('/images/design-table.jpg')]
+#            selector:
+#              attributes:
+#                sectionName: nodoku-way
+
+#  - row:
+#      theme:
+#        decoration: mt-10 mx-5 gap-5
+#      components:
+#        - flowbite/carousel:
+#            options:
+#              slideInterval: 5000
+#              showIndicators: false
+#              animationType: slide-x
+#            theme:
+#              slideAnimation:
+#                base: duration-[2000ms]
+#            themes:
+#              - bgImageStyle:
+#                  decoration: blur-sm bg-[url('/images/postit-board.jpg')]
+#              - bgImageStyle:
+#                  decoration: blur-sm bg-[url('/images/3d-view-puzzle-pieces.jpg')]
+#              - bgImageStyle:
+#                  decoration: blur-sm bg-[url('/images/design-table.jpg')]
+#            selector:
+#              attributes:
+#                sectionName: nodoku-way
+#
+#  - row:
+#      theme:
+#        decoration: mt-10 mx-5 gap-5
+#      components:
+#        - flowbite/carousel:
+#            options:
+#              slideInterval: 5000
+#              showIndicators: false
+#              animationType: slide-y
+#            theme:
+#              slideAnimation:
+#                base: duration-[2000ms]
+#            themes:
+#              - bgImageStyle:
+#                  decoration: blur-sm bg-[url('/images/postit-board.jpg')]
+#              - bgImageStyle:
+#                  decoration: blur-sm bg-[url('/images/3d-view-puzzle-pieces.jpg')]
+#              - bgImageStyle:
+#                  decoration: blur-sm bg-[url('/images/design-table.jpg')]
+#            selector:
+#              attributes:
+#                sectionName: nodoku-way
+
+#  - row:
+#      theme:
+#        decoration: mt-10 mx-5 gap-5
+#      components:
+#        - flowbite-react/carousel:
+#            options:
+#              slideInterval: 2000
+#            themes:
+#              - bgImageStyle:
+#                  decoration: blur-sm bg-[url('/images/postit-board.jpg')]
+#              - bgImageStyle:
+#                  decoration: blur-sm bg-[url('/images/3d-view-puzzle-pieces.jpg')]
+#              - bgImageStyle:
+#                  decoration: blur-sm bg-[url('/images/design-table.jpg')]
+#            selector:
+#              attributes:
+#                sectionName: nodoku-way
+
+  - row:
+      theme:
+        decoration: mt-10
+      components:
+        - core/typography:
+            selector:
+              attributes:
+                sectionName: example-header
+
+  - row:
+      theme:
+        decoration: mt-10 mx-5 gap-5
+      components:
+        - flowbite/horizontal-card:
+            theme:
+              paragraphStyle:
+                paragraphContainer:
+                  base: w-full
+              codeHighlightTheme:
+                lightDisplay: block
+                darkDisplay: dark:block
+                codeContainer:
+                  decoration: text-xl
+                pre:
+                  base: w-full overflow-x-auto
+#              imageStyle:
+#                decoration: aspect-narrow grayscale
+              imageContainerStyle:
+                base: md:rounded-none md:rounded-s-lg
+              imageStyle:
+                base: inline-block
+                decoration: text-black dark:text-white
+                imageWidth: '150'
+            themes:
+              - innerContainerStyle:
+                  decoration: p-4 w-full bg-amber-200 dark:bg-amber-800
+              - innerContainerStyle:
+                  decoration: p-4 w-full bg-cyan-200 dark:bg-cyan-800
+            selector:
+              attributes:
+                sectionName: example
+
+  - row:
+      theme:
+        decoration: mt-10 mx-5
+      components:
+        - core/typography:
+            selector:
+              attributes:
+                sectionName: example-result-header
+
+  - row:
+      theme:
+        decoration: mt-10 mx-5
+      components:
+        - mambaui/hero-left-text:
+            selector:
+              attributes:
+                id: product-1
+
+  - row:
+      theme:
+        decoration: mt-10 mx-5
+      components:
+        - core/typography:
+            selector:
+              attributes:
+                sectionName: generated-with-nodoku
+
+  - row:
+      theme:
+        decoration: m-10 mx-5
+      components:
+        - core/typography:
+            theme:
+              contentContainerStyle:
+                decoration: pb-5
+            selector:
+              attributes:
+                sectionName: advantages-header
+
+
+  - row:
+      maxCols: 4
+      theme:
+        rowDisplay: flex
+        decoration: mt-10 text-black dark:text-white
+        componentHolder:
+          decoration: p-7
+      components:
+        - flowbite/card:
+            theme:
+              containerStyle:
+                decoration: overflow-hidden rounded-t-lg
+              bgColorStyle:
+                decoration: opacity-90 bg-gray-100 dark:bg-gray-900
+              innerContainerStyle:
+                decoration: text-lg text-black dark:text-white leading-relaxed
+              imageStyle:
+                base: inline-block
+                imageWidth: '150'
+#              ctaButtonStyle:
+#                - base: flex inline-flex items-center text-center nowrap focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800
+#                  decoration: m-2 px-3 py-2 text-sm font-medium text-white bg-blue-700 hover:bg-blue-800 rounded-lg dark:bg-blue-600 dark:hover:bg-blue-700
+#                - base: flex inline-flex items-center text-center nowrap focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800
+#                  decoration: m-2 px-3 py-2 text-sm font-medium text-black border border-blue-700 hover:border-blue-800 rounded-lg dark:border-blue-600 dark:hover:border-blue-700
+
+            themes:
+              - imageContainerStyle:
+                  decoration: text-center dark:bg-red-700 bg-red-300 p-5
+              - imageContainerStyle:
+                  decoration: text-center dark:bg-orange-700 bg-orange-300 p-5
+              - imageContainerStyle:
+                  decoration: text-center dark:bg-cyan-700 bg-cyan-300 p-5
+              - imageContainerStyle:
+                  decoration: text-center dark:bg-lime-700 bg-lime-300 p-5
+              - imageContainerStyle:
+                  decoration: text-center dark:bg-violet-700 bg-violet-300 p-5
+              - imageContainerStyle:
+                  decoration: text-center dark:bg-pink-700 bg-pink-300 p-5
+              - imageContainerStyle:
+                  decoration: text-center dark:bg-sky-700 bg-sky-300 p-5
+            selector:
+              attributes:
+                sectionName: advantages
+
+
+  - row:
+      theme:
+        decoration: m-10 mx-5
+      components:
+        - core/typography:
+            theme:
+              contentContainerStyle:
+                decoration: pb-5 text-center
+            selector:
+              attributes:
+                sectionName: advantages-carousel-header
+
+  - row:
+      theme:
+        decoration: mt-10 mx-5 gap-5
+        componentHolder:
+          base: container mx-auto
+      components:
+        - flowbite/carousel:
+            options:
+              slideInterval: 5000
+              showIndicators: false
+              animationType: fade-in-fade-out
+            theme:
+              carouselAspectStyle:
+                decoration: aspect-[2/5] md:aspect-square lg:aspect-[4/1.61]
+              slideAnimation:
+                base: duration-[2000ms]
+              titleStyle:
+                base: lg:text-6xl md:text-4xl text-2xl mb-6 lg:text-2xl
+              paragraphStyle:
+                base: mb-5 lg:text-2xl md:text-xl text-xl
+              imageStyle:
+                decoration: aspect-square
+                imageWidth: '100'
+            themes:
+              - bgColorStyle:
+                  decoration: text-center dark:bg-red-700 bg-red-300 p-5
+              - bgColorStyle:
+                  decoration: text-center dark:bg-orange-700 bg-orange-300 p-5
+              - bgColorStyle:
+                  decoration: text-center dark:bg-cyan-700 bg-cyan-300 p-5
+              - bgColorStyle:
+                  decoration: text-center dark:bg-lime-700 bg-lime-300 p-5
+              - bgColorStyle:
+                  decoration: text-center dark:bg-violet-700 bg-violet-300 p-5
+              - bgColorStyle:
+                  decoration: text-center dark:bg-pink-700 bg-pink-300 p-5
+              - bgColorStyle:
+                  decoration: text-center dark:bg-sky-700 bg-sky-300 p-5
+            selector:
+              attributes:
+                sectionName: advantages
+
+
+
+  - row:
+      theme:
+        decoration: m-10 mx-5
+      components:
+        - core/typography:
+            theme:
+              contentContainerStyle:
+                decoration: pb-5 text-center
+            selector:
+              attributes:
+                sectionName: languages-header
+
+
+  - row:
+      theme:
+        base: container mx-auto
+        componentHolder:
+          decoration: p-7
+      components:
+        - flowbite/horizontal-card:
+            theme:
+              className: languages-card
+              containerStyle:
+                decoration: overflow-hidden rounded-t-lg
+              bgColorStyle:
+                decoration: opacity-90 bg-gray-100 dark:bg-gray-900
+              imageStyle:
+                base: w-full h-full
+              innerContainerStyle:
+#                base: flex flex-1 flex-col h-full items-start justify-start leading-loose
+                decoration: text-lg text-black dark:text-white p-10
+#              imageStyle:
+#                base: inline-block
+#                imageWidth: '150'
+              paragraphStyle:
+                paragraphContainer:
+                  base: leading-relaxed inline-block text-left rtl:text-right text-3xl
+#              ctaButtonStyle:
+#                - base: inline-flex items-center text-center focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800
+#                  decoration: px-3 py-2 text-sm font-medium text-blue-700 border border-blue-700 hover:border-blue-800 rounded-lg dark:border-blue-600 dark:hover:border-blue-700
+              listTheme:
+                listItemStyle:
+                  decoration: whitespace-nowrap
+            themes:
+              - imageContainerStyle:
+                  decoration: text-center dark:bg-cyan-700 bg-cyan-300
+              - imageContainerStyle:
+                  decoration: text-center dark:bg-lime-700 bg-lime-300
+            selector:
+              attributes:
+                sectionName: languages-1
+        - flowbite/horizontal-card:
+            theme:
+              className: languages-card
+              containerStyle:
+                decoration: overflow-hidden rounded-t-lg
+              bgColorStyle:
+                decoration: opacity-90 bg-gray-100 dark:bg-gray-900
+              imageStyle:
+                base: w-full h-full
+              innerContainerStyle:
+#                base: flex flex-1 flex-col h-full items-start justify-start leading-loose
+                decoration: text-lg text-black dark:text-white p-10
+#              imageStyle:
+#                base: inline-block
+#                imageWidth: '150'
+              paragraphStyle:
+                paragraphContainer:
+                  base: leading-relaxed inline-block text-left rtl:text-right text-3xl
+#              ctaButtonStyle:
+#                - base: inline-flex items-center text-center focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800
+#                  decoration: px-3 py-2 text-sm font-medium text-blue-700 border border-blue-700 hover:border-blue-800 rounded-lg dark:border-blue-600 dark:hover:border-blue-700
+              listTheme:
+                listItemStyle:
+                  decoration: whitespace-nowrap
+            themes:
+              - imageContainerStyle:
+                  decoration: text-center dark:bg-cyan-700 bg-cyan-300
+              - imageContainerStyle:
+                  decoration: text-center dark:bg-lime-700 bg-lime-300
+            selector:
+              attributes:
+                sectionName: languages-2
+
+
+  - row:
+      theme:
+        decoration: m-10 mx-5
+      components:
+        - core/typography:
+            theme:
+              contentContainerStyle:
+                decoration: pb-5 text-center
+            selector:
+              attributes:
+                sectionName: languages-footer
+
+

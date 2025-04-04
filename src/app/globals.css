@@ -10,7 +10,7 @@
 @tailwind utilities;
 
 .font-normal a {
-    color: rgb(217, 119, 6);
+    /*color: rgb(217, 119, 6);*/
     text-decoration: underline;
     font-weight: 500;
 }
@@ -28,3 +28,13 @@ svg {
     box-shadow: inset 0 0 0 2px rgba(0, 0, 0, .06);
     background: white;
 }
+
+.languages-card .fiCircle {
+    width: 3rem !important;
+    height: 3rem !important;
+}
+
+/*.listItemStyle a {*/
+/*    color: #d97706;*/
+/*    text-decoration: underline;*/
+/*}*/

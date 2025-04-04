@@ -18,7 +18,7 @@ console.log("<<< started initializing store")
 
 const saveMissing = true;
 const loadOnInit: boolean = process.env.NODE_ENV === "development"
-const translationFetchMode: "api" | "cdn" = process.env.NODE_ENV === "development" ? "api" : "cdn"
+const translationFetchMode: "api" | "cdn" = process.env.NODE_ENV === "development" ? "cdn" : "cdn"
 const onFallbackLngTextUpdateStrategy = OnFallbackLngTextUpdateStrategy.reset_reviewed_status;
 const onMissingKeyStrategy: OnMissingKeyStrategy = OnMissingKeyStrategy.save_to_file;//process.env.NODE_ENV === "development" ? OnMissingKeyStrategy.upload : OnMissingKeyStrategy.save_to_file;
 
@@ -32,7 +32,7 @@ const missingKeyStorage: MissingKeyStorage =
 
 export const i18nStore: NodokuI18n.I18nStore = await NodokuI18n.initI18nStore(/*apiKey, projectToken,*/
     "all",
-    ["nodoku-landing", "getting-started", "showcase", "footer", "nav-header"], 'en',
+    ["blog-article", "faq", "getting-started", "flowbite-showcase", "mambaui-showcase", "nodoku-landing", "footer", "nav-header"], 'en',
     translationFetchMode,
     saveMissing,
     loadOnInit,

@@ -1,0 +1,48 @@
+# yaml-language-server: $schema=../../../../schemas/visual-schema.json
+
+global:
+  defaultTheme: light
+  theme:
+    paragraphStyle:
+      paragraphContainer:
+        base: text-lg leading-relaxed
+      paragraphStyle:
+        base: mb-4
+  components:
+    core/typography:
+      theme:
+        containerStyle:
+          decoration: mx-auto
+
+
+
+rows:
+
+  - row:
+      components:
+        - flowbite/jumbotron:
+            theme:
+              containerStyle:
+                base: py-8 px-4 text-center lg:py-16 mb-8
+                decoration: ''
+              bgImageStyle:
+                decoration: blur-sm bg-[url('/images/high-angle-geometric-paper-objects-desk.jpg')]
+              titleStyle:
+                base: max-w-5xl mx-auto mb-4 lg:text-6xl font-bold tracking-tight leading-none md:text-5xl lg:text-6xl
+              subTitleStyle:
+                base: max-w-5xl mx-auto mb-8 lg:text-4xl font-normal md:text-2xl
+            selector:
+              attributes:
+                sectionName: readme-header
+
+
+  - row:
+      maxCols: 1
+      theme:
+        base: mb-10
+      components:
+        - core/typography:
+            selector:
+              attributes:
+                sectionName: readme
+

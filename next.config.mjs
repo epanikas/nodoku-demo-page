@@ -17,9 +17,14 @@ const nextConfig = (phase, {defaultConfig}) => {
         /* config options here */
         ...defaultConfig,
         pageExtensions: ['js', 'jsx', 'md', 'mdx', 'ts', 'tsx'],
-        // experimental: {
-        //     optimizePackageImports: ['flowbite'],
-        // },
+        experimental: {
+            // optimizePackageImports: ['nodoku-icons'],
+            // serverComponentsExternalPackages: ['nodoku-icons'],
+
+            workerThreads: false,
+            cpus: 1
+        },
+        // serverExternalPackages: ['nodoku-icons'],
 
         webpack: ((config, opts) => {
 

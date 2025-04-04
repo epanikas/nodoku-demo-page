@@ -1,3 +1,5 @@
+# yaml-language-server: $schema=./visual-schema.json
+
 containerStyle:
 #  don't use mx-auto here, as it will break the grid column width layout (should also use min-width: 0)
 #  ref: https://stackoverflow.com/questions/36247140/why-dont-flex-items-shrink-past-content-size
@@ -12,8 +14,17 @@ preContainer:
   base: ''
   decoration: ''
 
+imageContainer:
+  base: text-center
+  decoration: ''
+
+imageStyle:
+  base: inline-block
+  decoration: ''
+
 codeHighlightTheme:
   hljsLightTheme: a11y-light
   hljsDarkTheme: a11y-dark
   pre:
     base: not-prose
+

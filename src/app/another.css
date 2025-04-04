@@ -1,0 +1,92 @@
+.fi {
+    background-size: contain;
+    background-position: 50%;
+    background-repeat: no-repeat
+}
+
+.fi {
+    position: relative;
+    display: inline-block;
+    width: 1.333333em;
+    line-height: 1em
+}
+
+.fi:before {
+    content: " "
+}
+
+.fi.fis {
+    width: 1em
+}
+
+.fi-ar {
+    background-image: url(/_next/static/media/ar.bdb94662.svg)
+}
+
+.fi-ar.fis {
+    background-image: url(/_next/static/media/ar.c4490a1e.svg)
+}
+
+.fi-de {
+    background-image: url(/_next/static/media/de.666805f5.svg)
+}
+
+.fi-de.fis {
+    background-image: url(/_next/static/media/de.7643c466.svg)
+}
+
+.fi-es {
+    background-image: url(/_next/static/media/es.a857d3dd.svg)
+}
+
+.fi-es.fis {
+    background-image: url(/_next/static/media/es.4a628583.svg)
+}
+
+.fi-fr {
+    background-image: url(/_next/static/media/fr.f5380d92.svg)
+}
+
+.fi-fr.fis {
+    background-image: url(/_next/static/media/fr.9b218945.svg)
+}
+
+.fi-gb {
+    background-image: url(/_next/static/media/gb.a50bb9b9.svg)
+}
+
+.fi-gb.fis {
+    background-image: url(/_next/static/media/gb.84704546.svg)
+}
+
+.fi-il {
+    background-image: url(/_next/static/media/il.80b0a878.svg)
+}
+
+.fi-il.fis {
+    background-image: url(/_next/static/media/il.189a898e.svg)
+}
+
+.fi-it {
+    background-image: url(/_next/static/media/it.919398e6.svg)
+}
+
+.fi-it.fis {
+    background-image: url(/_next/static/media/it.a33eed70.svg)
+}
+
+.fi-pt {
+    background-image: url(/_next/static/media/pt.4f4aed1d.svg)
+}
+
+.fi-pt.fis {
+    background-image: url(/_next/static/media/pt.164e60e4.svg)
+}
+
+.fi-ru {
+    background-image: url(/_next/static/media/ru.2c447906.svg)
+}
+
+.fi-ru.fis {
+    background-image: url(/_next/static/media/ru.9ee2a40e.svg)
+}

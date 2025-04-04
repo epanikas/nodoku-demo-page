@@ -82,7 +82,7 @@ export async function middleware(request: NextRequest) {
 
     const langsPattern = languages.map(l => l.key).join("|");
     console.log("middleware langsPattern", langsPattern, request.nextUrl.pathname)
-    const regex = new RegExp(`\/(${langsPattern})(.*)`);
+    const regex = new RegExp(`^\/(${langsPattern})(.*)`);
 
     const chunkedUrl = regex.exec(request.nextUrl.pathname);
 
@@ -92,6 +92,7 @@ export async function middleware(request: NextRequest) {
         resp = NextResponse.next();
         lang = chunkedUrl[1]
     } else if (request.nextUrl.pathname.startsWith("/first-page")
+        || request.nextUrl.pathname.startsWith("/readme")
         || request.nextUrl.pathname.startsWith("/images")
         || request.nextUrl.pathname.endsWith(".js")
         || request.nextUrl.pathname.endsWith(".js.map")) {

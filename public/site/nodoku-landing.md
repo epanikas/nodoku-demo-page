@@ -9,7 +9,7 @@ nd-block:
 
 ## a content-first landing page and <br>static site generator
 
-Nodoku is a library aiming at creating beautiful and responsive landing pages effortlessly. 
+Nodoku is a set of libraries aiming at creating beautiful and responsive landing pages effortlessly. 
 
 Nodoku uses **_Markdown_** file as content supplier, and a **_Yaml_** file as visual configurator.
 
@@ -34,7 +34,12 @@ The Nodoku engine parses the supplied Markdown file into content blocks.
 
 Then it renders each block using the configuration provided in the Yaml file - called _**skin**_.
 
+![step-1](../images/svg/Business_SVG.svg)
 
+
+|[Get started](/getting-started)|
+
+|[Learn more](/getting-started)|
 
 
 ```yaml
@@ -126,7 +131,7 @@ nd-block:
 
 # Create an MD file
 
-![step-1](../images/postit-board.jpg "step 1")
+![step-1](icon:nd-react-icons/md:MdOutlinePages )
 
 create a Markdown content file, describing your product 
 
@@ -143,7 +148,7 @@ And another line of description.
 # Draft a skin Yaml file
 
 
-![step-2](../images/3d-view-puzzle-pieces.jpg "step 2")
+![step-1](icon:nd-react-icons/md:MdOutlineDesignServices )
 
 
 draft a Yaml file configuring the visual representation
@@ -199,7 +204,7 @@ nd-block:
     sectionName: generated-with-nodoku
 ```
 
-# And Yes!<br><br>This very page was generated with Nodoku!
+# And Yes!<br><br>This **_whole site_** was generated with Nodoku!
 
 Check out the source code of this page at <br>[https://github.com/epanikas/nodoku-demo-page](https://github.com/epanikas/nodoku-demo-page)
 
@@ -220,7 +225,7 @@ nd-block:
 
 # Distraction-free content-first approach
 
-![step-1](icon:nd-react-icons/hi:HiCode "step 1")
+![step-1](icon:nd-react-icons/hi:HiCode )
 
 Unlike Nodoku, the vast majority of site builders are using the so-called WYSIWYG (What You See Is What You Get) approach, when the site is being built gradually, by filling in the web-forms right on the visual elements.
 
@@ -237,7 +242,7 @@ The content is created in a textual form in a Markdown file, and at this moment 
 
 # Content and presentation are strictly separated 
 
-![step-1](icon:nd-react-icons/hi:HiOutlineViewGrid "step 1")
+![step-1](icon:nd-react-icons/hi:HiOutlineViewGrid )
 
 Nodoku promotes a strict separation between the content and the presentation, allowing for a great deal of flexibility, when one can be changed without affecting the other.
 
@@ -252,7 +257,7 @@ Keeping content and design concepts strictly separated allows for independent ed
 
 # Built-in multilingual localization 
 
-![step-1](icon:nd-react-icons/hi:HiOutlineGlobeAlt "step 1")
+![step-1](icon:nd-react-icons/hi:HiOutlineGlobeAlt )
 
 Nodoku has been designed from ground up keeping in mind the necessity of the content localization.
 
@@ -270,7 +275,7 @@ Check out [nodoku-i18n](https://github.com/nodoku/nodoku-i18n) for more details.
 
 # Nodoku components are naturally responsive
 
-![step-1](icon:nd-react-icons/hi:HiOutlineDeviceMobile "step 1")
+![step-1](icon:nd-react-icons/hi:HiOutlineDeviceMobile )
 
 Each Nodoku component is carefully crafted such that it would be presented correctly on any browsing device.
 
@@ -285,7 +290,7 @@ The Nodoku skin - a Yaml file providing visual customization - is based on the T
 
 # Layout, based either on CSS grid or CSS flex
 
-![step-1](icon:nd-react-icons/hi:HiOutlineTable "step 1")
+![step-1](icon:nd-react-icons/hi:HiOutlineTable )
 
 A Nodoku page is organized as a **_set of rows_**, each row having one or more visual components.
 
@@ -304,7 +309,7 @@ This allows, depending on your particular requirements, adapt the layout that be
 
 # SEO friendly, thanks to Server-Side rendering
 
-![step-1](icon:nd-react-icons/hi:HiOutlineAnnotation "step 1")
+![step-1](icon:nd-react-icons/hi:HiOutlineAnnotation )
 
 Nodoku is using Server-Side Rendering, powered by the [NextJS](https://github.com/vercel/next.js) framework.
 
@@ -323,7 +328,7 @@ Consequently, the whole page naturally becomes **_SEO friendly_**.
 
 # Extensible with new visual components
 
-![step-1](icon:nd-react-icons/hi:HiOutlinePuzzle "step 1")
+![step-1](icon:nd-react-icons/hi:HiOutlinePuzzle )
 
 Nodoku framework is extensible by design, since it is **_the end user that controls the mapping_** between visual components and Yaml skin configuration.
 
@@ -337,4 +342,88 @@ Consequently, the end-user can easily extend the existing set of components by c
 |[Get started](/getting-started)|
 
 |[Learn more](/getting-started)|
+
+
+
+
+
+```yaml
+nd-block:
+  attributes:
+    sectionName: advantages-carousel-header
+```
+
+## The same cards can be presented as the **_Carousel_** component
+
+### This is just a matter of skin configuration
+
+```yaml
+
+rows:
+  - row:
+      components:
+        - flowbite/carousel:
+            selector:
+              attributes:
+                sectionName: advantages
+
+
+
+
+```
+
+```yaml
+nd-block:
+  attributes:
+    sectionName: languages-header
+```
+
+## Most of this site is available on the following languages
+
+```yaml
+nd-block:
+  attributes:
+    sectionName: languages-1
+```
+
+![step-1](../images/rb_2147864503-resized-1984x1170.png )
+
+
+- {icon:nd-flag-icons/gb} [English](/en)
+- {icon:nd-flag-icons/fr} [French](/fr)
+- {icon:nd-flag-icons/de} [German](/de)
+- {icon:nd-flag-icons/it} [Italian](/it)
+- {icon:nd-flag-icons/es} [Spanish](/es)
+
+
+```yaml
+nd-block:
+  attributes:
+    sectionName: languages-2
+```
+
+
+
+![step-1](../images/rb_2148370672-resized.png )
+
+
+
+- {icon:nd-flag-icons/pt} [Portuguese](/pt)
+- {icon:nd-flag-icons/il} [Hebrew](/il)
+- {icon:nd-flag-icons/sa} [Arabic](/ar)
+- {icon:nd-flag-icons/ru} [Russian](/ru)
+- {icon:nd-flag-icons/ge} [Georgian](/ge)
+
+
+
+```yaml
+nd-block:
+  attributes:
+    sectionName: languages-footer
+```
+
+## And yours can be too, with the help of Nodoku easy localization
+
+[Learn more about Nodoku localization capabilities](/readme/i18n)
+
 

@@ -25,16 +25,18 @@ titleStyle:
     base: text-5xl font-bold leading-none sm:text-6xl
     decoration: ''
 subTitleStyle:
-    base: mt-3 text-3xl font-bold leading-none sm:text-4xl
+    base: mt-3 text-3xl font-bold leading-none sm:text-4xl mb-4
     decoration: ''
 paragraphStyle:
     base: mt-4 mb-2 text-lg
     decoration: ''
 ctaContainerStyle:
-    base: mt-5 flex flex-col space-y-4 sm:items-center sm:justify-center sm:flex-row sm:space-y-0 sm:space-x-4 lg:justify-end
+    base: mt-5 flex flex-col space-y-4 sm:items-center sm:justify-center sm:flex-row sm:space-y-0 sm:space-x-4 lg:justify-start
     decoration: ''
 ctaButtonStyle:
     - base: px-8 py-3 text-lg font-semibold rounded bg-violet-400 dark:bg-violet-600 text-gray-900 dark:text-gray-50
+      decoration: ''
+    - base: px-8 py-3 text-lg font-semibold rounded border border-violet-400 dark:border-violet-600 text-gray-900 dark:text-gray-50
       decoration: ''
 codeHighlightTheme:
     hljsLightTheme: a11y-light
@@ -48,12 +50,12 @@ codeHighlightTheme:
         base: text-left w-full
         decoration: border-2 border-gray-200
     pre:
-        base: w-full overflow-scroll
+        base: ''
         decoration: ''
 listTheme:
     listStyle:
         base: inline-block list-disc space-y-1 list-outside
         decoration: ''
     listItemStyle:
-        base: ml-4,
+        base: ml-4
         decoration: ''

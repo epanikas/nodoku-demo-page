@@ -14,11 +14,22 @@ import {commonImageProvider} from "@/app/components/common-provider";
 import {commonHtmlSanitizer} from "@/app/components/common-provider";
 import {nameToIconConverters} from "@/app/components/common-provider";
 import {i18nStore} from "@/app/components/nodoku-server-i18n-config";
-import {NodokuIcons} from "nodoku-icons";
 import {LanguageSwitcher} from "@/app/components/language-switcher";
 import LanguageDef = NodokuI18n.LanguageDef;
-import {UserAccount} from "@/app/components/user-account";
-import flagIconProvider = NodokuIcons.flagIconProvider;
+// import {UserAccount} from "@/app/components/user-account";
+import {NodokuIcons} from "nodoku-icons";
+import {gb_flag} from "nodoku-icons/nd-flag-icons/gb";
+import {it_flag} from "nodoku-icons/nd-flag-icons/it";
+import {de_flag} from "nodoku-icons/nd-flag-icons/de";
+import {es_flag} from "nodoku-icons/nd-flag-icons/es";
+import {fr_flag} from "nodoku-icons/nd-flag-icons/fr";
+import {pt_flag} from "nodoku-icons/nd-flag-icons/pt";
+import {ru_flag} from "nodoku-icons/nd-flag-icons/ru";
+import {sa_flag} from "nodoku-icons/nd-flag-icons/sa";
+import {il_flag} from "nodoku-icons/nd-flag-icons/il";
+import {ge_flag} from "nodoku-icons/nd-flag-icons/ge";
+import {NdPageSkin} from "nodoku-core";
+import {NdContentBlock} from "nodoku-core";
 
 
 var runsOnServerSide = typeof window === 'undefined';
@@ -45,10 +56,37 @@ export type NavHeaderProps = {
     i18nextPostProcessor: NdI18NextPostProcessor | undefined;
     htmlSanitizer: NdHtmlSanitizer | undefined;
 
-
-
 }
 
+
+function countryCodeToFlagIcon(countryCode: string, className: string): JSX.Element | undefined {
+
+    switch (countryCode) {
+        case "gb":
+            return <>{gb_flag("1x1", className)!({})}</>
+        case "it":
+            return <>{it_flag("1x1", className)!({})}</>
+        case "de":
+            return <>{de_flag("1x1", className)!({})}</>
+        case "es":
+            return <>{es_flag("1x1", className)!({})}</>
+        case "fr":
+            return <>{fr_flag("1x1", className)!({})}</>
+        case "pt":
+            return <>{pt_flag("1x1", className)!({})}</>
+        case "ru":
+            return <>{ru_flag("1x1", className)!({})}</>
+        case "il":
+            return <>{il_flag("1x1", className)!({})}</>
+        case "sa":
+            return <>{sa_flag("1x1", className)!({})}</>
+        case "ge":
+            return <>{ge_flag("1x1", className)!({})}</>
+    }
+
+    return undefined
+
+}
 
 export default async function NavHeader(params: {lng: string, languages: LanguageDef[]}): Promise<JSX.Element> {
 
@@ -58,23 +96,11 @@ export default async function NavHeader(params: {lng: string, languages: Languag
         return <></>
     }
 
-    const skin = parseYamlContentAsSkin(fs.readFileSync("./public/site/skin/nav-header.yaml").toString());
-    const content = parseMarkdownAsContent(fs.readFileSync("./public/site/nav-header.md").toString(), "en", "nav-header")
-
-    // console.log("JSON.stringify(content)", JSON.stringify(content))
-    // console.log("JSON.stringify(content)", JSON.stringify(content))
-
-    // await NodokuI18n.Simplelocalize.initI18nStore( ["nodoku-landing"/*, "docs", "faq"*/], 'en', "auto", "auto",
-    //         OnFallbackLngTextUpdateStrategy.reset_reviewed_status)
-
-    // if (process.env.NODE_ENV === "development") {
-    //     await i18nStore.reloadResources();
-    // }
+    const skin: NdPageSkin = parseYamlContentAsSkin(fs.readFileSync("./public/site/header-footer/nav-header.yaml").toString());
+    const content: NdContentBlock[] = parseMarkdownAsContent(fs.readFileSync("./public/site/header-footer/nav-header.md").toString(), "en", "nav-header")
 
     const iconLanguages = await Promise.all(languages.map(async l => (
-        {...l,
-            icon: (await flagIconProvider(l.icon, "1x1", "fi fis fiCircle inline-block"))}
-    )));
+        {...l, icon: countryCodeToFlagIcon(l.icon, "fi fis fiCircle inline-block")})));
 
     const clientSideComponentProvider = (c: string) => {
 
@@ -84,7 +110,7 @@ export default async function NavHeader(params: {lng: string, languages: Languag
 
             switch (k) {
                 case "flowbite/nav-header:language-switcher":
-                    return <LanguageSwitcher languages={iconLanguages} selectedLng={lng} />
+                    return languages.length > 0 ? <LanguageSwitcher languages={iconLanguages} selectedLng={lng} /> : <></>
                 case "flowbite/nav-header:user-account":
                     // return <UserAccount />
                     return <></>

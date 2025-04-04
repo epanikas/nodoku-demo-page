@@ -24,8 +24,8 @@ export default async function MyFooter(params: {lng: string}): Promise<JSX.Eleme
         return <></>
     }
 
-    const skin = parseYamlContentAsSkin(fs.readFileSync("./public/site/skin/footer.yaml").toString());
-    const content = parseMarkdownAsContent(fs.readFileSync("./public/site/footer.md").toString(), "en", "footer")
+    const skin = parseYamlContentAsSkin(fs.readFileSync("./public/site/header-footer/footer.yaml").toString());
+    const content = parseMarkdownAsContent(fs.readFileSync("./public/site/header-footer/footer.md").toString(), "en", "footer")
 
     // console.log("JSON.stringify(content)", JSON.stringify(content))
     // console.log("JSON.stringify(content)", JSON.stringify(content))

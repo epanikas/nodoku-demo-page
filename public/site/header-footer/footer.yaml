@@ -1,0 +1,57 @@
+# yaml-language-server: $schema=../../../schemas/visual-schema.json
+
+global:
+  defaultTheme: light
+  theme:
+    paragraphStyle:
+      paragraphContainer:
+        base: text-xs leading-relaxed
+      paragraphStyle:
+        base: mb-4
+  components:
+    core/typography:
+      theme:
+        containerStyle:
+          decoration: mx-auto
+        contentContainerStyle:
+          decoration: text-center
+
+
+
+rows:
+
+  - row:
+      maxCols: 1
+      theme:
+        base: pb-10 bg-gray-100 dark:bg-gray-900 border-b-gray-300 dark:border-b-gray-700
+        componentHolder:
+          decoration: mt-5
+      components:
+        - core/typography:
+            theme:
+              contentContainerStyle:
+                base: prose prose-amber dark:prose-invert text-sm leading-none
+              containerStyle:
+                decoration: container mx-auto
+            selector:
+              attributes:
+                sectionName: attributions
+
+
+  - row:
+      maxCols: 1
+      components:
+        - mambaui/footer-four:
+            theme:
+              contentContainerStyle:
+                base: grid grid-cols-2 text-sm gap-x-3 gap-y-8 lg:w-2/3 sm:grid-cols-5
+#              copyrightNoticeStyle:
+#                base: py-6 text-sm text-center text-gray-400 dark:text-gray-600 border-t-gray-300 dark:border-t-gray-700
+            selector:
+              attributes:
+                sectionName: footer
+
+
+
+
+

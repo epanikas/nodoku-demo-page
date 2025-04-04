@@ -1,5 +1,10 @@
 # yaml-language-server: $schema=./visual-schema.json
-
+carouselContainerStyle:
+    base: ''
+    decoration: ''
+carouselAspectStyle:
+    base: w-full,
+    decoration: aspect-[2/4] md:aspect-square lg:aspect-[4/1.61]
 bgImageStyle:
     base: '-z-20 bg-cover bg-no-repeat'
     decoration: 'blur-sm '
@@ -18,6 +23,9 @@ indicatorActiveClasses:
 indicatorInactiveClasses:
     base: bg-white/50 dark:bg-gray-800/50 hover:bg-white dark:hover:bg-gray-800
     decoration: ''
+imageStyle:
+    base: rounded-t-lg object-cover
+    decoration: aspect-video
 titleStyle:
     base: lg:text-9xl md:text-6xl text-3xl mb-6
     decoration: ''
@@ -50,12 +58,12 @@ codeHighlightTheme:
         base: text-left w-full
         decoration: border-2 border-gray-200
     pre:
-        base: w-full overflow-scroll
+        base: ''
         decoration: ''
 listTheme:
     listStyle:
         base: inline-block list-disc space-y-1 list-outside
         decoration: ''
     listItemStyle:
-        base: ml-4,
+        base: ml-4
         decoration: ''

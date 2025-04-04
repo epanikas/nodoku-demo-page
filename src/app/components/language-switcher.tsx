@@ -44,9 +44,9 @@ export const LanguageSwitcher = (
 
         const urlPath = window.location.pathname;
 
-        const langsPattern = languages.map(l => l.key).join("|");
+        const langsPattern = languages.map(l => l.key).join("|") ;
         console.log("client langsPattern", langsPattern, urlPath)
-        const regex = new RegExp(`\/(${langsPattern})(.*)`);
+        const regex = new RegExp(`^\/(${langsPattern})\/?(.*)`);
 
         const chunkedUrl = regex.exec(urlPath);
         console.log("chunkedUrl", chunkedUrl)

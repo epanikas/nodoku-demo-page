@@ -2,6 +2,9 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "type": "object",
   "properties": {
+    "className": {
+      "type": "string"
+    },
     "bgImageStyle": {
       "$ref": "../../../../../node_modules/nodoku-core/schemas/skin-common-schema.json#/definitions/ThemeStyle"
     },
@@ -9,6 +12,9 @@
       "$ref": "../../../../../node_modules/nodoku-core/schemas/skin-common-schema.json#/definitions/ThemeStyle"
     },
     "carouselContainerStyle": {
+      "$ref": "../../../../../node_modules/nodoku-core/schemas/skin-common-schema.json#/definitions/ThemeStyle"
+    },
+    "carouselAspectStyle": {
       "$ref": "../../../../../node_modules/nodoku-core/schemas/skin-common-schema.json#/definitions/ThemeStyle"
     },
     "containerStyle": {
@@ -22,6 +28,12 @@
     },
     "slideAnimation": {
       "$ref": "../../../../../node_modules/nodoku-core/schemas/skin-common-schema.json#/definitions/ThemeStyle"
+    },
+    "imageContainerStyle": {
+      "$ref": "../../../../../node_modules/nodoku-core/schemas/skin-common-schema.json#/definitions/ThemeStyle"
+    },
+    "imageStyle": {
+      "$ref": "../../../../../node_modules/nodoku-core/schemas/skin-common-schema.json#/definitions/ImageStyle"
     },
     "titleStyle": {
       "$ref": "../../../../../node_modules/nodoku-core/schemas/skin-common-schema.json#/definitions/ThemeStyle"

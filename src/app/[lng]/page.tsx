@@ -11,6 +11,9 @@ import {i18nStore} from "@/app/components/nodoku-server-i18n-config";
 import {NodokuIcons} from "nodoku-icons";
 
 import dynamic from "next/dynamic";
+import {NdPageSkin} from "nodoku-core";
+import {NdContentBlock} from "nodoku-core";
+import {NdList} from "nodoku-core";
 
 // const Flowbite = dynamic(() => (await import("flowbite-react")).Flowbite)
 
@@ -36,8 +39,10 @@ export default async function Home({params}: { params: Promise<{ lng: string }> 
         return <></>
     }
 
-    const skin = parseYamlContentAsSkin(fs.readFileSync("./public/site/skin/nodoku-landing.yaml").toString());
-    const content = parseMarkdownAsContent(fs.readFileSync("./public/site/nodoku-landing.md").toString(), "en", "nodoku-landing")
+    const skin: NdPageSkin = parseYamlContentAsSkin(fs.readFileSync("./public/site/nodoku-landing.yaml").toString());
+    const content: NdContentBlock[] = parseMarkdownAsContent(fs.readFileSync("./public/site/nodoku-landing.md").toString(), "en", "nodoku-landing")
+
+    console.log("rendering content: \n", content.map(b => `b.id ${b.id} b.list ${b.paragraphs.filter(p => p instanceof NdList).map(l => l.items == undefined ? "list with no items!!!" : "ok").join(", ")}`).join('\n'));
 
     // console.log("JSON.stringify(content)", JSON.stringify(content))
     // console.log("JSON.stringify(content)", JSON.stringify(content))
@@ -48,9 +53,7 @@ export default async function Home({params}: { params: Promise<{ lng: string }> 
     // }
 
 
-    return (
-        // <Flowbite theme={{theme: customCarousel}}>
-            <RenderingPage
+    return <RenderingPage
                 lng={lng}
                 renderingPriority={RenderingPriority.skin_first}
                 skin={skin}
@@ -61,8 +64,6 @@ export default async function Home({params}: { params: Promise<{ lng: string }> 
                 i18nextProvider={NodokuI18n.i18nForNodoku(i18nStore)}
                 i18nextPostProcessor={NodokuIcons.iconTextPostProcessorFactory(nameToIconConverters)}
                 clientSideComponentProvider={undefined}
-            />
-        // </Flowbite>
-    );
+            />;
 }
 
