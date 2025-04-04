@@ -8,7 +8,7 @@
     "dev-inspect": "cross-env NODE_ENV=development && cross-env NODE_OPTIONS='--inspect' next dev -p 3001",
     "dev-debug": "cross-env NODE_ENV=development NODE_OPTIONS='--inspect' && next dev -p 3001",
     "build": "shx rm -rf ./.next && shx rm -f ./missing-keys.csv && shx rm -f ./updated-keys.csv && shx rm -f ./existing-keys.csv && next build --debug",
-    "vercel-upgrade-build": "cross-env PATH=./node_modules/.bin:$PATH && npm upgrade && npm ls --depth=2 && shx rm -rf ./.next && shx rm -f ./missing-keys.csv && shx rm -f ./updated-keys.csv && shx rm -f ./existing-keys.csv && next build --debug",
+    "vercel-upgrade-build": "npm upgrade && npm ls --depth=2 && next build --debug",
     "build-analyze": "cross-env ANALYZE=true  next build --debug",
     "build-purgecss": "next build --debug  && npm run purgecss",
     "build-purgecss-vercel": "next build --debug  && npm run purgecss-vercel",
