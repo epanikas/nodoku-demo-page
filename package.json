@@ -57,7 +57,7 @@
     "react-i18next": "^14.1.2",
     "sass": "^1.80.7",
     "ts-node": "^10.9.2",
-    "typescript": "^5",
+    "typescript": "^5"
   },
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.15",
