@@ -305,7 +305,7 @@ rows:
               animationType: fade-in-fade-out
             theme:
               carouselAspectStyle:
-                decoration: aspect-[2/5] md:aspect-square lg:aspect-[4/1.61]
+                decoration: aspect-[2/5]  md:aspect-square lg:aspect-[4/1.61]
               slideAnimation:
                 base: duration-[2000ms]
               titleStyle:
