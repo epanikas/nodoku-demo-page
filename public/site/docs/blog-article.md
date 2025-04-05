@@ -463,11 +463,11 @@ As you can see, the attribute list is quite exhaustive and provides full transpa
 
 For further details please have a look at the following resources:
 
-* Nodoku Demo page ***(TBD)***
+* Nodoku Demo page: [https://nodoku.io/](https://nodoku.io/)
 
-* Nodoku Demo page GitHub repository\*\*\*(TBD)\*\*\*
+* Nodoku Demo page GitHub repository: [https://github.com/epanikas/nodoku-demo-page](https://github.com/epanikas/nodoku-demo-page)
 
-* Nodoku Core GitHub repository\*\*\*(TBD)\*\*\*
+* Nodoku Core GitHub repository: [https://github.com/nodoku/nodoku-core](https://github.com/nodoku/nodoku-core)
 
 
 ## Conclusion

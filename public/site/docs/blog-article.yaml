@@ -31,9 +31,9 @@ rows:
               bgImageStyle:
                 decoration: blur-sm bg-[url('/images/high-angle-geometric-paper-objects-desk.jpg')]
               titleStyle:
-                base: max-w-5xl mx-auto mb-4 lg:text-6xl font-bold tracking-tight leading-none md:text-5xl lg:text-6xl
+                base: max-w-5xl mx-auto mb-4 lg:text-6xl font-bold tracking-tight leading-none md:text-5xl lg:text-6xl text-3xl
               subTitleStyle:
-                base: max-w-5xl mx-auto mb-8 lg:text-4xl font-normal md:text-2xl
+                base: max-w-5xl mx-auto mb-8 lg:text-4xl font-normal md:text-2xl text-2xl
             selector:
               attributes:
                 sectionName: blog-article-header
