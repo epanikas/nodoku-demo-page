@@ -13,9 +13,9 @@ Nodoku is a set of libraries aiming at creating beautiful and responsive landing
 
 Nodoku uses **_Markdown_** file as content supplier, and a **_Yaml_** file as visual configurator.
 
-|[Get started](/getting-started)|
+|[Get started](/docs/getting-started)|
 
-|[Learn more](/getting-started)|
+|[Learn more](/docs/blog-article)|
 
 ```yaml
 nd-block:
@@ -37,9 +37,9 @@ Then it renders each block using the configuration provided in the Yaml file - c
 ![step-1](../images/svg/Business_SVG.svg)
 
 
-|[Get started](/getting-started)|
+|[Get started](/docs/getting-started)|
 
-|[Learn more](/getting-started)|
+|[Learn more](/docs/blog-article)|
 
 
 ```yaml
@@ -71,9 +71,9 @@ without worrying about presentation.
 Using content block delimeter - a Yaml code snippet -
 structure the content file, so that it can be submitted to the Nodoku parser.
 
-|[Get started](/getting-started)|
+|[Get started](/docs/getting-started)|
 
-|[Learn more](/getting-started)|
+|[Learn more](/docs/blog-article)|
 
 
 # Step 2: _Skin_
@@ -90,9 +90,9 @@ with the presentation blocks.
 You can choose among different presentation components,
 including Carousel, Hero and different types of Card components.
 
-|[Get started](/getting-started)|
+|[Get started](/docs/getting-started)|
 
-|[Learn more](/getting-started)|
+|[Learn more](/docs/blog-article)|
 
 # Step 3: _Fine tune_
 ## Use configuration options to fine tune your landing page presentation
@@ -108,9 +108,9 @@ visual details of your presentation.
 Normally the Nodoku components support Tailwind CSS out of the box,
 so you can fine tune ivsual presetnation using Tailwind.
 
-|[Get started](/getting-started)|
+|[Get started](/docs/getting-started)|
 
-|[Learn more](/getting-started)|
+|[Learn more](/docs/blog-article)|
 
 
 ```yaml
@@ -235,9 +235,9 @@ Nodoku is suggesting a different approach - **_you create content first_**.
 
 The content is created in a textual form in a Markdown file, and at this moment _nothing else matters_.
 
-|[Get started](/getting-started)|
+|[Get started](/docs/getting-started)|
 
-|[Learn more](/getting-started)|
+|[Learn more](/docs/blog-article)|
 
 
 # Content and presentation are strictly separated 
@@ -250,9 +250,9 @@ This approach is illustrated by the fact that the content and the design are rep
 
 Keeping content and design concepts strictly separated allows for independent editing of both, without worrying about the impact that one might have on another.
 
-|[Get started](/getting-started)|
+|[Get started](/docs/getting-started)|
 
-|[Learn more](/getting-started)|
+|[Learn more](/docs/blog-article)|
 
 
 # Built-in multilingual localization 
@@ -269,9 +269,9 @@ This key can naturally be used as a **_translation key_**, that can be integrate
 
 Check out [nodoku-i18n](https://github.com/nodoku/nodoku-i18n) for more details.
 
-|[Get started](/getting-started)|
+|[Get started](/docs/getting-started)|
 
-|[Learn more](/getting-started)|
+|[Learn more](/docs/blog-article)|
 
 # Nodoku components are naturally responsive
 
@@ -283,9 +283,9 @@ The currently available sets of Nodoku components, [**_Nodoku-Flowbite_**](https
 
 The Nodoku skin - a Yaml file providing visual customization - is based on the Tailwind CSS styling engine, which gives large possibilities for responsive design tuning.  
 
-|[Get started](/getting-started)|
+|[Get started](/docs/getting-started)|
 
-|[Learn more](/getting-started)|
+|[Learn more](/docs/blog-article)|
 
 
 # Layout, based either on CSS grid or CSS flex
@@ -302,9 +302,9 @@ However, the layout of a row can be switched to **_CSS flex_**, if required.
 
 This allows, depending on your particular requirements, adapt the layout that best suits your needs.
 
-|[Get started](/getting-started)|
+|[Get started](/docs/getting-started)|
 
-|[Learn more](/getting-started)|
+|[Learn more](/docs/blog-article)|
 
 
 # SEO friendly, thanks to Server-Side rendering
@@ -321,9 +321,9 @@ No Javascript code is required to be executed prior to page scanning by the web 
 
 Consequently, the whole page naturally becomes **_SEO friendly_**.
 
-|[Get started](/getting-started)|
+|[Get started](/docs/getting-started)|
 
-|[Learn more](/getting-started)|
+|[Learn more](/docs/blog-article)|
 
 
 # Extensible with new visual components
@@ -339,9 +339,9 @@ This implementation is responsible for the ultimate component rendering, using t
 Consequently, the end-user can easily extend the existing set of components by custom ones, as required.
 
 
-|[Get started](/getting-started)|
+|[Get started](/docs/getting-started)|
 
-|[Learn more](/getting-started)|
+|[Learn more](/docs/blog-article)|
 
 
 
