@@ -136,6 +136,12 @@ nd-block:
 create a Markdown content file, describing your product 
 
 ```markdown
+```yaml
+nd-block:
+  attributes:
+    id: product-1
+``
+
 # Title of my awesome product
 ## Subtitle of my awesome product
 
