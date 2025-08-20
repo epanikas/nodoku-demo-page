@@ -9,7 +9,6 @@ nd-block:
 
 ## In this documentation we will discover the first steps, needed to setup a Nodoku project
 
-
 ### **_Step 1_**: Create a NextJS project
 
 Nodoku is a framework, that runs in a NextJS project. In order to start with Nodoku one needs to be familiar with NextJS environment.
@@ -186,4 +185,14 @@ At this point, if everything goes well, you should see the following page displa
 
 
 ![my-nodoku-page](../../images/my-nodoku-page-screenshot.png "step 1")
+
+## Nodoku starter templates
+
+You can bootstrap your first Nodoku project in seconds using one of these starter templates:
+
+- https://github.com/nodoku/nodoku-starter-template
+  - use this template to bootstrap a simple Nodoku site without localization
+- https://github.com/nodoku/nodoku-starter-template-i18n
+  - use this template to bootstrap a Nodoku site with fully fledged localization, based on nodoku-i18n module
+  - Note: you'll need to create a Simplelocalize account, and configure the project using the .env file
 

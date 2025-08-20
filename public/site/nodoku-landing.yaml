@@ -229,6 +229,42 @@ rows:
         - core/typography:
             theme:
               contentContainerStyle:
+                decoration: pb-5 text-center
+            selector:
+              attributes:
+                sectionName: bootstrap-header
+
+  - row:
+      theme:
+        decoration: m-10 mx-5 gap-5
+      components:
+        - flowbite/card:
+            theme:
+              imageStyle:
+                base: inline-block
+                imageWidth: '150'
+            themes:
+              - imageContainerStyle:
+                  decoration: text-white dark:text-black text-center
+                containerStyle:
+                  decoration: text-center bg-blue-200 dark:bg-blue-700
+              - imageContainerStyle:
+                  decoration: text-black dark:text-white text-center
+                containerStyle:
+                  decoration: text-center bg-pink-200 dark:bg-pink-700
+
+            selector:
+              attributes:
+                sectionName: bootstrap
+
+
+  - row:
+      theme:
+        decoration: m-10 mx-5
+      components:
+        - core/typography:
+            theme:
+              contentContainerStyle:
                 decoration: pb-5
             selector:
               attributes:

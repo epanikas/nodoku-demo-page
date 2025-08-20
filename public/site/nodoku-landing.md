@@ -214,6 +214,40 @@ nd-block:
 
 Check out the source code of this page at <br>[https://github.com/epanikas/nodoku-demo-page](https://github.com/epanikas/nodoku-demo-page)
 
+```yaml
+nd-block:
+  attributes:
+    sectionName: bootstrap-header
+```
+
+# Bootstrap your first Nodoku project in seconds
+
+
+```yaml
+nd-block:
+  attributes:
+    sectionName: bootstrap
+```
+
+# Nodoku starter template without localization
+
+![nodoku template without localization](icon:nd-react-icons/fa6:FaBootstrap )
+
+A bare minimum Nodoku template, without localization
+
+|[Get started](https://github.com/nodoku/nodoku-starter-template)|
+
+|[Deploy on Netlify](https://app.netlify.com/start/deploy?repository=https://github.com/nodoku/nodoku-starter-template)|
+
+
+# Nodoku starter template with localization
+
+![nodoku template with localization](icon:nd-react-icons/fa6:FaBootstrap )
+
+Use this starter template to bootstrap a fully localized, multilingual Nodoku site.
+
+|[Get started](https://github.com/nodoku/nodoku-starter-template-i18n)|
+
 
 ```yaml
 nd-block:
