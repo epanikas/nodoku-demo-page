@@ -1,11 +1,11 @@
 <!-- TOC -->
-* [Getting started](#getting-started)
-* [Project structure](#project-structure)
-* [Page translation (i18n localization)](#page-translation-i18n-localization)
-* [Configuring Tailwind](#configuring-tailwind)
-* [Using Nodoku icons](#using-nodoku-icons)
-  * [Specifying icon in a text](#specifying-icon-in-a-text)
-  * [Using an icon as an image](#using-an-icon-as-an-image)
+  * [Getting started](#getting-started)
+  * [Project structure](#project-structure)
+  * [Page translation (i18n localization)](#page-translation-i18n-localization)
+  * [Configuring Tailwind](#configuring-tailwind)
+  * [Using Nodoku icons](#using-nodoku-icons)
+    * [Specifying icon in a text](#specifying-icon-in-a-text)
+    * [Using an icon as an image](#using-an-icon-as-an-image)
 <!-- TOC -->
 
 
